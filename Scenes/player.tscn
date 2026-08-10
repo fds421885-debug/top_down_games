@@ -153,11 +153,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
-size = Vector2(34, 71)
+size = Vector2(51, 71)
 
-[node name="Player" type="CharacterBody2D" unique_id=1223779622 node_paths=PackedStringArray("animated_sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1223779622 node_paths=PackedStringArray("animated_sprite", "attack_area", "health_bar") groups=["player"]]
 script = ExtResource("1_cvnsp")
 animated_sprite = NodePath("AnimatedSprite2D")
+attack_area = NodePath("AttackArea")
+health_bar = NodePath("HUD/HealthBar")
+attack_hit_frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=849212392]
 position = Vector2(-3, -4)
@@ -167,10 +170,19 @@ shape = SubResource("RectangleShape2D_g7b7a")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g7b7a")
 animation = &"attack"
+frame = 3
+frame_progress = 1.0
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=6633926]
 position = Vector2(40, -29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=787632937]
-position = Vector2(7, 25.5)
+position = Vector2(10.5, 27)
 shape = SubResource("RectangleShape2D_gyc6d")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1479539326]
+
+[node name="HealthBar" type="ProgressBar" parent="HUD" unique_id=334838785]
+offset_right = 320.0
+offset_bottom = 64.0
+value = 100.0

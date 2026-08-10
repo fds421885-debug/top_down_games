@@ -1,8 +1,34 @@
 [gd_scene format=3 uid="uid://brch3d0oybrmv"]
 
 [ext_resource type="PackedScene" uid="uid://cfepn7ehex1qq" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://bnmflpvuotthv" path="res://Scripts/wave_spawner.gd" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://dxn0e4hs5fyig" path="res://Scripts/wave_data.gd" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://dv4ynlgglkvcl" path="res://Scenes/enemy.tscn" id="4_wowpa"]
+
+[sub_resource type="Resource" id="Resource_qxrlw"]
+script = ExtResource("3_3dryh")
+spawn_interval = 3.0
+enemy_types = Array[PackedScene]([ExtResource("4_wowpa")])
+metadata/_custom_type_script = "uid://dxn0e4hs5fyig"
 
 [node name="Game" type="Node2D" unique_id=1770986592]
 
 [node name="Player" parent="." unique_id=1223779622 instance=ExtResource("1_ebmjs")]
 position = Vector2(468, 286)
+
+[node name="WaveSpawner" type="Node2D" parent="." unique_id=25390337 node_paths=PackedStringArray("spawn_markers")]
+script = ExtResource("2_qxrlw")
+spawn_markers = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+waves = Array[ExtResource("3_3dryh")]([SubResource("Resource_qxrlw")])
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=920773915]
+position = Vector2(37, 30)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1104408098]
+position = Vector2(1154, 49)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=611674527]
+position = Vector2(968, 541)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=961871024]
+position = Vector2(117, 605)
