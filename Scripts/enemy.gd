@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @export_category("Movement Settings")
 @export var speed: float = 180.0
-@export var use_pathfinding: bool = true
 
 @export_category("Combat Settings")
 ## حدد هنا كم ضربة بالسيف يحتاج العدو عشان يموت (مثلاً 1، 2، 3...)
@@ -33,6 +32,8 @@ func _ready() -> void:
 		nav_agent.path_desired_distance = 4.0
 		nav_agent.target_desired_distance = 4.0
 		nav_agent.avoidance_enabled = true
+	else:
+		print("تحذير: عقدة NavigationAgent2D غير موجودة داخل مشهد العدو!")
 
 	# ربط حساس التلامس السريع مع اللاعب
 	if hit_box:
@@ -56,13 +57,12 @@ func _physics_process(delta: float) -> void:
 
 	var direction: Vector2 = Vector2.ZERO
 
-	if use_pathfinding and nav_agent:
+	# الاعتماد الكلي والأساسي على الناف مش (NavigationAgent2D) فقط
+	if nav_agent:
 		nav_agent.target_position = player.global_position
 		if not nav_agent.is_navigation_finished():
 			var next_point: Vector2 = nav_agent.get_next_path_position()
 			direction = (next_point - global_position).normalized()
-	else:
-		direction = (player.global_position - global_position).normalized()
 
 	velocity = direction * speed
 	move_and_slide()

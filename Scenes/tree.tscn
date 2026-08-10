@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cuqd8lgpigid5"]
+
+[ext_resource type="Texture2D" uid="uid://dq6sjvf4q68im" path="res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree2.png" id="1_0vwjc"]
+[ext_resource type="Script" uid="uid://dx6d33a0imu5w" path="res://Scripts/tree.gd" id="1_rsuno"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsuno"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(0, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7sa7"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(192, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3oha"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(384, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m36md"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(576, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8wpw"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(768, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqx0n"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(960, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byqqd"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(1152, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqyx3"]
+atlas = ExtResource("1_0vwjc")
+region = Rect2(1344, 0, 192, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7b7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsuno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7sa7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3oha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m36md")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8wpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqx0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byqqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqyx3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
+size = Vector2(68.571434, 201.71431)
+
+[node name="tree" type="StaticBody2D" unique_id=756795118]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_rsuno")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1575761339]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_g7b7a")
+frame_progress = 0.5083207
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1968250355]
+position = Vector2(-2.857144, 4.857155)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_gyc6d")

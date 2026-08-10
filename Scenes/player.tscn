@@ -180,6 +180,16 @@ position = Vector2(40, -29)
 position = Vector2(10.5, 27)
 shape = SubResource("RectangleShape2D_gyc6d")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AttackArea" unique_id=2009673945]
+position = Vector2(-10, 57)
+rotation = 0.6281724
+shape = SubResource("RectangleShape2D_gyc6d")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="AttackArea" unique_id=805951238]
+position = Vector2(-55.000004, 59.000004)
+rotation = 1.7896017
+shape = SubResource("RectangleShape2D_gyc6d")
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1479539326]
 
 [node name="HealthBar" type="ProgressBar" parent="HUD" unique_id=334838785]

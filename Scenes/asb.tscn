@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://crhgisqjmsawr"]
+
+[ext_resource type="Texture2D" uid="uid://ds7m5d8r5siqg" path="res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png" id="1_83xh7"]
+[ext_resource type="Script" uid="uid://ds8kx3bigasd4" path="res://Scripts/asb.gd" id="2_ymny2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymny2"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoemp"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ustnu"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbgrb"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gco3o"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nynw"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq4ab"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dga20"]
+atlas = ExtResource("1_83xh7")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7b7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymny2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoemp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ustnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbgrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gco3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nynw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq4ab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dga20")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="asb" type="AnimatedSprite2D" unique_id=162240676]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_g7b7a")
+animation = &"new_animation"
+frame_progress = 0.9331822
+script = ExtResource("2_ymny2")
