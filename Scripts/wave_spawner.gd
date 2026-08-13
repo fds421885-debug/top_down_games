@@ -2,6 +2,7 @@ extends Node2D
 
 @export var spawn_markers: Array[Marker2D] # أماكن الرسبنة على الخريطة
 @export var waves: Array[WaveData]         # قائمة الويفات المتتابعة
+@export var wave_label: Label              # عرض اسم الويف أو رسالة الفوز
 
 var current_wave: int = 0
 var current_kills: int = 0
@@ -9,16 +10,58 @@ var timer: float = 0.0
 
 func _ready() -> void:
 	add_to_group("spawner")
+	
+	if wave_label:
+		wave_label.modulate.a = 0.0
+	
+	# استرجاع الويف المحفوظ من السحابة (إذا كان موجوداً)
+	if CloudManager and CloudManager.current_wave > 0:
+		current_wave = CloudManager.current_wave - 1
+		if current_wave < 0: current_wave = 0
+	
 	if not waves.is_empty():
 		start_wave()
 
 func start_wave() -> void:
 	current_kills = 0
-	print("--- بدء الويف: ", waves[current_wave].wave_title, " ---")
+	
+	if current_wave >= waves.size():
+		return
+		
+	var wave_data = waves[current_wave]
+	print("--- بدء الويف: ", wave_data.wave_title, " ---")
+	
+	if wave_label:
+		wave_label.modulate = Color.WHITE
+		
+	play_wave_intro(wave_data.wave_title)
+
+func play_wave_intro(title_text: String) -> void:
+	if not wave_label:
+		return
+		
+	# إبطاء سرعة اللعبة (حركة سينمائية Slow-Mo)
+	Engine.time_scale = 0.25
+	
+	wave_label.text = title_text
+	wave_label.modulate.a = 1.0
+	wave_label.scale = Vector2(0.5, 0.5)
+	
+	var tween = create_tween().set_ignore_time_scale(true)
+	tween.tween_property(wave_label, "scale", Vector2(1.2, 1.2), 0.4).from(Vector2(0.5, 0.5))
+	tween.tween_property(wave_label, "scale", Vector2(1.0, 1.0), 0.2)
+	
+	await get_tree().create_timer(1.5, false, true).timeout
+	
+	var fade_tween = create_tween().set_ignore_time_scale(true)
+	fade_tween.tween_property(wave_label, "modulate:a", 0.0, 0.4)
+	await fade_tween.finished
+	
+	Engine.time_scale = 1.0
 
 func _process(delta: float) -> void:
 	if current_wave >= waves.size():
-		return # انتهت جميع الويفات (فوز)
+		return
 		
 	var wave_data = waves[current_wave]
 	
@@ -31,15 +74,29 @@ func spawn_enemy(wave_data: WaveData) -> void:
 	if wave_data.enemy_types.is_empty() or spawn_markers.is_empty():
 		return
 		
-	# اختيار العدو بناءً على الوزن (Weight) لترجيح كفة عدو معين
 	var chosen_enemy = get_weighted_enemy(wave_data.enemy_types, wave_data.enemy_weights)
 	if not chosen_enemy:
 		return
 		
-	# اختيار نقطة رسبنة عشوائية من الـ Markers اللي حددتها
 	var random_marker = spawn_markers[randi() % spawn_markers.size()]
-	
 	var enemy_instance = chosen_enemy.instantiate()
+	
+	# توزيع الأهداف: 70% للبرج و 30% للاعب
+	var random_chance = randf()
+	var chosen_target: Node2D = null
+	
+	if random_chance < 0.7:
+		chosen_target = get_tree().get_first_node_in_group("tower")
+		if not chosen_target:
+			chosen_target = get_tree().get_first_node_in_group("player")
+	else:
+		chosen_target = get_tree().get_first_node_in_group("player")
+		if not chosen_target:
+			chosen_target = get_tree().get_first_node_in_group("tower")
+			
+	if enemy_instance.has_method("set_target"):
+		enemy_instance.set_target(chosen_target)
+	
 	enemy_instance.global_position = random_marker.global_position
 	get_tree().current_scene.add_child(enemy_instance)
 
@@ -78,7 +135,13 @@ func on_enemy_defeated() -> void:
 func advance_to_next_wave() -> void:
 	current_wave += 1
 	if current_wave < waves.size():
+		# تحديث الحفظ السحابي في سوبابيس بالويف الجديد والقتلات
+		if CloudManager:
+			CloudManager.update_progress(current_wave + 1, current_kills)
+			
 		start_wave()
 	else:
 		print("مبروك! أنهيت جميع الويفات بنجاح!")
- 
+		if wave_label:
+			wave_label.modulate = Color.GREEN
+		play_wave_intro("لقد فزت!")

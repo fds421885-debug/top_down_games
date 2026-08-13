@@ -1,0 +1,285 @@
+[gd_scene format=4 uid="uid://cdurehs1inibg"]
+
+[ext_resource type="TileSet" uid="uid://blnbqthmx26wk" path="res://المابات/new_tile_set.tres" id="1_pcird"]
+[ext_resource type="Texture2D" uid="uid://btnfluxivh41x" path="res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="1_xb1mu"]
+[ext_resource type="PackedScene" uid="uid://5jfm64ia1oja" path="res://Scenes/efx_water.tscn" id="2_ffwjg"]
+[ext_resource type="PackedScene" uid="uid://crhgisqjmsawr" path="res://Scenes/asb.tscn" id="4_lvb74"]
+[ext_resource type="PackedScene" uid="uid://cuqd8lgpigid5" path="res://Scenes/tree.tscn" id="5_t8abu"]
+
+[node name="back ground" type="Node2D" unique_id=26277604]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=919521636]
+texture_filter = 1
+position = Vector2(581, 367)
+scale = Vector2(23.953125, 14.078125)
+texture = ExtResource("1_xb1mu")
+
+[node name="efx wter" type="Node2D" parent="Sprite2D" unique_id=1218832575]
+
+[node name="efx_water" parent="Sprite2D/efx wter" unique_id=591532460 instance=ExtResource("2_ffwjg")]
+position = Vector2(19.746895, -21.167591)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water3" parent="Sprite2D/efx wter" unique_id=27835818 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.498367, -5.398444)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water2" parent="Sprite2D/efx wter" unique_id=685283271 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.331375, -14.419535)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx wter5" type="Node2D" parent="Sprite2D/efx wter" unique_id=15165499]
+position = Vector2(-42.040443, 18.894562)
+
+[node name="efx_water" parent="Sprite2D/efx wter/efx wter5" unique_id=176638012 instance=ExtResource("2_ffwjg")]
+position = Vector2(19.746895, -21.167591)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water3" parent="Sprite2D/efx wter/efx wter5" unique_id=448179819 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.498367, -5.398444)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water2" parent="Sprite2D/efx wter/efx wter5" unique_id=278722364 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.331375, -14.419535)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx wter2" type="Node2D" parent="Sprite2D/efx wter" unique_id=1781513261]
+position = Vector2(-0.70971954, 20.386238)
+
+[node name="efx_water" parent="Sprite2D/efx wter/efx wter2" unique_id=1200056970 instance=ExtResource("2_ffwjg")]
+position = Vector2(19.746895, -21.167591)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water3" parent="Sprite2D/efx wter/efx wter2" unique_id=85477297 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.498367, -5.398444)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water2" parent="Sprite2D/efx wter/efx wter2" unique_id=671074500 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.331375, -14.419535)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx wter4" type="Node2D" parent="Sprite2D/efx wter" unique_id=257153854]
+position = Vector2(-41.66471, 15.485017)
+
+[node name="efx_water" parent="Sprite2D/efx wter/efx wter4" unique_id=1694725672 instance=ExtResource("2_ffwjg")]
+position = Vector2(19.746895, -21.167591)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water3" parent="Sprite2D/efx wter/efx wter4" unique_id=199441431 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.498367, -5.398444)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water2" parent="Sprite2D/efx wter/efx wter4" unique_id=1424699604 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.331375, -14.419535)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx wter3" type="Node2D" parent="Sprite2D/efx wter" unique_id=1218107196]
+position = Vector2(-41.9152, 1.7758049)
+
+[node name="efx_water" parent="Sprite2D/efx wter/efx wter3" unique_id=1115233329 instance=ExtResource("2_ffwjg")]
+position = Vector2(19.746895, -21.167591)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water3" parent="Sprite2D/efx wter/efx wter3" unique_id=636950316 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.498367, -5.398444)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="efx_water2" parent="Sprite2D/efx wter/efx wter3" unique_id=934051530 instance=ExtResource("2_ffwjg")]
+position = Vector2(20.331375, -14.419535)
+scale = Vector2(0.07001518, 0.12097667)
+
+[node name="Node2D" type="Node2D" parent="Sprite2D" unique_id=1547174384]
+
+[node name="efx_water" parent="Sprite2D/Node2D" unique_id=310212498 instance=ExtResource("2_ffwjg")]
+position = Vector2(18.6197, -24.00888)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water2" parent="Sprite2D/Node2D" unique_id=1882938354 instance=ExtResource("2_ffwjg")]
+position = Vector2(11.480757, -24.221977)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water3" parent="Sprite2D/Node2D" unique_id=1729658859 instance=ExtResource("2_ffwjg")]
+position = Vector2(4.634051, -25.074362)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water4" parent="Sprite2D/Node2D" unique_id=1976083651 instance=ExtResource("2_ffwjg")]
+position = Vector2(-0.7514677, -24.293007)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water5" parent="Sprite2D/Node2D" unique_id=1713343624 instance=ExtResource("2_ffwjg")]
+position = Vector2(-6.804958, -24.07991)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="Node2D2" type="Node2D" parent="Sprite2D" unique_id=543129055]
+position = Vector2(-14.987606, 0)
+
+[node name="efx_water" parent="Sprite2D/Node2D2" unique_id=1953728832 instance=ExtResource("2_ffwjg")]
+position = Vector2(18.6197, -24.00888)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water2" parent="Sprite2D/Node2D2" unique_id=565256490 instance=ExtResource("2_ffwjg")]
+position = Vector2(11.480757, -24.221977)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water3" parent="Sprite2D/Node2D2" unique_id=1364434929 instance=ExtResource("2_ffwjg")]
+position = Vector2(4.634051, -25.074362)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water4" parent="Sprite2D/Node2D2" unique_id=61181696 instance=ExtResource("2_ffwjg")]
+position = Vector2(-0.7514677, -24.293007)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water5" parent="Sprite2D/Node2D2" unique_id=2098584492 instance=ExtResource("2_ffwjg")]
+position = Vector2(-6.804958, -24.07991)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="Node2D3" type="Node2D" parent="Sprite2D" unique_id=1242692092]
+position = Vector2(-14.44488, 41.624863)
+
+[node name="efx_water" parent="Sprite2D/Node2D3" unique_id=846835891 instance=ExtResource("2_ffwjg")]
+position = Vector2(18.6197, -24.00888)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water2" parent="Sprite2D/Node2D3" unique_id=47553268 instance=ExtResource("2_ffwjg")]
+position = Vector2(11.480757, -24.221977)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water3" parent="Sprite2D/Node2D3" unique_id=1762382552 instance=ExtResource("2_ffwjg")]
+position = Vector2(4.634051, -25.074362)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water4" parent="Sprite2D/Node2D3" unique_id=1884610248 instance=ExtResource("2_ffwjg")]
+position = Vector2(-0.7514677, -24.293007)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water5" parent="Sprite2D/Node2D3" unique_id=1722160888 instance=ExtResource("2_ffwjg")]
+position = Vector2(-6.804958, -24.07991)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="Node2D4" type="Node2D" parent="Sprite2D" unique_id=1796005208]
+position = Vector2(0.083496094, 41.269703)
+
+[node name="efx_water" parent="Sprite2D/Node2D4" unique_id=1997880119 instance=ExtResource("2_ffwjg")]
+position = Vector2(18.6197, -24.00888)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water2" parent="Sprite2D/Node2D4" unique_id=2124874137 instance=ExtResource("2_ffwjg")]
+position = Vector2(11.480757, -24.221977)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water3" parent="Sprite2D/Node2D4" unique_id=1899790872 instance=ExtResource("2_ffwjg")]
+position = Vector2(4.634051, -25.074362)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water4" parent="Sprite2D/Node2D4" unique_id=1397251290 instance=ExtResource("2_ffwjg")]
+position = Vector2(-0.7514677, -24.293007)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="efx_water5" parent="Sprite2D/Node2D4" unique_id=317260746 instance=ExtResource("2_ffwjg")]
+position = Vector2(-6.804958, -24.07991)
+scale = Vector2(0.046803627, 0.07186462)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=170463461]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+tile_map_data = PackedByteArray("AAAbAAAAAAALAAAAAAAbAAEAAAALAAEAAAAbAAIAAAALAAIAAAAbAAMAAAALAAMAAAAbAAQAAAALAAQAAAAbAAUAAAALAAUAAAAbAAYAAAALAAYAAAAbAAcAAAALAAcAAAAbAAgAAAALAAQAAAAbAAkAAAALAAQAAAAbAAoAAAALAAQAAAAbAAsAAAALAAQAAAAbAAwAAAALAAIAAAAbAA0AAAALAAMAAAAbAA4AAAALAAoAAAAbAA8AAAALAAsAAAACAAAAAAACAAAAAAADAAAAAAACAAAAAAAEAAAAAAADAAAAAAAFAAAAAAAEAAAAAAAGAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAIAAAAAAAHAAAAAAAJAAAAAAAIAAAAAAAKAAAAAAAJAAAAAAALAAAAAAACAAAAAAAMAAAAAAADAAAAAAANAAAAAAAEAAAAAAAOAAAAAAAFAAAAAAAPAAAAAAAGAAAAAAAQAAAAAAAHAAAAAAARAAAAAAAIAAAAAAASAAAAAAAJAAAAAAATAAAAAAACAAAAAAAUAAAAAAADAAAAAAAVAAAAAAAEAAAAAAAWAAAAAAAFAAAAAAAXAAAAAAAGAAAAAAAYAAAAAAAHAAAAAAAZAAAAAAAIAAAAAAAaAAAAAAAJAAAAAAABAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAEAAAAIAAcAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAQAAAAAAAUAAAAAAAUAAAAAAAYAAAAAAAYAAAAAAAcAAAAAAAcAAAAAAAgAAAAAAAgAAAAAAAkAAAAAAAkAAAAAAAIAAAAAAAoAAAAAAAMAAAAAAAsAAAAAAAQAAAAAAAwAAAAAAAUAAAAAAA0AAAAAAAYAAAAAAA4AAAAAAAcAAAAAAA8AAAAAAAsAAAACAA8AAAAEAAsAAAADAA8AAAAFAAsAAAAEAA8AAAAGAAsAAAAFAA8AAAAHAAsAAAAGAA8AAAAIAAsAAAAHAA8AAAAJAAsAAAAIAA8AAAAEAAsAAAAJAA8AAAAFAAsAAAAKAA8AAAAGAAsAAAALAA8AAAAHAAsAAAAMAA8AAAAIAAsAAAANAA8AAAAJAAsAAAAOAA8AAAAEAAsAAAAPAA8AAAAFAAsAAAAQAA8AAAAGAAsAAAARAA8AAAAHAAsAAAASAA8AAAAIAAsAAAATAA8AAAAJAAsAAAAUAA8AAAAEAAsAAAAVAA8AAAAFAAsAAAAWAA8AAAAGAAsAAAAXAA8AAAAHAAsAAAAYAA8AAAAIAAcAAAAZAA8AAAAIAAcAAAAaAA8AAAAEAAsAAAABAA8AAAAEAAsAAAAXAA4AAAAIAAcAAAAXAA0AAAAIAAcAAAAXAAwAAAAIAAcAAAAXAAsAAAAIAAcAAAAXAAoAAAAIAAcAAAAXAAkAAAAIAAcAAAAXAAgAAAAIAAcAAAAXAAcAAAAIAAcAAAAXAAYAAAAIAAcAAAAXAAUAAAAIAAcAAAAXAAQAAAAIAAcAAAAXAAMAAAAIAAcAAAAXAAIAAAAIAAcAAAAXAAEAAAAIAAcAAAAWAAEAAAAIAAcAAAAVAAEAAAAIAAcAAAAUAAEAAAAIAAcAAAATAAEAAAAIAAcAAAASAAEAAAAIAAcAAAARAAEAAAAIAAcAAAAQAAEAAAAIAAcAAAAPAAEAAAAIAAcAAAAOAAEAAAAIAAcAAAANAAEAAAAIAAcAAAAMAAEAAAAIAAcAAAALAAEAAAAIAAcAAAAKAAEAAAAIAAcAAAAJAAEAAAAIAAcAAAAIAAEAAAAIAAcAAAAHAAEAAAAIAAcAAAAGAAEAAAAIAAcAAAAFAAEAAAAIAAcAAAAEAAEAAAAIAAcAAAADAAEAAAAIAAcAAAADAAIAAAAIAAcAAAACAAIAAAAIAAcAAAABAAIAAAAIAAcAAAABAAEAAAAIAAcAAAABAAMAAAAIAAcAAAABAAQAAAAIAAcAAAABAAUAAAAIAAcAAAABAAYAAAAIAAcAAAABAAcAAAAIAAcAAAABAAgAAAAIAAcAAAABAAkAAAAIAAcAAAABAAoAAAAIAAcAAAABAAsAAAAIAAcAAAABAAwAAAAIAAcAAAABAA0AAAAIAAcAAAABAA4AAAAIAAcAAAACAA4AAAAIAAcAAAACAA0AAAAIAAcAAAACAAwAAAAIAAcAAAACAAsAAAAIAAcAAAACAAoAAAAIAAcAAAACAAkAAAAIAAcAAAACAAgAAAAIAAcAAAACAAcAAAAIAAcAAAACAAYAAAAIAAcAAAACAAUAAAAIAAcAAAACAAQAAAAIAAcAAAACAAMAAAAIAAcAAAADAAMAAAAIAAcAAAADAAQAAAAIAAcAAAADAAUAAAAIAAcAAAADAAYAAAAIAAcAAAADAAcAAAAIAAcAAAADAAgAAAAIAAcAAAADAAkAAAAIAAcAAAADAAoAAAAIAAcAAAADAAsAAAAIAAcAAAADAAwAAAAIAAcAAAADAA0AAAAIAAcAAAADAA4AAAAIAAcAAAAEAA4AAAAIAAcAAAAEAA0AAAAIAAcAAAAEAAwAAAAIAAcAAAAEAAsAAAAIAAcAAAAEAAoAAAAIAAcAAAAEAAkAAAAIAAcAAAAEAAgAAAAIAAcAAAAEAAcAAAAIAAcAAAAEAAYAAAAIAAcAAAAEAAUAAAAIAAcAAAAEAAQAAAAIAAcAAAAEAAMAAAAIAAcAAAAEAAIAAAAIAAcAAAAFAAIAAAAIAAcAAAAFAAMAAAAIAAcAAAAFAAQAAAAIAAcAAAAFAAUAAAAIAAcAAAAFAAYAAAAIAAcAAAAFAAcAAAAIAAcAAAAFAAgAAAAIAAcAAAAFAAkAAAAIAAcAAAAFAAoAAAAIAAcAAAAFAAsAAAAIAAcAAAAFAAwAAAAIAAcAAAAFAA0AAAAIAAcAAAAFAA4AAAAIAAcAAAAGAA4AAAAIAAcAAAAGAA0AAAAIAAcAAAAGAAwAAAAIAAcAAAAGAAsAAAAIAAcAAAAGAAoAAAAIAAcAAAAGAAkAAAAIAAcAAAAGAAgAAAAIAAcAAAAGAAcAAAAIAAcAAAAGAAYAAAAIAAcAAAAGAAUAAAAIAAcAAAAGAAQAAAAIAAcAAAAGAAMAAAAIAAcAAAAGAAIAAAAIAAcAAAAHAAIAAAAIAAcAAAAHAAMAAAAIAAcAAAAHAAQAAAAIAAcAAAAHAAUAAAAIAAcAAAAHAAYAAAAIAAcAAAAHAAcAAAAIAAcAAAAHAAgAAAAIAAcAAAAHAAkAAAAIAAcAAAAHAAoAAAAIAAcAAAAHAAsAAAAIAAcAAAAHAAwAAAAIAAcAAAAHAA0AAAAIAAcAAAAHAA4AAAAIAAcAAAAIAA4AAAAIAAcAAAAIAA0AAAAIAAcAAAAIAAwAAAAIAAcAAAAIAAsAAAAIAAcAAAAIAAoAAAAIAAcAAAAIAAkAAAAIAAcAAAAIAAgAAAAIAAcAAAAIAAcAAAAIAAcAAAAIAAYAAAAIAAcAAAAIAAUAAAAIAAcAAAAIAAQAAAAIAAcAAAAIAAMAAAAIAAcAAAAIAAIAAAAIAAcAAAAJAAIAAAAIAAcAAAAJAAMAAAAIAAcAAAAJAAQAAAAIAAcAAAAJAAUAAAAIAAcAAAAJAAYAAAAIAAcAAAAJAAcAAAAIAAcAAAAJAAgAAAAIAAcAAAAJAAkAAAAIAAcAAAAJAAoAAAAIAAcAAAAJAAsAAAAIAAcAAAAJAAwAAAAIAAcAAAAJAA0AAAAIAAcAAAAJAA4AAAAIAAcAAAAKAA4AAAAIAAcAAAAKAA0AAAAIAAcAAAAKAAwAAAAIAAcAAAAKAAsAAAAIAAcAAAAKAAoAAAAIAAcAAAAKAAkAAAAIAAcAAAAKAAgAAAAIAAcAAAAKAAcAAAAIAAcAAAAKAAYAAAAIAAcAAAAKAAUAAAAIAAcAAAAKAAQAAAAIAAcAAAAKAAMAAAAIAAcAAAAKAAIAAAAIAAcAAAALAAIAAAAIAAcAAAALAAMAAAAIAAcAAAALAAQAAAAIAAcAAAALAAUAAAAIAAcAAAALAAYAAAAIAAcAAAALAAcAAAAIAAcAAAALAAgAAAAIAAcAAAALAAkAAAAIAAcAAAALAAoAAAAIAAcAAAALAAsAAAAIAAcAAAALAAwAAAAIAAcAAAALAA0AAAAIAAcAAAALAA4AAAAIAAcAAAAMAA4AAAAIAAcAAAAMAA0AAAAIAAcAAAAMAAwAAAAIAAcAAAAMAAsAAAAIAAcAAAAMAAoAAAAIAAcAAAAMAAkAAAAIAAcAAAAMAAgAAAAIAAcAAAAMAAcAAAAIAAcAAAAMAAYAAAAIAAcAAAAMAAUAAAAIAAcAAAAMAAQAAAAIAAcAAAAMAAMAAAAIAAcAAAAMAAIAAAAIAAcAAAANAAIAAAAIAAcAAAANAAMAAAAIAAcAAAANAAQAAAAIAAcAAAANAAUAAAAIAAcAAAANAAYAAAAIAAcAAAANAAcAAAAIAAcAAAANAAgAAAAIAAcAAAANAAkAAAAIAAcAAAANAAoAAAAIAAcAAAANAAsAAAAIAAcAAAANAAwAAAAIAAcAAAANAA0AAAAIAAcAAAANAA4AAAAIAAcAAAAOAA4AAAAIAAcAAAAOAA0AAAAIAAcAAAAOAAwAAAAIAAcAAAAOAAsAAAAIAAcAAAAOAAoAAAAIAAcAAAAOAAkAAAAIAAcAAAAOAAgAAAAIAAcAAAAOAAcAAAAIAAcAAAAOAAYAAAAIAAcAAAAOAAUAAAAIAAcAAAAOAAQAAAAIAAcAAAAOAAMAAAAIAAcAAAAOAAIAAAAIAAcAAAAPAAIAAAAIAAcAAAAPAAMAAAAIAAcAAAAPAAQAAAAIAAcAAAAPAAUAAAAIAAcAAAAPAAYAAAAIAAcAAAAPAAcAAAAIAAcAAAAPAAgAAAAIAAcAAAAPAAkAAAAIAAcAAAAPAAoAAAAIAAcAAAAPAAsAAAAIAAcAAAAPAAwAAAAIAAcAAAAPAA0AAAAIAAcAAAAPAA4AAAAIAAcAAAAQAA4AAAAIAAcAAAAQAA0AAAAIAAcAAAAQAAwAAAAIAAcAAAAQAAsAAAAIAAcAAAAQAAoAAAAIAAcAAAAQAAkAAAAIAAcAAAAQAAgAAAAIAAcAAAAQAAcAAAAIAAcAAAAQAAYAAAAIAAcAAAAQAAUAAAAIAAcAAAAQAAQAAAAIAAcAAAAQAAMAAAAIAAcAAAAQAAIAAAAIAAcAAAARAAIAAAAIAAcAAAARAAMAAAAIAAcAAAARAAQAAAAIAAcAAAARAAUAAAAIAAcAAAARAAYAAAAIAAcAAAARAAcAAAAIAAcAAAARAAgAAAAIAAcAAAARAAkAAAAIAAcAAAARAAoAAAAIAAcAAAARAAsAAAAIAAcAAAARAAwAAAAIAAcAAAARAA0AAAAIAAcAAAARAA4AAAAIAAcAAAASAA4AAAAIAAcAAAASAA0AAAAIAAcAAAASAAwAAAAIAAcAAAASAAsAAAAIAAcAAAASAAoAAAAIAAcAAAASAAkAAAAIAAcAAAASAAgAAAAIAAcAAAASAAcAAAAIAAcAAAASAAYAAAAIAAcAAAASAAUAAAAIAAcAAAASAAQAAAAIAAcAAAASAAMAAAAIAAcAAAASAAIAAAAIAAcAAAATAAIAAAAIAAcAAAATAAMAAAAIAAcAAAATAAQAAAAIAAcAAAATAAUAAAAIAAcAAAATAAYAAAAIAAcAAAATAAcAAAAIAAcAAAATAAgAAAAIAAcAAAATAAkAAAAIAAcAAAATAAoAAAAIAAcAAAATAAsAAAAIAAcAAAATAAwAAAAIAAcAAAATAA0AAAAIAAcAAAATAA4AAAAIAAcAAAAUAA4AAAAIAAcAAAAUAA0AAAAIAAcAAAAUAAwAAAAIAAcAAAAUAAsAAAAIAAcAAAAUAAoAAAAIAAcAAAAUAAkAAAAIAAcAAAAUAAgAAAAIAAcAAAAUAAcAAAAIAAcAAAAUAAYAAAAIAAcAAAAUAAUAAAAIAAcAAAAUAAQAAAAIAAcAAAAUAAMAAAAIAAcAAAAUAAIAAAAIAAcAAAAVAAIAAAAIAAcAAAAVAAMAAAAIAAcAAAAVAAQAAAAIAAcAAAAVAAUAAAAIAAcAAAAVAAYAAAAIAAcAAAAVAAcAAAAIAAcAAAAVAAgAAAAIAAcAAAAVAAkAAAAIAAcAAAAVAAoAAAAIAAcAAAAVAAsAAAAIAAcAAAAVAAwAAAAIAAcAAAAVAA0AAAAIAAcAAAAVAA4AAAAIAAcAAAAWAA4AAAAIAAcAAAAWAA0AAAAIAAcAAAAWAAwAAAAIAAcAAAAWAAsAAAAIAAcAAAAWAAoAAAAIAAcAAAAWAAkAAAAIAAcAAAAWAAgAAAAIAAcAAAAWAAcAAAAIAAcAAAAWAAYAAAAIAAcAAAAWAAUAAAAIAAcAAAAWAAQAAAAIAAcAAAAWAAMAAAAIAAcAAAAWAAIAAAAIAAcAAAAYAAEAAAAIAAcAAAAYAAIAAAAIAAcAAAAYAAMAAAAIAAcAAAAYAAQAAAAIAAcAAAAYAAUAAAAIAAcAAAAYAAYAAAAIAAcAAAAYAAcAAAAIAAcAAAAYAAgAAAAIAAcAAAAYAAkAAAAIAAcAAAAYAAoAAAAIAAcAAAAYAAsAAAAIAAcAAAAYAAwAAAAIAAcAAAAYAA0AAAAIAAcAAAAYAA4AAAAIAAcAAAAZAA4AAAAIAAcAAAAZAA0AAAAIAAcAAAAZAAwAAAAIAAcAAAAZAAsAAAAIAAcAAAAZAAoAAAAIAAcAAAAZAAkAAAAIAAcAAAAZAAgAAAAIAAcAAAAZAAcAAAAIAAcAAAAZAAYAAAAIAAcAAAAZAAUAAAAIAAcAAAAZAAQAAAAIAAcAAAAZAAMAAAAIAAcAAAAZAAIAAAAIAAcAAAAZAAEAAAAIAAcAAAAaAAEAAAAIAAcAAAAaAAIAAAAIAAcAAAAaAAMAAAAIAAcAAAAaAAQAAAAIAAcAAAAaAAUAAAAIAAcAAAAaAAYAAAAIAAcAAAAaAAcAAAAIAAcAAAAaAAgAAAAIAAcAAAAaAAkAAAAIAAcAAAAaAAoAAAAIAAcAAAAaAAsAAAAIAAcAAAAaAAwAAAAIAAcAAAAaAA0AAAAIAAcAAAAaAA4AAAAIAAcAAAA=")
+tile_set = ExtResource("1_pcird")
+
+[node name="asb" parent="." unique_id=162240676 instance=ExtResource("4_lvb74")]
+position = Vector2(166, 106)
+
+[node name="asb2" parent="." unique_id=1174665175 instance=ExtResource("4_lvb74")]
+position = Vector2(843, 447)
+
+[node name="asb3" parent="." unique_id=306562862 instance=ExtResource("4_lvb74")]
+position = Vector2(955, 162)
+
+[node name="asb4" parent="." unique_id=1328575385 instance=ExtResource("4_lvb74")]
+position = Vector2(159, 484)
+
+[node name="tree" parent="." unique_id=756795118 instance=ExtResource("5_t8abu")]
+position = Vector2(673.99994, 131.99998)
+
+[node name="tree2" parent="." unique_id=1889905154 instance=ExtResource("5_t8abu")]
+position = Vector2(766, 132)
+
+[node name="tree3" parent="." unique_id=944882067 instance=ExtResource("5_t8abu")]
+position = Vector2(854, 128)
+
+[node name="tree4" parent="." unique_id=836867023 instance=ExtResource("5_t8abu")]
+position = Vector2(1013.99994, 267)
+
+[node name="tree5" parent="." unique_id=1887957668 instance=ExtResource("5_t8abu")]
+position = Vector2(674, 298.00003)
+
+[node name="tree6" parent="." unique_id=863178966 instance=ExtResource("5_t8abu")]
+position = Vector2(1050, 112.000015)
+
+[node name="tree7" parent="." unique_id=1294849775 instance=ExtResource("5_t8abu")]
+position = Vector2(953, 111)
+
+[node name="tree8" parent="." unique_id=174307096 instance=ExtResource("5_t8abu")]
+position = Vector2(890, 298)
+
+[node name="tree9" parent="." unique_id=1745765163 instance=ExtResource("5_t8abu")]
+position = Vector2(794, 302)
+
+[node name="tree10" parent="." unique_id=1428064766 instance=ExtResource("5_t8abu")]
+position = Vector2(833, 194.00003)
+
+[node name="tree11" parent="." unique_id=1769090749 instance=ExtResource("5_t8abu")]
+position = Vector2(727.99994, 205)
+
+[node name="tree12" parent="." unique_id=540653787 instance=ExtResource("5_t8abu")]
+position = Vector2(953, 187)
+
+[node name="tree13" parent="." unique_id=1435790958 instance=ExtResource("5_t8abu")]
+position = Vector2(377.00006, 176.00002)
+
+[node name="tree14" parent="." unique_id=2075950312 instance=ExtResource("5_t8abu")]
+position = Vector2(504, 241)
+
+[node name="tree15" parent="." unique_id=1143796405 instance=ExtResource("5_t8abu")]
+position = Vector2(360, 394)
+
+[node name="tree16" parent="." unique_id=766699808 instance=ExtResource("5_t8abu")]
+position = Vector2(227.00005, 288)
+
+[node name="tree17" parent="." unique_id=197750470 instance=ExtResource("5_t8abu")]
+position = Vector2(743.99994, 491)
+
+[node name="tree18" parent="." unique_id=1081140179 instance=ExtResource("5_t8abu")]
+position = Vector2(547.99994, 488)
+
+[node name="tree19" parent="." unique_id=1959948846 instance=ExtResource("5_t8abu")]
+position = Vector2(103.00003, 284)
+
+[node name="tree20" parent="." unique_id=1163655743 instance=ExtResource("5_t8abu")]
+position = Vector2(575, 133.00002)
+
+[node name="tree21" parent="." unique_id=327323453 instance=ExtResource("5_t8abu")]
+position = Vector2(262.00003, 495)
+
+[node name="tree22" parent="." unique_id=1750082545 instance=ExtResource("5_t8abu")]
+position = Vector2(92.000015, 494)
+
+[node name="tree23" parent="." unique_id=2092072928 instance=ExtResource("5_t8abu")]
+position = Vector2(267, 128.00003)
+
+[node name="tree24" parent="." unique_id=1973664751 instance=ExtResource("5_t8abu")]
+position = Vector2(1050, 365)
+
+[node name="tree25" parent="." unique_id=309052762 instance=ExtResource("5_t8abu")]
+position = Vector2(661, 433)
+
+[node name="tree26" parent="." unique_id=2028410845 instance=ExtResource("5_t8abu")]
+position = Vector2(491, 335)
+
+[node name="tree27" parent="." unique_id=159845480 instance=ExtResource("5_t8abu")]
+position = Vector2(462, 111.000015)
+
+[node name="tree28" parent="." unique_id=648521877 instance=ExtResource("5_t8abu")]
+position = Vector2(131, 142)
+
+[node name="tree29" parent="." unique_id=560401908 instance=ExtResource("5_t8abu")]
+position = Vector2(404.99997, 263)

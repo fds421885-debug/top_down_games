@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bkrj61r6x6du0"]
+
+[ext_resource type="Script" uid="uid://cmfi871c6r4j7" path="res://Scripts/tower.gd" id="1_mh5eo"]
+[ext_resource type="Texture2D" uid="uid://q5pkdfs044u5" path="res://Assets/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Tower.png" id="1_ndpwd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7b7a"]
+size = Vector2(81, 159)
+
+[node name="tower" type="StaticBody2D" unique_id=2046613758 node_paths=PackedStringArray("health_bar") groups=["tower"]]
+script = ExtResource("1_mh5eo")
+health_bar = NodePath("ProgressBar")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1525810436]
+texture_filter = 1
+texture = ExtResource("1_ndpwd")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=143930170]
+offset_left = -2.0
+offset_top = -47.0
+offset_right = 2.0
+offset_bottom = -20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1856078602]
+position = Vector2(-2.5, 10.5)
+shape = SubResource("RectangleShape2D_g7b7a")

@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://r730yoauq0b5"]
+
+[ext_resource type="PackedScene" uid="uid://cdurehs1inibg" path="res://Scenes/back_ground.tscn" id="1_28flt"]
+[ext_resource type="Script" uid="uid://cipqlgw7xvdfn" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://bn33ykhi7kvt0" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Swords/Swords.png" id="3_1ehe0"]
+[ext_resource type="Script" uid="uid://3w5mwfyr15mh" path="res://Scripts/control.gd" id="4_ce3w2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ce3w2"]
+load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n45e2"]
+load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_opfnp"]
+load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cp0ys"]
+load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yhxw7"]
+load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
+
+[node name="MainMenu" type="Control" unique_id=370220947 node_paths=PackedStringArray("start_button", "exit_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48xlc")
+start_button = NodePath("button/start")
+exit_button = NodePath("button/quitr")
+game_scene_path = "uid://brch3d0oybrmv"
+
+[node name="back ground" parent="." unique_id=26277604 instance=ExtResource("1_28flt")]
+
+[node name="start" type="Node2D" parent="." unique_id=72021602]
+
+[node name="TextureRect" type="Sprite2D" parent="start" unique_id=2028311648]
+texture_filter = 1
+position = Vector2(837, 537)
+texture = ExtResource("3_1ehe0")
+region_enabled = true
+region_rect = Rect2(23, 0, 110, 130)
+
+[node name="TextureRect2" type="Sprite2D" parent="start" unique_id=128364855]
+texture_filter = 1
+position = Vector2(1077, 537)
+texture = ExtResource("3_1ehe0")
+region_enabled = true
+region_rect = Rect2(320, 20, 92, 88)
+region_filter_clip_enabled = true
+
+[node name="TextureRect3" type="Sprite2D" parent="start" unique_id=1133337296]
+texture_filter = 1
+position = Vector2(951, 538)
+texture = ExtResource("3_1ehe0")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect4" type="Sprite2D" parent="start" unique_id=1583948503]
+texture_filter = 1
+position = Vector2(908, 538)
+texture = ExtResource("3_1ehe0")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect5" type="Sprite2D" parent="start" unique_id=544421337]
+texture_filter = 1
+position = Vector2(1014, 537)
+texture = ExtResource("3_1ehe0")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="quite" type="Node2D" parent="." unique_id=1201708651]
+position = Vector2(661, 354)
+rotation = -3.1436968
+scale = Vector2(0.5, 0.5)
+
+[node name="TextureRect" type="Sprite2D" parent="quite" unique_id=293877146]
+texture_filter = 1
+position = Vector2(837, 537)
+texture = SubResource("CompressedTexture2D_ce3w2")
+region_enabled = true
+region_rect = Rect2(16, 128, 128, 128)
+
+[node name="TextureRect2" type="Sprite2D" parent="quite" unique_id=1423062949]
+texture_filter = 1
+position = Vector2(1077, 537)
+texture = SubResource("CompressedTexture2D_n45e2")
+region_enabled = true
+region_rect = Rect2(320, 20, 92, 88)
+region_filter_clip_enabled = true
+
+[node name="TextureRect3" type="Sprite2D" parent="quite" unique_id=2129506088]
+texture_filter = 1
+position = Vector2(951, 538)
+texture = SubResource("CompressedTexture2D_opfnp")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect4" type="Sprite2D" parent="quite" unique_id=1819997002]
+texture_filter = 1
+position = Vector2(908, 538)
+texture = SubResource("CompressedTexture2D_cp0ys")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect5" type="Sprite2D" parent="quite" unique_id=1284433843]
+texture_filter = 1
+position = Vector2(1014, 537)
+texture = SubResource("CompressedTexture2D_yhxw7")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="button" type="Control" parent="." unique_id=40711578]
+texture_filter = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="start" type="Button" parent="button" unique_id=828795391]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 491.0
+offset_right = 322.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.104493, 0.10449313, 0.10449346, 1)
+theme_override_font_sizes/font_size = 32
+text = "أبدأ اللعب"
+flat = true
+
+[node name="quitr" type="Button" parent="button" unique_id=1756784856]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 39.0
+offset_right = 1116.0
+offset_bottom = 135.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.7018091, 0, 0.123920225, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9083292, 0.17033285, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "خروج"
+flat = true
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=1718168935]
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer" unique_id=1125576251]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="." unique_id=463955954 node_paths=PackedStringArray("start_button", "start_button_bg", "exit_button", "exit_button_bg", "transition_rect")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_ce3w2")
+start_button = NodePath("../button/start")
+start_button_bg = NodePath("../start")
+exit_button = NodePath("../button/quitr")
+exit_button_bg = NodePath("")
+transition_rect = NodePath("../TransitionLayer/ColorRect")
+game_scene_path = "uid://brch3d0oybrmv"

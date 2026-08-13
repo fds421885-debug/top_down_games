@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://kapgl3a7bar2"]
+
+[ext_resource type="Script" uid="uid://bulyyl3svrka2" path="res://Scripts/scene_manager.gd" id="1_mk1ro"]
+
+[node name="SceneManager" type="CanvasLayer" unique_id=1927178025]
+layer = 1333
+script = ExtResource("1_mk1ro")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1041010723]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

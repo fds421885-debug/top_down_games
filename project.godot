@@ -11,18 +11,36 @@ config_version=5
 [application]
 
 config/name="top_down_games"
-run/main_scene="uid://brch3d0oybrmv"
+run/main_scene="uid://r730yoauq0b5"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LootLockerSDK="uid://pchcwak7fv2u"
+SupabaseManager="*uid://csnwfyu3lhstb"
+SaveManager="*uid://dd5adeuv2y3jr"
+NamePrompt="*uid://cmt5uob00iui8"
+CloudManager="*uid://cfioj8osoyiq8"
+SceneManager="*uid://bulyyl3svrka2"
 
 [display]
 
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/LootLockerSDK/plugin.cfg")
+
 [global_group]
 
 enemy=""
 player=""
+tower=""
+
+[internationalization]
+
+rendering/force_right_to_left_layout_direction=true
 
 [physics]
 
