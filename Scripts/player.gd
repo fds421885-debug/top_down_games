@@ -21,7 +21,7 @@ extends CharacterBody2D
 @export var attack_area: Area2D
 @export var max_health: int = 100
 @export var health_bar: ProgressBar
-@export var attack_hit_frame: int = 2 # حدد من الإنسبيكتور رقم الفريم اللي تبي الضربة تحصل فيه
+@export var attack_hit_frame: int = 2
 
 var current_health: int = 100
 var is_dashing: bool = false
@@ -32,7 +32,7 @@ var dash_cooldown_left: float = 0.0
 var current_dash_dir: Vector2 = Vector2.RIGHT
 
 var enemies_in_range: Array = []
-var has_dealt_damage: bool = false # عشان نضمن أن الضربة تحصل مرة وحدة بس في الهجمة الواحدة
+var has_dealt_damage: bool = false
 
 var joystick_touch_index: int = -1
 var joystick_origin: Vector2 = Vector2.ZERO
@@ -61,23 +61,33 @@ func _input(event: InputEvent) -> void:
 	if is_dead:
 		return
 
+	# دعم الكيبورد للكمبيوتر (اختياري)
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_SPACE:
+			trigger_dash()
+		elif event.keycode == KEY_E or event.keycode == KEY_ENTER:
+			trigger_attack()
+
 	var screen_width = get_viewport().get_visible_rect().size.x
 
+	# نظام اللمس (اليسار للحركة، اليمين للضرب والداش)
 	if event is InputEventScreenTouch:
 		if event.pressed:
-			var current_time = Time.get_ticks_msec()
-			if current_time - last_tap_time < double_tap_threshold:
-				trigger_dash()
-				last_tap_time = 0
-			else:
-				last_tap_time = current_time
-
 			if event.position.x < screen_width / 2:
+				# الجهة اليسار: عصا التحكم بالحركة (Joystick)
 				if joystick_touch_index == -1:
 					joystick_touch_index = event.index
 					joystick_origin = event.position
 					joystick_vector = Vector2.ZERO
 			else:
+				# الجهة اليمين: للداش والهجوم بالضغط المزدوج أو السحب
+				var current_time = Time.get_ticks_msec()
+				if current_time - last_tap_time < double_tap_threshold:
+					trigger_dash()
+					last_tap_time = 0
+				else:
+					last_tap_time = current_time
+				
 				if right_touch_index == -1:
 					right_touch_index = event.index
 					right_touch_start_y = event.position.y
@@ -100,8 +110,9 @@ func _input(event: InputEvent) -> void:
 				joystick_vector = Vector2.ZERO
 
 		elif event.index == right_touch_index:
+			# سحب في الجهة اليمين ينفذ هجوم
 			var swipe_diff = event.position.y - right_touch_start_y
-			if swipe_diff < -30 and not is_attacking:
+			if abs(swipe_diff) > 20 and not is_attacking:
 				trigger_attack()
 				right_touch_index = -1
 
@@ -125,7 +136,6 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		move_and_slide()
 		
-		# فحص فريم الهجوم الدقيق لتنفيذ الضربة
 		if animated_sprite and animated_sprite.animation == anim_attack:
 			if animated_sprite.frame == attack_hit_frame and not has_dealt_damage:
 				has_dealt_damage = true
@@ -133,6 +143,7 @@ func _physics_process(delta: float) -> void:
 				
 		return
 
+	# دمج حركة التاتش باليسار مع أزرار الكيبورد
 	var direction = joystick_vector
 	if direction == Vector2.ZERO:
 		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -219,5 +230,5 @@ func die() -> void:
 	if is_dead:
 		return
 	is_dead = true
-	print("مات اللاعب!")
+	print("مات اللاعب! جاري إعادة تحميل المرحلة...")
 	get_tree().reload_current_scene()

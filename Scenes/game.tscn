@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cuqd8lgpigid5" path="res://Scenes/tree.tscn" id="9_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://bkrj61r6x6du0" path="res://Scenes/tower.tscn" id="10_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://kapgl3a7bar2" path="res://Scenes/scene_manager.tscn" id="11_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://7cc20dxhfnnr" path="res://Scenes/pause_menu.tscn" id="12_rku1e"]
 
 [sub_resource type="Resource" id="Resource_qxrlw"]
 script = ExtResource("3_3dryh")
@@ -18,12 +19,20 @@ spawn_interval = 3.0
 enemy_types = Array[PackedScene]([ExtResource("4_wowpa")])
 metadata/_custom_type_script = "uid://dxn0e4hs5fyig"
 
+[sub_resource type="Resource" id="Resource_vmhho"]
+script = ExtResource("3_3dryh")
+wave_title = "Wave 2"
+kills_to_advance = 20
+spawn_interval = 2.5
+enemy_types = Array[PackedScene]([ExtResource("4_wowpa")])
+metadata/_custom_type_script = "uid://dxn0e4hs5fyig"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g7b7a"]
 size = Vector2(1161, 817.5)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_v158k"]
-vertices = PackedVector2Array(1033.2969, 435.79688, 944, 435.79688, 828.2969, 371.35156, 828.2969, 206.79688, 2599.789, -226.67188, 1033.2969, 600.35156, 2571.1875, 1087.7109, -812.6875, 1344.1094, 944, 600.35156, 183.29688, 507.35156, 739, 371.35156, 183.29688, 342.79688, 739, 206.79688, 94, 507.35156, -609.1328, -448.35938, 94, 342.79688)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 10, 2, 1, 8, 7), PackedInt32Array(4, 6, 5, 0), PackedInt32Array(10, 9, 11, 12), PackedInt32Array(13, 9, 7), PackedInt32Array(13, 7, 14, 15), PackedInt32Array(15, 14, 4, 12), PackedInt32Array(12, 11, 15), PackedInt32Array(12, 4, 3)])
+vertices = PackedVector2Array(1021, 597, 2571.1875, 1087.7109, -812.6875, 1344.1094, 953, 597, 868, 365, 868, 203.79688, 2599.789, -226.67188, 1021, 435.79688, -609.1328, -448.35938, 800, 203.79688, 953, 435.79688, 171, 504, 171, 342.79688, 800, 365, 103, 504, 103, 342.79688)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 1, 7), PackedInt32Array(8, 6, 5, 9), PackedInt32Array(10, 3, 11, 12, 13), PackedInt32Array(11, 3, 2, 14), PackedInt32Array(14, 2, 8, 15), PackedInt32Array(15, 8, 9, 12), PackedInt32Array(12, 9, 13), PackedInt32Array(10, 13, 4, 7), PackedInt32Array(1, 0, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(2581, 1097, 2610, -236, -618, -459, -824, 1355)])
 
 [node name="Game" type="Node2D" unique_id=1770986592]
@@ -104,7 +113,7 @@ tile_set = ExtResource("3_ldgsr")
 [node name="WaveSpawner" type="Node2D" parent="." unique_id=25390337 node_paths=PackedStringArray("spawn_markers", "wave_label")]
 script = ExtResource("2_qxrlw")
 spawn_markers = [NodePath("spawn/Marker2D"), NodePath("spawn/Marker2D2"), NodePath("spawn/Marker2D3"), NodePath("spawn/Marker2D4")]
-waves = Array[ExtResource("3_3dryh")]([SubResource("Resource_qxrlw")])
+waves = Array[ExtResource("3_3dryh")]([SubResource("Resource_qxrlw"), SubResource("Resource_vmhho")])
 wave_label = NodePath("../WaveUI/WaveLabel")
 
 [node name="spawn" type="Node2D" parent="WaveSpawner" unique_id=313021479]
@@ -168,7 +177,7 @@ navigation_layers = 3
 [node name="tree" type="Node2D" parent="NavRegion" unique_id=1321927877]
 
 [node name="tree" parent="NavRegion/tree" unique_id=756795118 instance=ExtResource("9_h4fw4")]
-position = Vector2(784, 284)
+position = Vector2(835.99994, 281)
 
 [node name="tree2" parent="NavRegion/tree" unique_id=1948621429 instance=ExtResource("9_h4fw4")]
 position = Vector2(139, 420)
@@ -199,3 +208,9 @@ theme_override_font_sizes/font_size = 64
 text = "Wave 1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PauseMenu" parent="." unique_id=1979350304 instance=ExtResource("12_rku1e")]
+offset_left = -1149.0
+offset_top = 31.0
+offset_right = -1149.0
+offset_bottom = 31.0

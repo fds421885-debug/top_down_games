@@ -31,5 +31,5 @@ func update_health_bar() -> void:
 			health_bar.modulate = Color.WHITE
 
 func destroy_tower() -> void:
-	print("دُمّر البرج! انتهت اللعبة.")
+	print("دُمّر البرج! جاري إعادة تحميل المرحلة...")
 	get_tree().reload_current_scene()

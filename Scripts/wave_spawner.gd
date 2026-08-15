@@ -5,7 +5,8 @@ extends Node2D
 @export var wave_label: Label              # عرض اسم الويف أو رسالة الفوز
 
 var current_wave: int = 0
-var current_kills: int = 0
+var current_kills: int = 0 # قتلات الويف الحالي
+var total_kills_session: int = 0 # إجمالي القتلات المتراكمة
 var timer: float = 0.0
 
 func _ready() -> void:
@@ -14,16 +15,20 @@ func _ready() -> void:
 	if wave_label:
 		wave_label.modulate.a = 0.0
 	
-	# استرجاع الويف المحفوظ من السحابة (إذا كان موجوداً)
-	if CloudManager and CloudManager.current_wave > 0:
-		current_wave = CloudManager.current_wave - 1
-		if current_wave < 0: current_wave = 0
+	# استرجاع الويف والقتلات القديمة من السحابة لو اللاعب عنده حساب قديم
+	if CloudManager:
+		if CloudManager.current_wave > 0:
+			current_wave = CloudManager.current_wave - 1
+			if current_wave < 0: current_wave = 0
+		
+		# نسحب القتلات القديمة المخزنة بالسحابة عشان نبني عليها
+		total_kills_session = CloudManager.current_kills
 	
 	if not waves.is_empty():
 		start_wave()
 
 func start_wave() -> void:
-	current_kills = 0
+	current_kills = 0 # نصفر قتلات الويف الجديد فقط، بينما total_kills_session محفوظ
 	
 	if current_wave >= waves.size():
 		return
@@ -40,7 +45,6 @@ func play_wave_intro(title_text: String) -> void:
 	if not wave_label:
 		return
 		
-	# إبطاء سرعة اللعبة (حركة سينمائية Slow-Mo)
 	Engine.time_scale = 0.25
 	
 	wave_label.text = title_text
@@ -126,8 +130,14 @@ func on_enemy_defeated() -> void:
 		return
 		
 	current_kills += 1
+	total_kills_session += 1 # نزيد إجمالي القتلات التراكمي
+	
 	var wave_data = waves[current_wave]
-	print("القتلى: ", current_kills, " / ", wave_data.kills_to_advance)
+	print("قتلات الويف الحالي: ", current_kills, " | إجمالي القتلات المتراكمة: ", total_kills_session)
+	
+	# تحديث سحابي مباشر بالقتلات المتراكمة الجديدة
+	if CloudManager:
+		CloudManager.update_progress(current_wave + 1, total_kills_session)
 	
 	if current_kills >= wave_data.kills_to_advance:
 		advance_to_next_wave()
@@ -135,9 +145,9 @@ func on_enemy_defeated() -> void:
 func advance_to_next_wave() -> void:
 	current_wave += 1
 	if current_wave < waves.size():
-		# تحديث الحفظ السحابي في سوبابيس بالويف الجديد والقتلات
+		# تحديث الويف والقتلات في السحابة لما يترقى للويف الجديد
 		if CloudManager:
-			CloudManager.update_progress(current_wave + 1, current_kills)
+			CloudManager.update_progress(current_wave + 1, total_kills_session)
 			
 		start_wave()
 	else:

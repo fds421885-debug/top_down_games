@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="top_down_games"
-run/main_scene="uid://r730yoauq0b5"
+run/main_scene="uid://cult8kt0i8q3j"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -30,7 +30,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/LootLockerSDK/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dbd4vy5esx1vk"]
+
+[ext_resource type="Script" uid="uid://ctcgdprddfsgw" path="res://Scripts/player_hud.gd" id="1_pk5j4"]
+
+[node name="PlayerHUD" type="Control" unique_id=943000528 node_paths=PackedStringArray("name_label", "wave_label", "kills_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pk5j4")
+name_label = NodePath("VBoxContainer/NameLabel")
+wave_label = NodePath("VBoxContainer/WaveLabel")
+kills_label = NodePath("VBoxContainer/KillsLabel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=644648260]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 2.0
+offset_right = 117.0
+offset_bottom = 79.0
+
+[node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=2118595534]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+
+[node name="WaveLabel" type="Label" parent="VBoxContainer" unique_id=713208846]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+
+[node name="KillsLabel" type="Label" parent="VBoxContainer" unique_id=2069258759]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
