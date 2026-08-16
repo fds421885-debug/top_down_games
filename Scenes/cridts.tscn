@@ -1,0 +1,1040 @@
+[gd_scene format=3 uid="uid://b7d1rijcrmqhl"]
+
+[ext_resource type="Script" uid="uid://biulwwfxp5ymc" path="res://Scripts/controls_popup.gd" id="1_5ajuh"]
+[ext_resource type="Texture2D" uid="uid://cspio64gks5kk" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png" id="2_i635p"]
+[ext_resource type="Texture2D" uid="uid://bqjymaj3gfjvp" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png" id="3_ssm3w"]
+[ext_resource type="Texture2D" uid="uid://2otp25uhohuq" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_09.png" id="4_nc0et"]
+[ext_resource type="Texture2D" uid="uid://dju74kgf203jh" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_08.png" id="5_5ajuh"]
+
+[node name="ControlsPopup" type="Control" unique_id=1316260677 node_paths=PackedStringArray("popup_panel", "open_button", "close_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_5ajuh")
+popup_panel = NodePath("Control")
+open_button = NodePath("TextureButton2")
+close_button = NodePath("Control/TextureButton")
+
+[node name="Control" type="Control" parent="." unique_id=1279499232]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="puse2" type="Control" parent="Control" unique_id=685594117]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 800.0
+offset_top = 343.0
+offset_right = 800.0
+offset_bottom = 343.0
+scale = Vector2(1.7, 1.7)
+
+[node name="ColorRect" type="ColorRect" parent="Control/puse2" unique_id=245600431]
+layout_mode = 0
+offset_left = -871.99994
+offset_top = -496.00003
+offset_right = 776.00006
+offset_bottom = 398.99997
+color = Color(0, 0, 0, 0.0627451)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/puse2" unique_id=1037614635]
+position = Vector2(-111, -113)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(45, 43, 83, 85)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Control/puse2" unique_id=1265538271]
+position = Vector2(-46, -110)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 49, 64, 79)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Control/puse2" unique_id=1094896072]
+position = Vector2(17, -110)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 49, 64, 79)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Control/puse2" unique_id=1605659904]
+position = Vector2(80, -109)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 49, 64, 79)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Control/puse2" unique_id=471318700]
+position = Vector2(153, -112)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 43, 83, 85)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/puse2" unique_id=1504616913]
+position = Vector2(150, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 192, 79, 64)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Control/puse2" unique_id=686591807]
+position = Vector2(-109, -41)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(49, 192, 79, 64)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Control/puse2" unique_id=624157444]
+position = Vector2(-110, 23)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(49, 192, 79, 64)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Control/puse2" unique_id=801067371]
+position = Vector2(-113, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(44, 320, 84, 103)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Control/puse2" unique_id=494055036]
+position = Vector2(-44, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Control/puse2" unique_id=1220527800]
+position = Vector2(20, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Control/puse2" unique_id=2096755501]
+position = Vector2(82, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Control/puse2" unique_id=1509384929]
+position = Vector2(80, 22)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Control/puse2" unique_id=403613378]
+position = Vector2(16, 21)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Control/puse2" unique_id=278684255]
+position = Vector2(-48, 21)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Control/puse2" unique_id=1651786336]
+position = Vector2(-39, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 103)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Control/puse2" unique_id=844121231]
+position = Vector2(24, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 103)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Control/puse2" unique_id=1201421750]
+position = Vector2(88, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 103)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Control/puse2" unique_id=462013438]
+position = Vector2(151, 24)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 192, 79, 64)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Control/puse2" unique_id=650989317]
+position = Vector2(153, 102)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 320, 84, 103)
+
+[node name="back_ground_button" type="Sprite2D" parent="Control/puse2" unique_id=569351811]
+texture_filter = 1
+position = Vector2(-1041.7648, -478.8235)
+scale = Vector2(0.5, 0.3)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(28, 60, 100, 68)
+
+[node name="back_ground_button2" type="Sprite2D" parent="Control/puse2/back_ground_button" unique_id=1956399650]
+texture_filter = 1
+position = Vector2(0, 114)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(28, 320, 100, 104)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button3" type="Sprite2D" parent="Control/puse2/back_ground_button" unique_id=2077874902]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(28, 192, 100, 64)
+
+[node name="center" type="Sprite2D" parent="Control/puse2/back_ground_button" unique_id=1204033371]
+texture_filter = 1
+position = Vector2(82, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center2" type="Sprite2D" parent="Control/puse2/back_ground_button/center" unique_id=251520770]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center3" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2" unique_id=94552099]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3" unique_id=2090021824]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3" unique_id=2143576762]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3" unique_id=1703150611]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4" unique_id=1078641514]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4" unique_id=1661466222]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4" unique_id=2044034754]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4/center5" unique_id=190693483]
+texture_filter = 1
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4/center5/center6" unique_id=629377520]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4/center5/center6" unique_id=778384404]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4/center5" unique_id=388900282]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center3/center4/center5" unique_id=1749473067]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2" unique_id=1618362250]
+texture_filter = 1
+position = Vector2(240, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4" unique_id=1154533750]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4" unique_id=1563052290]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4" unique_id=425427167]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4" unique_id=266169135]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4" unique_id=1586845562]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4" unique_id=966784025]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4/center5" unique_id=606835808]
+texture_filter = 1
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4/center5/center6" unique_id=2064095315]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4/center5/center6" unique_id=392012882]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4/center5" unique_id=931291857]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center4/center4/center5" unique_id=1447300938]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2" unique_id=144925403]
+texture_filter = 1
+position = Vector2(316, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5" unique_id=2078574302]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5" unique_id=558015210]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5" unique_id=864300177]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4" unique_id=1815333562]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4" unique_id=1155373018]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4" unique_id=1930415601]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4/center5" unique_id=435885024]
+texture_filter = 1
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4/center5/center6" unique_id=99407771]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4/center5/center6" unique_id=1115763591]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4/center5" unique_id=1544076403]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2/center5/center4/center5" unique_id=581340276]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2" unique_id=998118505]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center/center2" unique_id=816512201]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button/center" unique_id=2056291057]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button/center" unique_id=1566038305]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button4" type="Sprite2D" parent="Control/puse2/back_ground_button" unique_id=1964298067]
+texture_filter = 1
+position = Vector2(662, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(320, 60, 84, 68)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse2/back_ground_button" unique_id=968688711]
+texture_filter = 1
+position = Vector2(662, 64)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(320, 192, 84, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse2/back_ground_button" unique_id=926050950]
+texture_filter = 1
+position = Vector2(660, 118)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(320, 320, 84, 111)
+
+[node name="puse" type="Control" parent="Control" unique_id=2135032609]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 423.0
+offset_top = 339.99997
+offset_right = 423.0
+offset_bottom = 339.99997
+scale = Vector2(1.7, 1.7)
+
+[node name="ColorRect" type="ColorRect" parent="Control/puse" unique_id=1091924705]
+layout_mode = 0
+offset_left = -1532.1177
+offset_top = -1160.5883
+offset_right = 115.882324
+offset_bottom = -265.58826
+color = Color(0, 0, 0, 0.0627451)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/puse" unique_id=416973041]
+visible = false
+position = Vector2(-111, -113)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(45, 43, 83, 85)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Control/puse" unique_id=328201662]
+position = Vector2(-46, -110)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 49, 64, 79)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Control/puse" unique_id=963000640]
+position = Vector2(17, -110)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 49, 64, 79)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Control/puse" unique_id=686251034]
+position = Vector2(80, -109)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 49, 64, 79)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Control/puse" unique_id=984010816]
+position = Vector2(153, -112)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 43, 83, 85)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Control/puse" unique_id=1108612929]
+position = Vector2(150, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 192, 79, 64)
+
+[node name="Sprite2D9" type="Sprite2D" parent="Control/puse" unique_id=59852508]
+visible = false
+position = Vector2(-109, -41)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(49, 192, 79, 64)
+
+[node name="Sprite2D10" type="Sprite2D" parent="Control/puse" unique_id=991699003]
+visible = false
+position = Vector2(-110, 23)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(49, 192, 79, 64)
+
+[node name="Sprite2D11" type="Sprite2D" parent="Control/puse" unique_id=639265745]
+visible = false
+position = Vector2(-113, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(44, 320, 84, 103)
+
+[node name="Sprite2D12" type="Sprite2D" parent="Control/puse" unique_id=1479137393]
+position = Vector2(-44, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D13" type="Sprite2D" parent="Control/puse" unique_id=1016873183]
+position = Vector2(20, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D14" type="Sprite2D" parent="Control/puse" unique_id=1921592690]
+position = Vector2(82, -40)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D15" type="Sprite2D" parent="Control/puse" unique_id=1774545295]
+position = Vector2(80, 22)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D16" type="Sprite2D" parent="Control/puse" unique_id=2015800091]
+position = Vector2(16, 21)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D17" type="Sprite2D" parent="Control/puse" unique_id=1710812518]
+position = Vector2(-48, 21)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="Sprite2D18" type="Sprite2D" parent="Control/puse" unique_id=158870971]
+position = Vector2(-39, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 103)
+
+[node name="Sprite2D19" type="Sprite2D" parent="Control/puse" unique_id=377186620]
+position = Vector2(24, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 103)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Control/puse" unique_id=777830666]
+position = Vector2(88, 103)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 103)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Control/puse" unique_id=393994451]
+position = Vector2(151, 24)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 192, 79, 64)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Control/puse" unique_id=78699446]
+position = Vector2(153, 102)
+texture = ExtResource("2_i635p")
+region_enabled = true
+region_rect = Rect2(320, 320, 84, 103)
+
+[node name="back_ground_button" type="Sprite2D" parent="Control/puse" unique_id=582890225]
+texture_filter = 1
+position = Vector2(-258.82355, -115.294106)
+scale = Vector2(0.5, 0.3)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(28, 60, 100, 68)
+
+[node name="back_ground_button2" type="Sprite2D" parent="Control/puse/back_ground_button" unique_id=212072938]
+texture_filter = 1
+position = Vector2(0, 114)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(28, 320, 100, 104)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button3" type="Sprite2D" parent="Control/puse/back_ground_button" unique_id=1667052806]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(28, 192, 100, 64)
+
+[node name="center" type="Sprite2D" parent="Control/puse/back_ground_button" unique_id=356961819]
+texture_filter = 1
+position = Vector2(82, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center2" type="Sprite2D" parent="Control/puse/back_ground_button/center" unique_id=1893061516]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center3" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2" unique_id=1679890523]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3" unique_id=1214690802]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3" unique_id=145336156]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3" unique_id=1188488137]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4" unique_id=1870138034]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4" unique_id=1931149227]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4" unique_id=1136680126]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4/center5" unique_id=1278314909]
+texture_filter = 1
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4/center5/center6" unique_id=1565849247]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4/center5/center6" unique_id=717526459]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4/center5" unique_id=660838244]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center3/center4/center5" unique_id=1438700690]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2" unique_id=1363189012]
+texture_filter = 1
+position = Vector2(240, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4" unique_id=1550543201]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4" unique_id=1648908473]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4" unique_id=759726055]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4" unique_id=595877658]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4" unique_id=1409951326]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4" unique_id=1387104203]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4/center5" unique_id=799504102]
+texture_filter = 1
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4/center5/center6" unique_id=556265729]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4/center5/center6" unique_id=466498537]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4/center5" unique_id=2019664128]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center4/center4/center5" unique_id=1321947140]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2" unique_id=65609999]
+texture_filter = 1
+position = Vector2(316, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5" unique_id=466332857]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5" unique_id=1538620091]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5" unique_id=2058802882]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4" unique_id=1417652501]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4" unique_id=1954302858]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4" unique_id=396902791]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4/center5" unique_id=1229314000]
+texture_filter = 1
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4/center5/center6" unique_id=492493603]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4/center5/center6" unique_id=2012976438]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4/center5" unique_id=899244727]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2/center5/center4/center5" unique_id=830084024]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2" unique_id=1603164074]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center/center2" unique_id=2051237999]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button/center" unique_id=1367446605]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button/center" unique_id=1071166093]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button4" type="Sprite2D" parent="Control/puse/back_ground_button" unique_id=1493919503]
+texture_filter = 1
+position = Vector2(662, 0)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(320, 60, 84, 68)
+
+[node name="back_ground_button5" type="Sprite2D" parent="Control/puse/back_ground_button" unique_id=1458782654]
+texture_filter = 1
+position = Vector2(662, 64)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(320, 192, 84, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="Control/puse/back_ground_button" unique_id=1625396919]
+texture_filter = 1
+position = Vector2(660, 118)
+texture = ExtResource("3_ssm3w")
+region_enabled = true
+region_rect = Rect2(320, 320, 84, 111)
+
+[node name="Label" type="Label" parent="Control" unique_id=284589610]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 139.0
+offset_right = 857.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 40
+text = "🎮 تم تطوير اللعبة بوسطة: 🎮"
+
+[node name="Label2" type="Label" parent="Control" unique_id=514048823]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 222.0
+offset_right = 953.0
+offset_bottom = 529.0
+theme_override_font_sizes/font_size = 70
+text = "محمد منتصر"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=442730642]
+texture_filter = 1
+layout_mode = 0
+offset_left = 958.0
+offset_top = 115.0
+offset_right = 1022.0
+offset_bottom = 179.0
+texture_normal = ExtResource("4_nc0et")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=1980526432]
+texture_filter = 1
+layout_mode = 0
+offset_left = 505.0
+offset_top = 6.0
+offset_right = 569.0
+offset_bottom = 70.0
+rotation = 1.5707964
+texture_normal = ExtResource("5_5ajuh")

@@ -19,7 +19,7 @@ login_button = NodePath("VBoxContainer/LoginButton")
 name_input = NodePath("VBoxContainer/NameInput")
 save_name_button = NodePath("VBoxContainer/SaveNameButton")
 status_label = NodePath("VBoxContainer/StatusLabel")
-main_menu_scene = "uid://r730yoauq0b5"
+main_menu_scene = "uid://ceggwpfcbmynh"
 
 [node name="back ground" parent="." unique_id=26277604 instance=ExtResource("2_rxrqw")]
 
@@ -380,7 +380,7 @@ region_rect = Rect2(320, 320, 84, 111)
 
 [node name="button" type="Node2D" parent="." unique_id=504114127]
 texture_filter = 1
-position = Vector2(-546, 349)
+position = Vector2(-534, 391)
 scale = Vector2(1, 0.8)
 
 [node name="Sprite2D" type="Sprite2D" parent="button" unique_id=729644365]

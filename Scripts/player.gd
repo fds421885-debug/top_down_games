@@ -34,6 +34,9 @@ var current_dash_dir: Vector2 = Vector2.RIGHT
 var enemies_in_range: Array = []
 var has_dealt_damage: bool = false
 
+# متغير لتحديد نوع الجهاز (true = جوال/لمس، false = كمبيوتر/ماوس وكيبورد)
+var is_mobile_device: bool = false
+
 var joystick_touch_index: int = -1
 var joystick_origin: Vector2 = Vector2.ZERO
 var joystick_vector: Vector2 = Vector2.ZERO
@@ -49,6 +52,13 @@ func _ready() -> void:
 	current_health = max_health
 	update_health_bar()
 
+	# الكشف التلقائي عن نوع الجهاز أول ما يبدأ الجيم
+	is_mobile_device = DisplayServer.is_touchscreen_available() or OS.has_feature("mobile")
+	if is_mobile_device:
+		print("تم التعرف على الجهاز: جوال (تم تفعيل تحكم اللمس وإلغاء الماوس)")
+	else:
+		print("تم التعرف على الجهاز: كمبيوتر (تم تفعيل تحكم الماوس والكيبورد وإلغاء اللمس)")
+
 	if attack_area:
 		attack_area.body_entered.connect(_on_attack_area_body_entered)
 		attack_area.body_exited.connect(_on_attack_area_body_exited)
@@ -61,60 +71,64 @@ func _input(event: InputEvent) -> void:
 	if is_dead:
 		return
 
-	# دعم الكيبورد للكمبيوتر (اختياري)
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_SPACE:
-			trigger_dash()
-		elif event.keycode == KEY_E or event.keycode == KEY_ENTER:
-			trigger_attack()
-
-	var screen_width = get_viewport().get_visible_rect().size.x
-
-	# نظام اللمس (اليسار للحركة، اليمين للضرب والداش)
-	if event is InputEventScreenTouch:
-		if event.pressed:
-			if event.position.x < screen_width / 2:
-				# الجهة اليسار: عصا التحكم بالحركة (Joystick)
-				if joystick_touch_index == -1:
-					joystick_touch_index = event.index
-					joystick_origin = event.position
-					joystick_vector = Vector2.ZERO
-			else:
-				# الجهة اليمين: للداش والهجوم بالضغط المزدوج أو السحب
-				var current_time = Time.get_ticks_msec()
-				if current_time - last_tap_time < double_tap_threshold:
-					trigger_dash()
-					last_tap_time = 0
-				else:
-					last_tap_time = current_time
-				
-				if right_touch_index == -1:
-					right_touch_index = event.index
-					right_touch_start_y = event.position.y
-		else:
-			if event.index == joystick_touch_index:
-				joystick_touch_index = -1
-				joystick_vector = Vector2.ZERO
-			elif event.index == right_touch_index:
-				right_touch_index = -1
-
-	elif event is InputEventScreenDrag:
-		if event.index == joystick_touch_index:
-			var diff = event.position - joystick_origin
-			if diff.length() > max_drag_distance:
-				diff = diff.normalized() * max_drag_distance
-
-			if diff.length() > 5.0:
-				joystick_vector = diff / max_drag_distance
-			else:
-				joystick_vector = Vector2.ZERO
-
-		elif event.index == right_touch_index:
-			# سحب في الجهة اليمين ينفذ هجوم
-			var swipe_diff = event.position.y - right_touch_start_y
-			if abs(swipe_diff) > 20 and not is_attacking:
+	# --- تحكم الكمبيوتر (يعمل فقط لو الجهاز مو جوال) ---
+	if not is_mobile_device:
+		if event is InputEventMouseButton and event.pressed:
+			if event.button_index == MOUSE_BUTTON_LEFT:
 				trigger_attack()
-				right_touch_index = -1
+			elif event.button_index == MOUSE_BUTTON_RIGHT:
+				trigger_dash()
+
+		if event is InputEventKey and event.pressed:
+			if event.keycode == KEY_SHIFT:
+				trigger_dash()
+		return # نقفل أي معالجة إضافية لevents الجوال لو كنا على كمبيوتر
+
+	# --- تحكم الجوال (يعمل فقط لو الجهاز لمس/جوال) ---
+	if is_mobile_device:
+		var screen_width = get_viewport().get_visible_rect().size.x
+
+		if event is InputEventScreenTouch:
+			if event.pressed:
+				if event.position.x < screen_width / 2:
+					if joystick_touch_index == -1:
+						joystick_touch_index = event.index
+						joystick_origin = event.position
+						joystick_vector = Vector2.ZERO
+				else:
+					var current_time = Time.get_ticks_msec()
+					if current_time - last_tap_time < double_tap_threshold:
+						trigger_dash()
+						last_tap_time = 0
+					else:
+						last_tap_time = current_time
+					
+					if right_touch_index == -1:
+						right_touch_index = event.index
+						right_touch_start_y = event.position.y
+			else:
+				if event.index == joystick_touch_index:
+					joystick_touch_index = -1
+					joystick_vector = Vector2.ZERO
+				elif event.index == right_touch_index:
+					right_touch_index = -1
+
+		elif event is InputEventScreenDrag:
+			if event.index == joystick_touch_index:
+				var diff = event.position - joystick_origin
+				if diff.length() > max_drag_distance:
+					diff = diff.normalized() * max_drag_distance
+
+				if diff.length() > 5.0:
+					joystick_vector = diff / max_drag_distance
+				else:
+					joystick_vector = Vector2.ZERO
+
+			elif event.index == right_touch_index:
+				var swipe_diff = event.position.y - right_touch_start_y
+				if abs(swipe_diff) > 20 and not is_attacking:
+					trigger_attack()
+					right_touch_index = -1
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -136,6 +150,11 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		move_and_slide()
 		
+		# للكمبيوتر أثناء الهجوم: يثبت اتجاهه نحو الماوس
+		if not is_mobile_device:
+			var mouse_dir = (get_global_mouse_position() - global_position).normalized()
+			rotation = mouse_dir.angle()
+
 		if animated_sprite and animated_sprite.animation == anim_attack:
 			if animated_sprite.frame == attack_hit_frame and not has_dealt_damage:
 				has_dealt_damage = true
@@ -143,18 +162,32 @@ func _physics_process(delta: float) -> void:
 				
 		return
 
-	# دمج حركة التاتش باليسار مع أزرار الكيبورد
-	var direction = joystick_vector
-	if direction == Vector2.ZERO:
-		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	# حساب الاتجاه حسب نوع الجهاز المكتشف
+	var direction = Vector2.ZERO
+	if is_mobile_device:
+		direction = joystick_vector
+	else:
+		var pc_x = 0.0
+		if Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
+			pc_x = 1.0
+		direction = Vector2(pc_x, 0.0)
 
 	if direction != Vector2.ZERO:
 		velocity = velocity.move_toward(direction * max_speed, acceleration * delta)
-		var target_angle = direction.angle()
-		rotation = lerp_angle(rotation, target_angle, 15.0 * delta)
 		current_dash_dir = direction
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+
+	# نظام التوجيه والدوران حسب الجهاز
+	if is_mobile_device:
+		if joystick_vector != Vector2.ZERO:
+			var target_angle = joystick_vector.angle()
+			rotation = lerp_angle(rotation, target_angle, 15.0 * delta)
+	else:
+		# الكمبيوتر يناظر الماوس دائماً
+		var mouse_pos = get_global_mouse_position()
+		var target_angle = (mouse_pos - global_position).angle()
+		rotation = lerp_angle(rotation, target_angle, 25.0 * delta)
 
 	move_and_slide()
 	update_animations(direction)
@@ -175,7 +208,11 @@ func trigger_dash() -> void:
 		is_dashing = true
 		dash_time_left = dash_duration
 		dash_cooldown_left = dash_cooldown
-		current_dash_dir = Vector2.RIGHT.rotated(rotation)
+		
+		if is_mobile_device and joystick_vector != Vector2.ZERO:
+			current_dash_dir = joystick_vector.normalized()
+		else:
+			current_dash_dir = (get_global_mouse_position() - global_position).normalized()
 
 func trigger_attack() -> void:
 	if is_attacking:
@@ -213,7 +250,6 @@ func take_damage(amount: int) -> void:
 		current_health = 0
 		
 	update_health_bar()
-	print("تم ضرب اللاعب! الدم المتبقي: ", current_health)
 	
 	if current_health <= 0:
 		die()
@@ -230,5 +266,12 @@ func die() -> void:
 	if is_dead:
 		return
 	is_dead = true
-	print("مات اللاعب! جاري إعادة تحميل المرحلة...")
-	get_tree().reload_current_scene()
+	
+	if CloudManager.is_multiplayer_match:
+		print("اللاعب مات في الأونلاين - سيتم إظهار شاشة الخسارة")
+		velocity = Vector2.ZERO
+		# استدعاء دالة player_died الموجودة في سكربت multiplayer_manager
+		get_tree().call_group("multiplayer_manager", "player_died")
+	else:
+		print("اللاعب مات في اللعب الفردي - جاري إعادة المرحلة")
+		get_tree().reload_current_scene()

@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://siafnp8xko4q" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner_Slots.png" id="3_opfnp"]
 [ext_resource type="Script" uid="uid://3w5mwfyr15mh" path="res://Scripts/control.gd" id="4_ce3w2"]
 [ext_resource type="PackedScene" uid="uid://dbd4vy5esx1vk" path="res://Scenes/player_hud.tscn" id="5_n45e2"]
+[ext_resource type="PackedScene" uid="uid://qnu8kfmf5nni" path="res://Scenes/controls_popup.tscn" id="7_cp0ys"]
+[ext_resource type="PackedScene" uid="uid://b7d1rijcrmqhl" path="res://Scenes/cridts.tscn" id="8_yhxw7"]
+[ext_resource type="AudioStream" uid="uid://b3jnex7usmlfr" path="res://intro_scen/moonlight_over_the_canyon_floor.mp3" id="9_trj04"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ce3w2"]
 load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
@@ -22,7 +25,7 @@ load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.c
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yhxw7"]
 load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
 
-[node name="MainMenu" type="Control" unique_id=370220947 node_paths=PackedStringArray("play_button", "online_button", "logout_button", "leaderboard_button", "welcome_label")]
+[node name="MainMenu" type="Control" unique_id=370220947 node_paths=PackedStringArray("play_button", "online_button", "logout_button", "leaderboard_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +37,6 @@ play_button = NodePath("button/start")
 online_button = NodePath("button/top2")
 logout_button = NodePath("button/quitr")
 leaderboard_button = NodePath("button/top")
-welcome_label = NodePath("")
 game_scene_path = "uid://brch3d0oybrmv"
 matchmaking_scene_path = "uid://dkpm1ggsuhkfg"
 login_scene_path = "uid://cult8kt0i8q3j"
@@ -359,3 +361,14 @@ start_button_bg = NodePath("../start")
 exit_button = NodePath("../button/quitr")
 transition_rect = NodePath("../TransitionLayer/ColorRect")
 game_scene_path = "uid://brch3d0oybrmv"
+
+[node name="ControlsPopup" parent="." unique_id=1316260677 instance=ExtResource("7_cp0ys")]
+layout_mode = 1
+
+[node name="ControlsPopup2" parent="." unique_id=1590420587 instance=ExtResource("8_yhxw7")]
+layout_mode = 1
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=756719232]
+stream = ExtResource("9_trj04")
+volume_db = -17.54
+autoplay = true

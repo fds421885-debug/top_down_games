@@ -16,6 +16,9 @@ var match_timer: Timer
 var sync_timer: Timer 
 
 func _ready() -> void:
+	# أضفنا هذي عشان كود اللاعب يقدر يوصل لهالسكربت بسهولة ويبلغه بالخسارة
+	add_to_group("multiplayer_manager")
+	
 	if not CloudManager.is_multiplayer_match:
 		hide()
 		return
@@ -127,6 +130,7 @@ func evaluate_winner_by_time() -> void:
 
 func player_died() -> void:
 	if not game_ended:
+		print("تم تبليغ السكربت بخسارة اللاعب!")
 		declare_winner("enemy")
 
 func declare_winner(winner: String) -> void:
@@ -141,7 +145,6 @@ func declare_winner(winner: String) -> void:
 		var f_req = HTTPRequest.new()
 		add_child(f_req)
 		f_req.request(update_url, CloudManager.headers.duplicate(), HTTPClient.METHOD_PATCH, finish_body)
-		# ما ننتظر الاستجابة عشان ما نعلق الشاشة، بنترك الطلب يروح بالخلفية
 	
 	var is_win = false
 	var points = 0
@@ -160,4 +163,7 @@ func declare_winner(winner: String) -> void:
 		points = 0
 		
 	if result_screen:
+		# نخلي شاشة النتيجة تشتغل حتى لو اللعبة (paused) عشان ما تعلق
+		result_screen.process_mode = Node.PROCESS_MODE_ALWAYS
+		result_screen.visible = true
 		result_screen.show_result(is_win, points)

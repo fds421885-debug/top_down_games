@@ -12,10 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://cuqd8lgpigid5" path="res://Scenes/tree.tscn" id="9_xydsh"]
 [ext_resource type="PackedScene" uid="uid://bkrj61r6x6du0" path="res://Scenes/tower.tscn" id="10_3788w"]
 [ext_resource type="PackedScene" uid="uid://kapgl3a7bar2" path="res://Scenes/scene_manager.tscn" id="11_kkflu"]
-[ext_resource type="PackedScene" uid="uid://7cc20dxhfnnr" path="res://Scenes/pause_menu.tscn" id="12_pru5y"]
 [ext_resource type="Script" uid="uid://gb6fb2fwdpt" path="res://Scripts/multiplayer_ui.gd" id="13_uons7"]
 [ext_resource type="Texture2D" uid="uid://bqjymaj3gfjvp" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png" id="15_e3efu"]
 [ext_resource type="PackedScene" uid="uid://cc2g6tgal4gpv" path="res://Scenes/game_over.tscn" id="15_ofktq"]
+[ext_resource type="AudioStream" uid="uid://b3jnex7usmlfr" path="res://intro_scen/moonlight_over_the_canyon_floor.mp3" id="16_e3efu"]
 
 [sub_resource type="Resource" id="Resource_qxrlw"]
 script = ExtResource("5_e3efu")
@@ -184,7 +184,6 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="NavRegion" type="NavigationRegion2D" parent="." unique_id=988405423]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_v158k")
 navigation_layers = 3
 
@@ -203,7 +202,6 @@ position = Vector2(988.99994, 512.99994)
 position = Vector2(604, 271)
 
 [node name="SceneManager" parent="." unique_id=1927178025 instance=ExtResource("11_kkflu")]
-visible = false
 
 [node name="WaveUI" type="CanvasLayer" parent="." unique_id=37304467]
 
@@ -223,13 +221,6 @@ theme_override_font_sizes/font_size = 64
 text = "Wave 1"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="PauseMenu" parent="." unique_id=1979350304 instance=ExtResource("12_pru5y")]
-visible = false
-offset_left = -1149.0
-offset_top = 31.0
-offset_right = -1149.0
-offset_bottom = 31.0
 
 [node name="MultiplayerUI" type="CanvasLayer" parent="." unique_id=1654651367 node_paths=PackedStringArray("mission_label", "time_label", "player_progress", "enemy_progress", "result_screen")]
 script = ExtResource("13_uons7")
@@ -978,3 +969,8 @@ offset_right = 608.0
 offset_bottom = 127.0
 theme_override_font_sizes/font_size = 20
 text = "نسبة تقدم الخصم :"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1196653417]
+stream = ExtResource("16_e3efu")
+volume_db = -17.54
+autoplay = true

@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cspio64gks5kk" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png" id="3_un2m5"]
 [ext_resource type="Texture2D" uid="uid://bqjymaj3gfjvp" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png" id="4_od7dn"]
 [ext_resource type="Texture2D" uid="uid://m6v8dfwx13gx" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BigBlueButton_Regular.png" id="5_nty3y"]
+[ext_resource type="PackedScene" uid="uid://7cc20dxhfnnr" path="res://Scenes/pause_menu.tscn" id="6_un2m5"]
+[ext_resource type="AudioStream" uid="uid://b3jnex7usmlfr" path="res://intro_scen/moonlight_over_the_canyon_floor.mp3" id="7_od7dn"]
 
 [node name="MatchmakingScreen" type="Control" unique_id=22974063 node_paths=PackedStringArray("status_label", "timer_label")]
 layout_mode = 3
@@ -19,8 +21,8 @@ timer_label = NodePath("Label2")
 multiplayer_game_scene = "uid://dibrfde6m5c4o"
 possible_wave_goals = Array[int]([1, 2, 3])
 bot_names = Array[String](["الو", "أحمد", "مصطفى شوبير", "عبد الله ", "سعود", "مـافـيـا_07", "خالد", "Shadow", "Al_Basha_77", "شادي", "محسن"])
-bot_kill_delays = Array[float]([5.0, 3.5, 2.0])
-bot_wave_delays = Array[float]([28.0, 25.0, 18.0])
+bot_kill_delays = Array[float]([5.0, 3.5, 3.0, 3.0, 4.0, 6.0, 3.0, 4.0, 3.0, 3.0, 3.0])
+bot_wave_delays = Array[float]([60.0, 40.0, 40.0, 40.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0])
 
 [node name="back ground" parent="." unique_id=26277604 instance=ExtResource("2_7kyai")]
 
@@ -579,3 +581,15 @@ offset_right = 878.0
 offset_bottom = 445.0
 theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
+
+[node name="PauseMenu" parent="." unique_id=1979350304 instance=ExtResource("6_un2m5")]
+layout_mode = 1
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1451620789]
+stream = ExtResource("7_od7dn")
+volume_db = -17.54
+autoplay = true

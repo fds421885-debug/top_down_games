@@ -6,7 +6,7 @@ const LOCAL_SESSION_PATH = "user://player_session.json"
 const OFFLINE_SAVE_PATH = "user://offline_save.json"
 
 var table_url = SUPABASE_URL + "/rest/v1/cloud_saves"
-var matches_url = SUPABASE_URL + "/rest/v1/active_matches" # رابط جدول الأونلاين الجديد
+var matches_url = SUPABASE_URL + "/rest/v1/active_matches"
 
 var headers = [
 	"apikey: " + SUPABASE_KEY,
@@ -23,7 +23,7 @@ var current_wave: int = 1
 var current_kills: int = 0
 var is_offline_mode: bool = false
 
-# --- متغيرات نظام الأونلاين (المباراة الحالية) ---
+# --- متغيرات نظام الأونلاين ---
 var is_multiplayer_match: bool = false
 var match_mode: String = "" 
 var match_goal: int = 0
@@ -33,17 +33,15 @@ var enemy_bot_difficulty: int = 0
 var enemy_name: String = ""
 var current_bot_delay: float = 2.0 
 
-# متغيرات الأونلاين الحقيقي (Real Player)
 var current_match_id: int = -1
-var is_player_one: bool = true # يحدد إذا أنت راعي الغرفة أو اللي انضم
-# ------------------------------------------------
+var is_player_one: bool = true
 
 func _ready():
 	http_request = HTTPRequest.new()
 	add_child(http_request)
+	http_request.accept_gzip = false # إيقاف الـ Gzip للويب
 	load_session()
 
-# دالة تصفير ذاكرة اللاعب تماماً
 func reset_player_memory():
 	current_email = ""
 	current_player_name = ""
@@ -56,7 +54,6 @@ func generate_signature(wave: int, kills: int) -> String:
 	return raw_string.sha256_text()
 
 func login_or_register(email: String) -> Dictionary:
-	# خطوة جوهرية: نصفر كل القيم القديمة بالذاكرة فوراً قبل القراءة
 	reset_player_memory()
 	current_email = email
 	
@@ -68,7 +65,9 @@ func login_or_register(email: String) -> Dictionary:
 		return {"success": true, "is_new": false, "offline": true}
 		
 	var response = await http_request.request_completed
-	var code = response[1]
+	
+	# 🛠️ تصليح تفكيك مصفوفة الويب:
+	var code = response[1] 
 	var body = response[3].get_string_from_utf8()
 	
 	if code == 200:
@@ -77,17 +76,15 @@ func login_or_register(email: String) -> Dictionary:
 		if json.parse(body) == OK:
 			var data = json.get_data()
 			if data.is_empty():
-				# حساب جديد: القيم مصفورة أساساً جاهزة
 				return {"success": true, "is_new": true}
 			else:
-				# حساب قديم: نضع بيانات هذا الحساب فقط
 				current_player_name = data[0].get("player_name", "")
 				current_wave = int(data[0].get("wave", 1))
 				current_kills = int(data[0].get("kills", 0))
 				save_session()
 				return {"success": true, "is_new": false}
 				
-	return {"success": false, "message": "فشل الاتصال بالسيرفر"}
+	return {"success": false, "message": "فشل الاتصال بالسيرفر، كود الاستجابة: " + str(code)}
 
 func save_new_player(player_name: String) -> bool:
 	current_player_name = player_name
@@ -104,16 +101,17 @@ func save_new_player(player_name: String) -> bool:
 	
 	var err = http_request.request(table_url, headers, HTTPClient.METHOD_POST, body)
 	if err != OK: return false
+	
 	var response = await http_request.request_completed
-	if response[1] == 201 or response[1] == 200:
+	var code = response[1] # 🛠️ تصليح المصفوفة
+	
+	if code == 201 or code == 200:
 		save_session()
 		return true
 	return false
 
 func update_progress(new_wave: int, new_kills: int) -> void:
-	# نمنع حفظ التقدم العادي إذا كنا نلعب أونلاين
-	if is_multiplayer_match:
-		return 
+	if is_multiplayer_match: return 
 
 	current_wave = new_wave
 	current_kills = new_kills
@@ -130,9 +128,6 @@ func update_progress(new_wave: int, new_kills: int) -> void:
 	var update_url = table_url + "?email=eq." + current_email.uri_encode()
 	http_request.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
 
-# --- دوال الأونلاين الجديدة ---
-
-# 1. تحديث النتيجة بعد ما تخلص مباراة الأونلاين
 func update_multiplayer_result(is_winner: bool, points_gained: int) -> void:
 	if is_winner:
 		current_kills += points_gained
@@ -140,14 +135,12 @@ func update_multiplayer_result(is_winner: bool, points_gained: int) -> void:
 		current_kills -= 5
 		if current_kills < 0: current_kills = 0
 	
-	# نقفل الغرفة بالسيرفر لو كانت ضد لاعب حقيقي
 	if not enemy_is_bot and current_match_id != -1:
 		end_real_match()
 		
 	is_multiplayer_match = false 
 	update_progress(current_wave, current_kills)
 
-# 2. إرسال نقاطك للسيرفر أثناء اللعب عشان يشوفها خصمك
 func sync_my_score_to_server(my_score: int) -> void:
 	if current_match_id == -1 or enemy_is_bot: return
 	var score_field = "player1_score" if is_player_one else "player2_score"
@@ -156,21 +149,20 @@ func sync_my_score_to_server(my_score: int) -> void:
 	
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
+	temp_http.accept_gzip = false
 	temp_http.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
 	await temp_http.request_completed
 	temp_http.queue_free()
 
-# 3. إنهاء المباراة في السيرفر
 func end_real_match() -> void:
 	var body = JSON.stringify({ "status": "finished" })
 	var update_url = matches_url + "?id=eq." + str(current_match_id)
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
+	temp_http.accept_gzip = false
 	temp_http.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
 	await temp_http.request_completed
 	temp_http.queue_free()
-
-# --------------------------------
 
 func save_session():
 	var save_dict = {
@@ -200,17 +192,18 @@ func logout():
 		DirAccess.remove_absolute(LOCAL_SESSION_PATH)
 	if FileAccess.file_exists(OFFLINE_SAVE_PATH):
 		DirAccess.remove_absolute(OFFLINE_SAVE_PATH)
-	print("تم تسجيل الخروج وتصفير ذاكرة اللعبة تماماً.")
 
 func fetch_leaderboard() -> Array:
 	var req_url = table_url + "?select=player_name,wave,kills&order=wave.desc,kills.desc&limit=10"
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
+	temp_http.accept_gzip = false
 	temp_http.request(req_url, headers)
 	var response = await temp_http.request_completed
 	temp_http.queue_free()
 	
-	if response[1] == 200:
+	var code = response[1] # 🛠️ تصليح المصفوفة
+	if code == 200:
 		var json = JSON.new()
 		if json.parse(response[3].get_string_from_utf8()) == OK:
 			return json.get_data()
@@ -220,11 +213,13 @@ func search_players_by_query(query_str: String) -> Array:
 	var req_url = table_url + "?player_name=ilike.*" + query_str.uri_encode() + "*&select=player_name,wave,kills&order=wave.desc,kills.desc"
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
+	temp_http.accept_gzip = false
 	temp_http.request(req_url, headers)
 	var response = await temp_http.request_completed
 	temp_http.queue_free()
 	
-	if response[1] == 200:
+	var code = response[1] # 🛠️ تصليح المصفوفة
+	if code == 200:
 		var json = JSON.new()
 		if json.parse(response[3].get_string_from_utf8()) == OK:
 			return json.get_data()
