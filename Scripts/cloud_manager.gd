@@ -6,6 +6,8 @@ const LOCAL_SESSION_PATH = "user://player_session.json"
 const OFFLINE_SAVE_PATH = "user://offline_save.json"
 
 var table_url = SUPABASE_URL + "/rest/v1/cloud_saves"
+var matches_url = SUPABASE_URL + "/rest/v1/active_matches" # رابط جدول الأونلاين الجديد
+
 var headers = [
 	"apikey: " + SUPABASE_KEY,
 	"Authorization: Bearer " + SUPABASE_KEY,
@@ -20,6 +22,21 @@ var current_player_name: String = ""
 var current_wave: int = 1
 var current_kills: int = 0
 var is_offline_mode: bool = false
+
+# --- متغيرات نظام الأونلاين (المباراة الحالية) ---
+var is_multiplayer_match: bool = false
+var match_mode: String = "" 
+var match_goal: int = 0
+var match_time_limit: int = 0
+var enemy_is_bot: bool = false
+var enemy_bot_difficulty: int = 0
+var enemy_name: String = ""
+var current_bot_delay: float = 2.0 
+
+# متغيرات الأونلاين الحقيقي (Real Player)
+var current_match_id: int = -1
+var is_player_one: bool = true # يحدد إذا أنت راعي الغرفة أو اللي انضم
+# ------------------------------------------------
 
 func _ready():
 	http_request = HTTPRequest.new()
@@ -94,6 +111,10 @@ func save_new_player(player_name: String) -> bool:
 	return false
 
 func update_progress(new_wave: int, new_kills: int) -> void:
+	# نمنع حفظ التقدم العادي إذا كنا نلعب أونلاين
+	if is_multiplayer_match:
+		return 
+
 	current_wave = new_wave
 	current_kills = new_kills
 	save_session()
@@ -108,6 +129,48 @@ func update_progress(new_wave: int, new_kills: int) -> void:
 	
 	var update_url = table_url + "?email=eq." + current_email.uri_encode()
 	http_request.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
+
+# --- دوال الأونلاين الجديدة ---
+
+# 1. تحديث النتيجة بعد ما تخلص مباراة الأونلاين
+func update_multiplayer_result(is_winner: bool, points_gained: int) -> void:
+	if is_winner:
+		current_kills += points_gained
+	else:
+		current_kills -= 5
+		if current_kills < 0: current_kills = 0
+	
+	# نقفل الغرفة بالسيرفر لو كانت ضد لاعب حقيقي
+	if not enemy_is_bot and current_match_id != -1:
+		end_real_match()
+		
+	is_multiplayer_match = false 
+	update_progress(current_wave, current_kills)
+
+# 2. إرسال نقاطك للسيرفر أثناء اللعب عشان يشوفها خصمك
+func sync_my_score_to_server(my_score: int) -> void:
+	if current_match_id == -1 or enemy_is_bot: return
+	var score_field = "player1_score" if is_player_one else "player2_score"
+	var body = JSON.stringify({ score_field: my_score })
+	var update_url = matches_url + "?id=eq." + str(current_match_id)
+	
+	var temp_http = HTTPRequest.new()
+	add_child(temp_http)
+	temp_http.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
+	await temp_http.request_completed
+	temp_http.queue_free()
+
+# 3. إنهاء المباراة في السيرفر
+func end_real_match() -> void:
+	var body = JSON.stringify({ "status": "finished" })
+	var update_url = matches_url + "?id=eq." + str(current_match_id)
+	var temp_http = HTTPRequest.new()
+	add_child(temp_http)
+	temp_http.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
+	await temp_http.request_completed
+	temp_http.queue_free()
+
+# --------------------------------
 
 func save_session():
 	var save_dict = {

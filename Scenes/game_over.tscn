@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bqjymaj3gfjvp" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png" id="3_w7goi"]
 [ext_resource type="Texture2D" uid="uid://m6v8dfwx13gx" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BigBlueButton_Regular.png" id="4_dx2x1"]
 
-[node name="game over" type="Control" unique_id=748280159 node_paths=PackedStringArray("play_again_button", "menu_button", "panel_box")]
+[node name="game over" type="Control" unique_id=748280159 node_paths=PackedStringArray("result_title", "result_details", "play_again_btn", "menu_btn")]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
@@ -14,11 +14,12 @@ offset_top = 336.00003
 offset_right = 644.99994
 offset_bottom = 336.00003
 script = ExtResource("1_cgp51")
-play_again_button = NodePath("play_again")
-menu_button = NodePath("menue")
-panel_box = NodePath(".")
-game_scene_path = "uid://brch3d0oybrmv"
-main_menu_path = "uid://r730yoauq0b5"
+result_title = NodePath("Label")
+result_details = NodePath("Label2")
+play_again_btn = NodePath("play_again")
+menu_btn = NodePath("menue")
+matchmaking_scene = "uid://dkpm1ggsuhkfg"
+menu_scene = "uid://r730yoauq0b5"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1876623854]
 layout_mode = 0
@@ -592,6 +593,16 @@ offset_top = -113.00003
 offset_right = 49.000053
 offset_bottom = -78.00003
 theme_override_colors/font_color = Color(0.94, 0.282, 0.29296649, 1)
+theme_override_font_sizes/font_size = 25
+text = "لقد خسرت !"
+
+[node name="Label2" type="Label" parent="." unique_id=133862706]
+layout_mode = 0
+offset_left = -85.99995
+offset_top = -61.00003
+offset_right = 46.000053
+offset_bottom = -26.00003
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "لقد خسرت !"
 

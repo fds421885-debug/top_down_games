@@ -17,9 +17,9 @@ kills_label = NodePath("VBoxContainer/KillsLabel")
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=644648260]
 layout_mode = 0
 offset_left = 77.0
-offset_top = 2.0
+offset_top = 13.0
 offset_right = 117.0
-offset_bottom = 79.0
+offset_bottom = 168.0
 
 [node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=2118595534]
 layout_mode = 2

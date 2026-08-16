@@ -1,0 +1,980 @@
+[gd_scene format=4 uid="uid://dibrfde6m5c4o"]
+
+[ext_resource type="Texture2D" uid="uid://btnfluxivh41x" path="res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="1_lucju"]
+[ext_resource type="PackedScene" uid="uid://5jfm64ia1oja" path="res://Scenes/efx_water.tscn" id="2_uons7"]
+[ext_resource type="TileSet" uid="uid://blnbqthmx26wk" path="res://المابات/new_tile_set.tres" id="3_h80mk"]
+[ext_resource type="Script" uid="uid://bnmflpvuotthv" path="res://Scripts/wave_spawner.gd" id="4_ofktq"]
+[ext_resource type="Script" uid="uid://dxn0e4hs5fyig" path="res://Scripts/wave_data.gd" id="5_e3efu"]
+[ext_resource type="PackedScene" uid="uid://dv4ynlgglkvcl" path="res://Scenes/enemy.tscn" id="6_1hp2u"]
+[ext_resource type="PackedScene" uid="uid://gs4rleojmlfr" path="res://Scenes/archer_enemy.tscn" id="7_h80mk"]
+[ext_resource type="PackedScene" uid="uid://crhgisqjmsawr" path="res://Scenes/asb.tscn" id="7_xn3h5"]
+[ext_resource type="PackedScene" uid="uid://cfepn7ehex1qq" path="res://Scenes/player.tscn" id="8_pmfbv"]
+[ext_resource type="PackedScene" uid="uid://cuqd8lgpigid5" path="res://Scenes/tree.tscn" id="9_xydsh"]
+[ext_resource type="PackedScene" uid="uid://bkrj61r6x6du0" path="res://Scenes/tower.tscn" id="10_3788w"]
+[ext_resource type="PackedScene" uid="uid://kapgl3a7bar2" path="res://Scenes/scene_manager.tscn" id="11_kkflu"]
+[ext_resource type="PackedScene" uid="uid://7cc20dxhfnnr" path="res://Scenes/pause_menu.tscn" id="12_pru5y"]
+[ext_resource type="Script" uid="uid://gb6fb2fwdpt" path="res://Scripts/multiplayer_ui.gd" id="13_uons7"]
+[ext_resource type="Texture2D" uid="uid://bqjymaj3gfjvp" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png" id="15_e3efu"]
+[ext_resource type="PackedScene" uid="uid://cc2g6tgal4gpv" path="res://Scenes/game_over.tscn" id="15_ofktq"]
+
+[sub_resource type="Resource" id="Resource_qxrlw"]
+script = ExtResource("5_e3efu")
+spawn_interval = 3.0
+enemy_types = Array[PackedScene]([ExtResource("6_1hp2u")])
+metadata/_custom_type_script = "uid://dxn0e4hs5fyig"
+
+[sub_resource type="Resource" id="Resource_vmhho"]
+script = ExtResource("5_e3efu")
+wave_title = "Wave 2"
+kills_to_advance = 20
+spawn_interval = 2.5
+enemy_types = Array[PackedScene]([ExtResource("6_1hp2u")])
+metadata/_custom_type_script = "uid://dxn0e4hs5fyig"
+
+[sub_resource type="Resource" id="Resource_xqt3k"]
+script = ExtResource("5_e3efu")
+wave_title = "Wave 3"
+kills_to_advance = 30
+spawn_interval = 1.5
+enemy_types = Array[PackedScene]([ExtResource("7_h80mk"), ExtResource("6_1hp2u")])
+enemy_weights = Array[int]([8, 22])
+metadata/_custom_type_script = "uid://dxn0e4hs5fyig"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7b7a"]
+size = Vector2(1161, 817.5)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_v158k"]
+vertices = PackedVector2Array(1021, 597, 2571.1875, 1087.7109, -812.6875, 1344.1094, 953, 597, 868, 365, 868, 203.79688, 2599.789, -226.67188, 1021, 435.79688, -609.1328, -448.35938, 800, 203.79688, 953, 435.79688, 171, 504, 171, 342.79688, 800, 365, 103, 504, 103, 342.79688)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 1, 7), PackedInt32Array(8, 6, 5, 9), PackedInt32Array(10, 3, 11, 12, 13), PackedInt32Array(11, 3, 2, 14), PackedInt32Array(14, 2, 8, 15), PackedInt32Array(15, 8, 9, 12), PackedInt32Array(12, 9, 13), PackedInt32Array(10, 13, 4, 7), PackedInt32Array(1, 0, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(2581, 1097, 2610, -236, -618, -459, -824, 1355)])
+
+[node name="Game" type="Node2D" unique_id=1770986592]
+
+[node name="back_ground" type="Sprite2D" parent="." unique_id=1162299672]
+position = Vector2(553, 458)
+scale = Vector2(23.3125, 16.25)
+texture = ExtResource("1_lucju")
+
+[node name="efx_water" parent="back_ground" unique_id=591532460 instance=ExtResource("2_uons7")]
+position = Vector2(-23.72118, -28.184616)
+scale = Vector2(0.042895444, 0.06153846)
+frame_progress = 0.49239835
+
+[node name="efx_water2" parent="back_ground" unique_id=276240237 instance=ExtResource("2_uons7")]
+position = Vector2(28.096516, 0.61538315)
+scale = Vector2(0.042895444, 0.06153846)
+frame_progress = 0.8141898
+
+[node name="efx_water3" parent="back_ground" unique_id=2025800541 instance=ExtResource("2_uons7")]
+position = Vector2(10.680965, 22.769232)
+scale = Vector2(0.042895444, 0.06153846)
+frame_progress = 0.8141898
+
+[node name="water" type="Node2D" parent="back_ground" unique_id=1883062809]
+position = Vector2(-23.72118, -28.184616)
+scale = Vector2(0.09651475, 0.13846155)
+
+[node name="efx_water" parent="back_ground/water" unique_id=1654552458 instance=ExtResource("2_uons7")]
+position = Vector2(31.555555, 25.333332)
+
+[node name="efx_water2" parent="back_ground/water" unique_id=1114946121 instance=ExtResource("2_uons7")]
+position = Vector2(479.1111, 31.11111)
+
+[node name="efx_water3" parent="back_ground/water" unique_id=1347391826 instance=ExtResource("2_uons7")]
+position = Vector2(483.1111, 84.44444)
+
+[node name="efx_water4" parent="back_ground/water" unique_id=751493309 instance=ExtResource("2_uons7")]
+position = Vector2(478.66666, 160.88889)
+
+[node name="efx_water5" parent="back_ground/water" unique_id=211838875 instance=ExtResource("2_uons7")]
+position = Vector2(478.66666, 253.33333)
+
+[node name="efx_water6" parent="back_ground/water" unique_id=1060541198 instance=ExtResource("2_uons7")]
+position = Vector2(386.66666, 26.666656)
+
+[node name="efx_water7" parent="back_ground/water" unique_id=1640537759 instance=ExtResource("2_uons7")]
+position = Vector2(272.8889, 27.555555)
+
+[node name="efx_water8" parent="back_ground/water" unique_id=57268645 instance=ExtResource("2_uons7")]
+position = Vector2(150.22223, 25.333332)
+
+[node name="water2" type="Node2D" parent="back_ground" unique_id=971973473]
+position = Vector2(-23.292225, 2.7692318)
+scale = Vector2(0.09651475, 0.13846155)
+
+[node name="efx_water" parent="back_ground/water2" unique_id=1469093194 instance=ExtResource("2_uons7")]
+position = Vector2(31.555555, 25.333332)
+
+[node name="efx_water2" parent="back_ground/water2" unique_id=1507921423 instance=ExtResource("2_uons7")]
+position = Vector2(479.1111, 31.11111)
+
+[node name="efx_water6" parent="back_ground/water2" unique_id=1180371143 instance=ExtResource("2_uons7")]
+position = Vector2(386.66666, 26.666656)
+
+[node name="efx_water7" parent="back_ground/water2" unique_id=1612358713 instance=ExtResource("2_uons7")]
+position = Vector2(272.8889, 27.555555)
+
+[node name="efx_water8" parent="back_ground/water2" unique_id=297547955 instance=ExtResource("2_uons7")]
+position = Vector2(150.22223, 25.333332)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=343084583]
+texture_filter = 1
+scale = Vector2(2.25, 2.25)
+tile_map_data = PackedByteArray("AAAFAAEAAAACAAIAAAAFAAIAAAACAAMAAAAFAAMAAAACAAQAAAAFAAQAAAACAAUAAAAFAAUAAAACAAYAAAAFAAYAAAACAAcAAAAFAAcAAAACAAgAAAAFAAgAAAACAAkAAAAFAAkAAAACAAEAAAAGAAEAAAADAAIAAAAGAAIAAAADAAMAAAAGAAMAAAADAAQAAAAGAAQAAAADAAUAAAAGAAUAAAADAAYAAAAGAAYAAAADAAcAAAAGAAcAAAADAAgAAAAGAAgAAAADAAkAAAAGAAkAAAADAAEAAAAHAAEAAAAEAAIAAAAHAAIAAAAEAAMAAAAHAAMAAAAEAAQAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAYAAAAHAAYAAAAEAAcAAAAHAAcAAAAEAAgAAAAHAAgAAAAEAAkAAAAHAAkAAAAEAAEAAAAFAAoAAAACAAIAAAAFAAsAAAACAAMAAAAGAAoAAAADAAIAAAAGAAsAAAADAAMAAAAHAAoAAAAEAAIAAAAHAAsAAAAEAAMAAAAIAAEAAAAFAAIAAAAIAAIAAAAFAAMAAAAIAAMAAAAFAAQAAAAIAAQAAAAFAAUAAAAIAAUAAAAFAAYAAAAIAAYAAAAFAAcAAAAIAAcAAAAFAAgAAAAIAAgAAAAFAAkAAAAIAAkAAAAFAAEAAAAJAAEAAAAGAAIAAAAJAAIAAAAGAAMAAAAJAAMAAAAGAAQAAAAJAAQAAAAGAAUAAAAJAAUAAAAGAAYAAAAJAAYAAAAGAAcAAAAJAAcAAAAGAAgAAAAJAAgAAAAGAAkAAAAJAAkAAAAGAAEAAAAKAAEAAAAHAAIAAAAKAAIAAAAHAAMAAAAKAAMAAAAHAAQAAAAKAAQAAAAHAAUAAAAKAAUAAAAHAAYAAAAKAAYAAAAHAAcAAAAKAAcAAAAHAAgAAAAKAAgAAAAHAAkAAAAKAAkAAAAHAAEAAAALAAEAAAAIAAIAAAALAAIAAAAIAAMAAAALAAMAAAAIAAQAAAALAAQAAAAIAAUAAAALAAUAAAAIAAYAAAALAAYAAAAIAAcAAAALAAcAAAAIAAgAAAALAAgAAAAIAAkAAAALAAkAAAAIAAEAAAAMAAEAAAAJAAIAAAAMAAIAAAAJAAMAAAAMAAMAAAAJAAQAAAAMAAQAAAAJAAUAAAAMAAUAAAAJAAYAAAAMAAYAAAAJAAcAAAAMAAcAAAAJAAgAAAAMAAgAAAAJAAkAAAAMAAkAAAAJAAEAAAANAAEAAAAKAAIAAAANAAIAAAAKAAMAAAANAAMAAAAKAAQAAAANAAQAAAAKAAUAAAANAAUAAAAKAAYAAAANAAYAAAAKAAcAAAANAAcAAAAKAAgAAAANAAgAAAAKAAkAAAANAAkAAAAKAAEAAAAOAAEAAAACAAIAAAAOAAIAAAACAAMAAAAOAAMAAAACAAQAAAAOAAQAAAACAAUAAAAOAAUAAAACAAYAAAAOAAYAAAACAAcAAAAOAAcAAAACAAgAAAAOAAgAAAACAAkAAAAOAAkAAAACAAEAAAAPAAEAAAADAAIAAAAPAAIAAAADAAMAAAAPAAMAAAADAAQAAAAPAAQAAAADAAUAAAAPAAUAAAADAAYAAAAPAAYAAAADAAcAAAAPAAcAAAADAAgAAAAPAAgAAAADAAkAAAAPAAkAAAADAAEAAAAQAAEAAAAEAAIAAAAQAAIAAAAEAAMAAAAQAAMAAAAEAAQAAAAQAAQAAAAEAAUAAAAQAAUAAAAEAAYAAAAQAAYAAAAEAAcAAAAQAAcAAAAEAAgAAAAQAAgAAAAEAAkAAAAQAAkAAAAEAAEAAAAIAAoAAAAFAAIAAAAIAAsAAAAFAAMAAAAJAAoAAAAGAAIAAAAJAAsAAAAGAAMAAAAKAAoAAAAHAAIAAAAKAAsAAAAHAAMAAAALAAoAAAAIAAIAAAALAAsAAAAIAAMAAAAMAAoAAAAJAAIAAAAMAAsAAAAJAAMAAAANAAoAAAAKAAIAAAANAAsAAAAKAAMAAAAOAAoAAAACAAIAAAAOAAsAAAACAAMAAAAPAAoAAAADAAIAAAAPAAsAAAADAAMAAAAQAAoAAAAEAAIAAAAQAAsAAAAEAAMAAAARAAEAAAAFAAIAAAARAAIAAAAFAAMAAAARAAMAAAAFAAQAAAARAAQAAAAFAAUAAAARAAUAAAAFAAYAAAARAAYAAAAFAAcAAAARAAcAAAAFAAgAAAARAAgAAAAFAAkAAAARAAkAAAAFAAEAAAASAAEAAAAGAAIAAAASAAIAAAAGAAMAAAASAAMAAAAGAAQAAAASAAQAAAAGAAUAAAASAAUAAAAGAAYAAAASAAYAAAAGAAcAAAASAAcAAAAGAAgAAAASAAgAAAAGAAkAAAASAAkAAAAGAAEAAAATAAEAAAAHAAIAAAATAAIAAAAHAAMAAAATAAMAAAAHAAQAAAATAAQAAAAHAAUAAAATAAUAAAAHAAYAAAATAAYAAAAHAAcAAAATAAcAAAAHAAgAAAATAAgAAAAHAAkAAAATAAkAAAAHAAEAAAAUAAEAAAAIAAIAAAAUAAIAAAAIAAMAAAAUAAMAAAAIAAQAAAAUAAQAAAAIAAUAAAAUAAUAAAAIAAYAAAAUAAYAAAAIAAcAAAAUAAcAAAAIAAgAAAAUAAgAAAAIAAkAAAAUAAkAAAAIAAEAAAARAAoAAAAFAAIAAAARAAsAAAAFAAMAAAASAAoAAAAGAAIAAAASAAsAAAAGAAMAAAATAAoAAAAHAAIAAAATAAsAAAAHAAMAAAAUAAoAAAAIAAIAAAAUAAsAAAAIAAMAAAAVAAsAAAAJAAMAAAAWAAsAAAAKAAMAAAAXAAsAAAACAAMAAAAYAAsAAAADAAMAAAAZAAsAAAAEAAMAAAAAAAAAAAAAAAAAAAAAAAEAAAAGAAIAAAABAAAAAAADAAAAAAABAAEAAAAHAAIAAAABAAIAAAAHAAMAAAABAAMAAAAHAAQAAAABAAQAAAAHAAUAAAABAAUAAAAHAAYAAAABAAYAAAAHAAcAAAABAAcAAAAHAAgAAAABAAgAAAAHAAkAAAACAAAAAAAEAAAAAAACAAEAAAAIAAIAAAACAAIAAAAIAAMAAAACAAMAAAAIAAQAAAACAAQAAAAIAAUAAAACAAUAAAAIAAYAAAACAAYAAAAIAAcAAAACAAcAAAAIAAgAAAACAAgAAAAIAAkAAAADAAAAAAAFAAAAAAADAAEAAAAJAAIAAAADAAIAAAAJAAMAAAADAAMAAAAJAAQAAAADAAQAAAAJAAUAAAADAAUAAAAJAAYAAAADAAYAAAAJAAcAAAADAAcAAAAJAAgAAAADAAgAAAAJAAkAAAAEAAAAAAAGAAAAAAAEAAEAAAAKAAIAAAAEAAIAAAAKAAMAAAAEAAMAAAAKAAQAAAAEAAQAAAAKAAUAAAAEAAUAAAAKAAYAAAAEAAYAAAAKAAcAAAAEAAcAAAAKAAgAAAAEAAgAAAAKAAkAAAAAABAAAAAAAAYAAAAAABEAAAAAAAsAAAABAAkAAAAHAAEAAAABAAoAAAAHAAIAAAABAAsAAAAHAAMAAAABAAwAAAAHAAQAAAABAA0AAAAHAAUAAAABAA4AAAAHAAYAAAABAA8AAAAHAAcAAAABABAAAAAHAAgAAAABABEAAAACAAsAAAACAAkAAAAIAAEAAAACAAoAAAAIAAIAAAACAAsAAAAIAAMAAAACAAwAAAAIAAQAAAACAA0AAAAIAAUAAAACAA4AAAAIAAYAAAACAA8AAAAIAAcAAAACABAAAAAIAAgAAAACABEAAAADAAsAAAADAAkAAAAJAAEAAAADAAoAAAAJAAIAAAADAAsAAAAJAAMAAAADAAwAAAAJAAQAAAADAA0AAAAJAAUAAAADAA4AAAAJAAYAAAADAA8AAAAJAAcAAAADABAAAAAJAAgAAAADABEAAAAEAAsAAAAEAAkAAAAKAAEAAAAEAAoAAAAKAAIAAAAEAAsAAAAKAAMAAAAEAAwAAAAKAAQAAAAEAA0AAAAKAAUAAAAEAA4AAAAKAAYAAAAEAA8AAAAKAAcAAAAEABAAAAAKAAgAAAAEABEAAAAFAAsAAAAFAAAAAAAHAAAAAAAGAAAAAAAIAAAAAAAHAAAAAAABAAAAAAAIAAAAAAACAAAAAAAJAAAAAAADAAAAAAAKAAAAAAAEAAAAAAALAAAAAAAFAAAAAAAMAAAAAAAGAAAAAAANAAAAAAAHAAAAAAAFAAwAAAACAAQAAAAFAA0AAAACAAUAAAAFAA4AAAACAAYAAAAFAA8AAAACAAcAAAAFABAAAAACAAgAAAAFABEAAAAGAAsAAAAGAAwAAAADAAQAAAAGAA0AAAADAAUAAAAGAA4AAAADAAYAAAAGAA8AAAADAAcAAAAGABAAAAADAAgAAAAGABEAAAAHAAsAAAAHAAwAAAAEAAQAAAAHAA0AAAAEAAUAAAAHAA4AAAAEAAYAAAAHAA8AAAAEAAcAAAAHABAAAAAEAAgAAAAHABEAAAAIAAsAAAAIAAwAAAAFAAQAAAAIAA0AAAAFAAUAAAAIAA4AAAAFAAYAAAAIAA8AAAAFAAcAAAAIABAAAAAFAAgAAAAIABEAAAAJAAsAAAAJAAwAAAAGAAQAAAAJAA0AAAAGAAUAAAAJAA4AAAAGAAYAAAAJAA8AAAAGAAcAAAAJABAAAAAGAAgAAAAJABEAAAAKAAsAAAAKAAwAAAAHAAQAAAAKAA0AAAAHAAUAAAAKAA4AAAAHAAYAAAAKAA8AAAAHAAcAAAAKABAAAAAHAAgAAAAKABEAAAACAAsAAAALAAwAAAAIAAQAAAALAA0AAAAIAAUAAAALAA4AAAAIAAYAAAALAA8AAAAIAAcAAAALABAAAAAIAAgAAAALABEAAAADAAsAAAAMAAwAAAAJAAQAAAAMAA0AAAAJAAUAAAAMAA4AAAAJAAYAAAAMAA8AAAAJAAcAAAAMABAAAAAJAAgAAAAMABEAAAAEAAsAAAANAAwAAAAKAAQAAAANAA0AAAAKAAUAAAANAA4AAAAKAAYAAAANAA8AAAAKAAcAAAANABAAAAAKAAgAAAANABEAAAAFAAsAAAAOAAAAAAAIAAAAAAAPAAAAAAABAAAAAAAQAAAAAAACAAAAAAARAAAAAAADAAAAAAASAAAAAAAEAAAAAAATAAAAAAAFAAAAAAAUAAAAAAAGAAAAAAAVAAAAAAAHAAAAAAAVAAEAAAAJAAIAAAAVAAIAAAAJAAMAAAAVAAMAAAAJAAQAAAAVAAQAAAAJAAUAAAAVAAUAAAAJAAYAAAAVAAYAAAAJAAcAAAAVAAcAAAAJAAgAAAAVAAgAAAAJAAkAAAAWAAAAAAAIAAAAAAAWAAEAAAAKAAIAAAAWAAIAAAAKAAMAAAAWAAMAAAAKAAQAAAAWAAQAAAAKAAUAAAAWAAUAAAAKAAYAAAAWAAYAAAAKAAcAAAAWAAcAAAAKAAgAAAAWAAgAAAAKAAkAAAAOAAwAAAACAAQAAAAOAA0AAAACAAUAAAAOAA4AAAACAAYAAAAOAA8AAAACAAcAAAAOABAAAAACAAgAAAAOABEAAAAGAAsAAAAPAAwAAAADAAQAAAAPAA0AAAADAAUAAAAPAA4AAAADAAYAAAAPAA8AAAADAAcAAAAPABAAAAADAAgAAAAPABEAAAAHAAsAAAAQAAwAAAAEAAQAAAAQAA0AAAAEAAUAAAAQAA4AAAAEAAYAAAAQAA8AAAAEAAcAAAAQABAAAAAEAAgAAAAQABEAAAAIAAsAAAARAAwAAAAFAAQAAAARAA0AAAAFAAUAAAARAA4AAAAFAAYAAAARAA8AAAAFAAcAAAARABAAAAAFAAgAAAARABEAAAAJAAsAAAASAAwAAAAGAAQAAAASAA0AAAAGAAUAAAASAA4AAAAGAAYAAAASAA8AAAAGAAcAAAASABAAAAAGAAgAAAASABEAAAAKAAsAAAATAAwAAAAHAAQAAAATAA0AAAAHAAUAAAATAA4AAAAHAAYAAAATAA8AAAAHAAcAAAATABAAAAAHAAgAAAATABEAAAACAAsAAAAUAAwAAAAIAAQAAAAUAA0AAAAIAAUAAAAUAA4AAAAIAAYAAAAUAA8AAAAIAAcAAAAUABAAAAAIAAgAAAAUABEAAAADAAsAAAAVAAkAAAAJAAEAAAAVAAoAAAAJAAIAAAAVAAwAAAAJAAQAAAAVAA0AAAAJAAUAAAAVAA4AAAAJAAYAAAAVAA8AAAAJAAcAAAAVABAAAAAJAAgAAAAVABEAAAAEAAsAAAAWAAkAAAAKAAEAAAAWAAoAAAAKAAIAAAAWAAwAAAAKAAQAAAAWAA0AAAAKAAUAAAAWAA4AAAAKAAYAAAAWAA8AAAAKAAcAAAAWABAAAAAKAAgAAAAWABEAAAAFAAsAAAAXAAAAAAABAAAAAAAXAAEAAAACAAIAAAAXAAIAAAACAAMAAAAXAAMAAAACAAQAAAAXAAQAAAACAAUAAAAXAAUAAAACAAYAAAAXAAYAAAACAAcAAAAXAAcAAAACAAgAAAAXAAgAAAACAAkAAAAYAAAAAAACAAAAAAAYAAEAAAADAAIAAAAYAAIAAAADAAMAAAAYAAMAAAADAAQAAAAYAAQAAAADAAUAAAAYAAUAAAADAAYAAAAYAAYAAAADAAcAAAAYAAcAAAADAAgAAAAYAAgAAAADAAkAAAAZAAAAAAADAAAAAAAZAAEAAAAEAAIAAAAZAAIAAAAEAAMAAAAZAAMAAAAEAAQAAAAZAAQAAAAEAAUAAAAZAAUAAAAEAAYAAAAZAAYAAAAEAAcAAAAZAAcAAAAEAAgAAAAZAAgAAAAEAAkAAAAaAAAAAAAEAAAAAAAaAAEAAAAFAAIAAAAaAAIAAAAFAAMAAAAaAAMAAAAFAAQAAAAaAAQAAAAFAAUAAAAaAAUAAAAFAAYAAAAaAAYAAAAFAAcAAAAaAAcAAAAFAAgAAAAaAAgAAAAFAAkAAAAbAAAAAAAFAAAAAAAbAAEAAAAGAAIAAAAbAAIAAAAGAAMAAAAbAAMAAAAGAAQAAAAbAAQAAAAGAAUAAAAbAAUAAAAGAAYAAAAbAAYAAAAGAAcAAAAbAAcAAAAGAAgAAAAbAAgAAAAGAAkAAAAcAAAAAAAGAAAAAAAcAAEAAAAHAAIAAAAcAAIAAAAHAAMAAAAcAAMAAAAHAAQAAAAcAAQAAAAHAAUAAAAcAAUAAAAHAAYAAAAcAAYAAAAHAAcAAAAcAAcAAAAHAAgAAAAcAAgAAAAHAAkAAAAdAAAAAAAHAAAAAAAdAAEAAAAIAAIAAAAdAAIAAAAIAAMAAAAdAAMAAAAIAAQAAAAdAAQAAAAIAAUAAAAdAAUAAAAIAAYAAAAdAAYAAAAIAAcAAAAdAAcAAAAIAAgAAAAdAAgAAAAIAAkAAAAeAAAAAAAIAAAAAAAeAAEAAAAJAAIAAAAeAAIAAAAJAAMAAAAeAAMAAAAJAAQAAAAeAAQAAAAJAAUAAAAeAAUAAAAJAAYAAAAeAAYAAAAJAAcAAAAeAAcAAAAJAAgAAAAeAAgAAAAJAAkAAAAfAAAAAAALAAAAAAAfAAEAAAALAAEAAAAfAAIAAAALAAIAAAAfAAMAAAALAAMAAAAfAAQAAAALAAQAAAAfAAUAAAALAAUAAAAfAAYAAAALAAYAAAAfAAcAAAALAAcAAAAfAAgAAAALAAgAAAAXAAkAAAACAAEAAAAXAAoAAAACAAIAAAAXAAwAAAACAAQAAAAXAA0AAAACAAUAAAAXAA4AAAACAAYAAAAXAA8AAAACAAcAAAAXABAAAAACAAgAAAAXABEAAAAGAAsAAAAYAAkAAAADAAEAAAAYAAoAAAADAAIAAAAYAAwAAAADAAQAAAAYAA0AAAADAAUAAAAYAA4AAAADAAYAAAAYAA8AAAADAAcAAAAYABAAAAADAAgAAAAYABEAAAAHAAsAAAAZAAkAAAAEAAEAAAAZAAoAAAAEAAIAAAAZAAwAAAAEAAQAAAAZAA0AAAAEAAUAAAAZAA4AAAAEAAYAAAAZAA8AAAAEAAcAAAAZABAAAAAEAAgAAAAZABEAAAAIAAsAAAAaAAkAAAAFAAEAAAAaAAoAAAAFAAIAAAAaAAsAAAAFAAMAAAAaAAwAAAAFAAQAAAAaAA0AAAAFAAUAAAAaAA4AAAAFAAYAAAAaAA8AAAAFAAcAAAAaABAAAAAFAAgAAAAaABEAAAAJAAsAAAAbAAkAAAAGAAEAAAAbAAoAAAAGAAIAAAAbAAsAAAAGAAMAAAAbAAwAAAAGAAQAAAAbAA0AAAAGAAUAAAAbAA4AAAAGAAYAAAAbAA8AAAAGAAcAAAAbABAAAAAGAAgAAAAbABEAAAAKAAsAAAAcAAkAAAAHAAEAAAAcAAoAAAAHAAIAAAAcAAsAAAAHAAMAAAAcAAwAAAAHAAQAAAAcAA0AAAAHAAUAAAAcAA4AAAAHAAYAAAAcAA8AAAAHAAcAAAAcABAAAAAHAAgAAAAcABEAAAACAAsAAAAdAAkAAAAIAAEAAAAdAAoAAAAIAAIAAAAdAAsAAAAIAAMAAAAdAAwAAAAIAAQAAAAdAA0AAAAIAAUAAAAdAA4AAAAIAAYAAAAdAA8AAAAIAAcAAAAdABAAAAAIAAgAAAAdABEAAAADAAsAAAAeAAkAAAAJAAEAAAAeAAoAAAAJAAIAAAAeAAsAAAAJAAMAAAAeAAwAAAAJAAQAAAAeAA0AAAAJAAUAAAAeAA4AAAAJAAYAAAAeAA8AAAAJAAcAAAAeABAAAAAJAAgAAAAeABEAAAAEAAsAAAAfAAkAAAALAAkAAAAfAAoAAAALAAoAAAAfAAsAAAALAAEAAAAfAAwAAAALAAIAAAAfAA0AAAALAAMAAAAfAA4AAAALAAQAAAAfAA8AAAALAAUAAAAfABAAAAALAAYAAAAfABEAAAALAAsAAAAAAAIAAAAAAAEAAAAAAAMAAAAAAAIAAAAAAAQAAAAAAAMAAAAAAAUAAAAAAAQAAAAAAAYAAAAAAAUAAAAAAAcAAAAAAAYAAAAAAAgAAAAAAAcAAAAAAAkAAAAAAAgAAAAAAAoAAAAAAAkAAAAAAAsAAAAAAAEAAAAAAAwAAAAAAAIAAAAAAA0AAAAAAAMAAAAAAA4AAAAAAAQAAAAAAA8AAAAAAAUAAAA=")
+tile_set = ExtResource("3_h80mk")
+
+[node name="WaveSpawner" type="Node2D" parent="." unique_id=25390337 node_paths=PackedStringArray("spawn_markers", "wave_label")]
+script = ExtResource("4_ofktq")
+spawn_markers = [NodePath("spawn/Marker2D"), NodePath("spawn/Marker2D2"), NodePath("spawn/Marker2D3"), NodePath("spawn/Marker2D4")]
+waves = Array[ExtResource("5_e3efu")]([SubResource("Resource_qxrlw"), SubResource("Resource_vmhho"), SubResource("Resource_xqt3k")])
+wave_label = NodePath("../WaveUI/WaveLabel")
+
+[node name="spawn" type="Node2D" parent="WaveSpawner" unique_id=313021479]
+
+[node name="Marker2D2" type="Marker2D" parent="WaveSpawner/spawn" unique_id=1104408098]
+position = Vector2(1222, -32)
+
+[node name="Marker2D3" type="Marker2D" parent="WaveSpawner/spawn" unique_id=611674527]
+position = Vector2(1123, 715)
+
+[node name="Marker2D4" type="Marker2D" parent="WaveSpawner/spawn" unique_id=961871024]
+position = Vector2(-18, 699)
+
+[node name="Marker2D" type="Marker2D" parent="WaveSpawner/spawn" unique_id=920773915]
+position = Vector2(-54, -17)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=238093333]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1969602769]
+position = Vector2(611, -393)
+shape = SubResource("RectangleShape2D_g7b7a")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=243937653]
+position = Vector2(584, 1044)
+shape = SubResource("RectangleShape2D_g7b7a")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1198471300]
+position = Vector2(1702, 412)
+shape = SubResource("RectangleShape2D_g7b7a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=291993465]
+position = Vector2(-588, 360)
+shape = SubResource("RectangleShape2D_g7b7a")
+
+[node name="asb" parent="." unique_id=162240676 instance=ExtResource("7_xn3h5")]
+position = Vector2(196, 166)
+
+[node name="asb5" parent="asb" unique_id=347079400 instance=ExtResource("7_xn3h5")]
+position = Vector2(413, -9)
+
+[node name="asb2" parent="asb" unique_id=279150160 instance=ExtResource("7_xn3h5")]
+position = Vector2(773, 364)
+
+[node name="asb3" parent="asb" unique_id=1253798255 instance=ExtResource("7_xn3h5")]
+position = Vector2(733, -37)
+
+[node name="asb4" parent="asb" unique_id=173827395 instance=ExtResource("7_xn3h5")]
+position = Vector2(-9, 350)
+
+[node name="Player" parent="." unique_id=1223779622 instance=ExtResource("8_pmfbv")]
+position = Vector2(468, 286)
+collision_layer = 3
+collision_mask = 3
+
+[node name="NavRegion" type="NavigationRegion2D" parent="." unique_id=988405423]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_v158k")
+navigation_layers = 3
+
+[node name="tree" type="Node2D" parent="NavRegion" unique_id=1321927877]
+
+[node name="tree" parent="NavRegion/tree" unique_id=756795118 instance=ExtResource("9_xydsh")]
+position = Vector2(835.99994, 281)
+
+[node name="tree2" parent="NavRegion/tree" unique_id=1948621429 instance=ExtResource("9_xydsh")]
+position = Vector2(139, 420)
+
+[node name="tree3" parent="NavRegion/tree" unique_id=1074647701 instance=ExtResource("9_xydsh")]
+position = Vector2(988.99994, 512.99994)
+
+[node name="tower" parent="." unique_id=2046613758 instance=ExtResource("10_3788w")]
+position = Vector2(604, 271)
+
+[node name="SceneManager" parent="." unique_id=1927178025 instance=ExtResource("11_kkflu")]
+visible = false
+
+[node name="WaveUI" type="CanvasLayer" parent="." unique_id=37304467]
+
+[node name="WaveLabel" type="Label" parent="WaveUI" unique_id=819744535]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -11.5
+offset_right = 28.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Wave 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseMenu" parent="." unique_id=1979350304 instance=ExtResource("12_pru5y")]
+visible = false
+offset_left = -1149.0
+offset_top = 31.0
+offset_right = -1149.0
+offset_bottom = 31.0
+
+[node name="MultiplayerUI" type="CanvasLayer" parent="." unique_id=1654651367 node_paths=PackedStringArray("mission_label", "time_label", "player_progress", "enemy_progress", "result_screen")]
+script = ExtResource("13_uons7")
+mission_label = NodePath("Label2")
+time_label = NodePath("Label")
+player_progress = NodePath("ProgressBar")
+enemy_progress = NodePath("ProgressBar2")
+result_screen = NodePath("game over")
+
+[node name="back_ground_button" type="Sprite2D" parent="MultiplayerUI" unique_id=1189850682]
+texture_filter = 1
+position = Vector2(407, 22)
+scale = Vector2(0.5, 0.3)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(28, 60, 100, 68)
+
+[node name="back_ground_button2" type="Sprite2D" parent="MultiplayerUI/back_ground_button" unique_id=902604572]
+texture_filter = 1
+position = Vector2(0, 114)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(28, 320, 100, 104)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button3" type="Sprite2D" parent="MultiplayerUI/back_ground_button" unique_id=1224436671]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(28, 192, 100, 64)
+
+[node name="center" type="Sprite2D" parent="MultiplayerUI/back_ground_button" unique_id=728904616]
+texture_filter = 1
+position = Vector2(82, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center2" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center" unique_id=701546170]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center3" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2" unique_id=1505033371]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3" unique_id=1956792022]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3" unique_id=380441604]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3" unique_id=72482719]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4" unique_id=1776810125]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4" unique_id=2044532244]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4" unique_id=1526442806]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4/center5" unique_id=825614593]
+texture_filter = 1
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4/center5/center6" unique_id=1837500362]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4/center5/center6" unique_id=487381259]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4/center5" unique_id=1536957303]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center3/center4/center5" unique_id=1762513903]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2" unique_id=784172260]
+texture_filter = 1
+position = Vector2(240, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4" unique_id=603609577]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4" unique_id=1578741839]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4" unique_id=1453365079]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4" unique_id=1728764339]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4" unique_id=644201718]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4" unique_id=1724727472]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4/center5" unique_id=1647743196]
+texture_filter = 1
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4/center5/center6" unique_id=2024895289]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4/center5/center6" unique_id=1191575596]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4/center5" unique_id=818391030]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center4/center4/center5" unique_id=1147667604]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2" unique_id=1943678887]
+texture_filter = 1
+position = Vector2(316, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5" unique_id=614699030]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5" unique_id=967133025]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5" unique_id=1080414796]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4" unique_id=1487911897]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4" unique_id=327789192]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4" unique_id=1736207224]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4/center5" unique_id=255275532]
+texture_filter = 1
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4/center5/center6" unique_id=252209623]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4/center5/center6" unique_id=1312438705]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4/center5" unique_id=1968694957]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2/center5/center4/center5" unique_id=1529523009]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2" unique_id=1537705836]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center/center2" unique_id=702230788]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center" unique_id=2137244125]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button/center" unique_id=1611378652]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button4" type="Sprite2D" parent="MultiplayerUI/back_ground_button" unique_id=430569238]
+texture_filter = 1
+position = Vector2(662, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(320, 60, 84, 68)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button" unique_id=215568818]
+texture_filter = 1
+position = Vector2(662, 64)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(320, 192, 84, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button" unique_id=1465134827]
+texture_filter = 1
+position = Vector2(660, 118)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(320, 320, 84, 111)
+
+[node name="back_ground_button2" type="Sprite2D" parent="MultiplayerUI" unique_id=2144666085]
+texture_filter = 1
+position = Vector2(401, 85)
+scale = Vector2(0.5, 0.3)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(28, 60, 100, 68)
+
+[node name="back_ground_button2" type="Sprite2D" parent="MultiplayerUI/back_ground_button2" unique_id=570137150]
+texture_filter = 1
+position = Vector2(0, 114)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(28, 320, 100, 104)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button3" type="Sprite2D" parent="MultiplayerUI/back_ground_button2" unique_id=248570854]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(28, 192, 100, 64)
+
+[node name="center" type="Sprite2D" parent="MultiplayerUI/back_ground_button2" unique_id=1762937512]
+texture_filter = 1
+position = Vector2(82, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center2" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center" unique_id=1793278188]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center3" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2" unique_id=593847122]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3" unique_id=425082863]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3" unique_id=1849364637]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3" unique_id=1475265510]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4" unique_id=1626448623]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4" unique_id=180071981]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4" unique_id=551613249]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4/center5" unique_id=1949305814]
+texture_filter = 1
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4/center5/center6" unique_id=137986748]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4/center5/center6" unique_id=548928487]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4/center5" unique_id=1077017901]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center3/center4/center5" unique_id=1292833258]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2" unique_id=1186083539]
+texture_filter = 1
+position = Vector2(240, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4" unique_id=1523465580]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4" unique_id=1785533015]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4" unique_id=1244407712]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4" unique_id=809731015]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4" unique_id=538620307]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4" unique_id=9477766]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4/center5" unique_id=115224296]
+texture_filter = 1
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4/center5/center6" unique_id=79732356]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4/center5/center6" unique_id=261744015]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4/center5" unique_id=979969180]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center4/center4/center5" unique_id=1859629578]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2" unique_id=406221513]
+texture_filter = 1
+position = Vector2(316, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5" unique_id=1835425586]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5" unique_id=1914823545]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center4" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5" unique_id=1171983890]
+texture_filter = 1
+position = Vector2(64, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4" unique_id=1447384205]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4" unique_id=1608773851]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="center5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4" unique_id=1222920382]
+texture_filter = 1
+position = Vector2(62, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="center6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4/center5" unique_id=1690315148]
+texture_filter = 1
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 60, 64, 68)
+region_filter_clip_enabled = true
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4/center5/center6" unique_id=890312391]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4/center5/center6" unique_id=590422170]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4/center5" unique_id=86357832]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2/center5/center4/center5" unique_id=1821476947]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2" unique_id=222053816]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center/center2" unique_id=90573462]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center" unique_id=963179080]
+texture_filter = 1
+position = Vector2(2, 66)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 192, 64, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2/center" unique_id=1404404732]
+texture_filter = 1
+position = Vector2(-2, 100)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(192, 320, 64, 77)
+
+[node name="back_ground_button4" type="Sprite2D" parent="MultiplayerUI/back_ground_button2" unique_id=273770681]
+texture_filter = 1
+position = Vector2(662, 0)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(320, 60, 84, 68)
+
+[node name="back_ground_button5" type="Sprite2D" parent="MultiplayerUI/back_ground_button2" unique_id=744313929]
+texture_filter = 1
+position = Vector2(662, 64)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(320, 192, 84, 64)
+
+[node name="back_ground_button6" type="Sprite2D" parent="MultiplayerUI/back_ground_button2" unique_id=1459386407]
+texture_filter = 1
+position = Vector2(660, 118)
+texture = ExtResource("15_e3efu")
+region_enabled = true
+region_rect = Rect2(320, 320, 84, 111)
+
+[node name="ProgressBar" type="ProgressBar" parent="MultiplayerUI" unique_id=626913540]
+offset_left = 592.0
+offset_top = 21.0
+offset_right = 596.0
+offset_bottom = 48.0
+
+[node name="ProgressBar2" type="ProgressBar" parent="MultiplayerUI" unique_id=471150711]
+offset_left = 613.0
+offset_top = 86.0
+offset_right = 617.0
+offset_bottom = 113.0
+
+[node name="Label" type="Label" parent="MultiplayerUI" unique_id=1872650542]
+offset_left = 339.0
+offset_top = 17.0
+offset_right = 379.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="MultiplayerUI" unique_id=671500095]
+offset_left = 804.0
+offset_top = 27.0
+offset_right = 844.0
+offset_bottom = 50.0
+
+[node name="game over" parent="MultiplayerUI" unique_id=748280159 instance=ExtResource("15_ofktq")]
+
+[node name="Label3" type="Label" parent="MultiplayerUI" unique_id=1212218685]
+offset_left = 460.0
+offset_top = 20.0
+offset_right = 638.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 20
+text = "نسبة تقدمك :"
+
+[node name="Label4" type="Label" parent="MultiplayerUI" unique_id=1012965346]
+offset_left = 430.0
+offset_top = 85.0
+offset_right = 608.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 20
+text = "نسبة تقدم الخصم :"

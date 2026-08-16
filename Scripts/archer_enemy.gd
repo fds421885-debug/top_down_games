@@ -3,15 +3,15 @@ extends CharacterBody2D
 @export_category("إعدادات الخصائص والدم")
 @export var max_health: int = 50
 @export var speed: float = 130.0
-@export var attack_range: float = 300.0 # المسافة التي يتوقف عندها ويرمي
+@export var attack_range: float = 300.0
 @export var attack_cooldown: float = 2.0
 
 @export_category("المراجع والروابط")
-@export var arrow_scene: PackedScene # اسحب مشهد Arrow.tscn هنا من المحرر
-@export var attack_hit_frame: int = 2 # رقم الفريم الذي يخرج فيه السهم بالأنيميشن
+@export var arrow_scene: PackedScene 
+@export var attack_hit_frame: int = 2 
 
 @export_category("نقطة انطلاق السهم")
-@export var arrow_spawn_point: Marker2D # ضع Marker2D عند يد/قوس العدو في المشهد واسحبه هنا. لو تركته فاضي هينطلق من مركز العدو
+@export var arrow_spawn_point: Marker2D 
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
@@ -42,6 +42,10 @@ func _ready() -> void:
 	if nav_agent:
 		nav_agent.path_desired_distance = 10.0
 		nav_agent.target_desired_distance = 10.0
+
+# تم إضافة هذه الدالة عشان الـ Spawner يحدد هدفه
+func set_target(new_target: Node2D) -> void:
+	target_node = new_target
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -88,6 +92,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func find_target() -> void:
+	if is_instance_valid(target_node):
+		return
+		
 	var players = get_tree().get_nodes_in_group("player")
 	if players.size() > 0:
 		target_node = players[0]
@@ -108,11 +115,7 @@ func shoot_arrow() -> void:
 	if not arrow_scene or not is_instance_valid(target_node):
 		return
 
-	# لقطة لحظية (Snapshot) لموقع اللاعب في هذه اللحظة بالذات
 	var snapshotted_position: Vector2 = target_node.global_position
-
-	# نقطة الانطلاق: لو فيه Marker2D محدد نستخدم موقعه (بيتحرك أوتوماتيك مع دوران وموقع العدو)
-	# ولو مفيش، نرجع لموقع العدو نفسه زي الأول
 	var spawn_position: Vector2 = arrow_spawn_point.global_position if arrow_spawn_point else global_position
 
 	var arrow_instance = arrow_scene.instantiate()
@@ -138,10 +141,14 @@ func take_damage(amount: int) -> void:
 		return
 
 	current_health -= amount
-	print("العدو الرامي اتضرب! الدم المتبقي: ", current_health)
 
 	if current_health <= 0:
 		die()
+
+func notify_spawner() -> void:
+	var spawner = get_tree().get_first_node_in_group("spawner")
+	if spawner and spawner.has_method("on_enemy_defeated"):
+		spawner.on_enemy_defeated()
 
 func die() -> void:
 	if is_dead:
@@ -154,10 +161,7 @@ func die() -> void:
 	if collision_shape:
 		collision_shape.set_deferred("disabled", true)
 
-	if typeof(CloudManager) != TYPE_NIL:
-		CloudManager.current_kills += 1
-		CloudManager.update_progress(CloudManager.current_wave, CloudManager.current_kills)
-		print("تم زيادة قتلة! إجمالي القتلات الحالية: ", CloudManager.current_kills)
+	notify_spawner() # نبلغ الـ Spawner وهو بيتصرف
 
 	if animated_sprite:
 		if animated_sprite.sprite_frames and animated_sprite.sprite_frames.has_animation("die"):

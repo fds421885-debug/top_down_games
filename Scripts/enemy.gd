@@ -25,7 +25,6 @@ var damage_cooldown_timer: float = 0.0
 func _ready() -> void:
 	add_to_group("enemy")
 	
-	# إذا لم يتم تعيين هدف له مسبقاً، فالافتراضي هو اللاعب
 	if not target_node:
 		target_node = get_tree().get_first_node_in_group("player")
 
@@ -38,7 +37,6 @@ func _ready() -> void:
 		if not hit_box.body_entered.is_connected(_on_hit_box_body_entered):
 			hit_box.body_entered.connect(_on_hit_box_body_entered)
 
-# دالة لتحديد هدف العدو من الـ Spawner
 func set_target(new_target: Node2D) -> void:
 	target_node = new_target
 
@@ -52,7 +50,6 @@ func _physics_process(delta: float) -> void:
 		if damage_cooldown_timer <= 0:
 			can_take_damage = true
 
-	# التحقق من أن الهدف لا يزال موجوداً وصالحاً
 	if not target_node or not is_instance_valid(target_node):
 		target_node = get_tree().get_first_node_in_group("tower")
 		if not target_node:
@@ -88,7 +85,6 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 	if is_dead:
 		return
 
-	# إذا لمس هدفه (سواء كان اللاعب أو البرج)، يضربه ويختفي
 	if body == target_node or body.is_in_group("player") or body.is_in_group("tower"):
 		if body.has_method("take_damage"):
 			body.take_damage(damage_on_touch)

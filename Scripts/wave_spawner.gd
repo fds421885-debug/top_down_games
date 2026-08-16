@@ -1,12 +1,12 @@
 extends Node2D
 
-@export var spawn_markers: Array[Marker2D] # أماكن الرسبنة على الخريطة
-@export var waves: Array[WaveData]         # قائمة الويفات المتتابعة
-@export var wave_label: Label              # عرض اسم الويف أو رسالة الفوز
+@export var spawn_markers: Array[Marker2D] 
+@export var waves: Array[WaveData]         
+@export var wave_label: Label              
 
 var current_wave: int = 0
-var current_kills: int = 0 # قتلات الويف الحالي
-var total_kills_session: int = 0 # إجمالي القتلات المتراكمة
+var current_kills: int = 0 
+var total_kills_session: int = 0 
 var timer: float = 0.0
 
 func _ready() -> void:
@@ -15,20 +15,22 @@ func _ready() -> void:
 	if wave_label:
 		wave_label.modulate.a = 0.0
 	
-	# استرجاع الويف والقتلات القديمة من السحابة لو اللاعب عنده حساب قديم
-	if CloudManager:
-		if CloudManager.current_wave > 0:
-			current_wave = CloudManager.current_wave - 1
-			if current_wave < 0: current_wave = 0
-		
-		# نسحب القتلات القديمة المخزنة بالسحابة عشان نبني عليها
-		total_kills_session = CloudManager.current_kills
+	if typeof(CloudManager) != TYPE_NIL:
+		if not CloudManager.is_multiplayer_match:
+			if CloudManager.current_wave > 0:
+				current_wave = CloudManager.current_wave - 1
+				if current_wave < 0: current_wave = 0
+			total_kills_session = CloudManager.current_kills
+		else:
+			current_wave = 0
+			current_kills = 0
+			total_kills_session = 0
 	
 	if not waves.is_empty():
 		start_wave()
 
 func start_wave() -> void:
-	current_kills = 0 # نصفر قتلات الويف الجديد فقط، بينما total_kills_session محفوظ
+	current_kills = 0 
 	
 	if current_wave >= waves.size():
 		return
@@ -85,7 +87,6 @@ func spawn_enemy(wave_data: WaveData) -> void:
 	var random_marker = spawn_markers[randi() % spawn_markers.size()]
 	var enemy_instance = chosen_enemy.instantiate()
 	
-	# توزيع الأهداف: 70% للبرج و 30% للاعب
 	var random_chance = randf()
 	var chosen_target: Node2D = null
 	
@@ -130,28 +131,39 @@ func on_enemy_defeated() -> void:
 		return
 		
 	current_kills += 1
-	total_kills_session += 1 # نزيد إجمالي القتلات التراكمي
-	
 	var wave_data = waves[current_wave]
-	print("قتلات الويف الحالي: ", current_kills, " | إجمالي القتلات المتراكمة: ", total_kills_session)
 	
-	# تحديث سحابي مباشر بالقتلات المتراكمة الجديدة
-	if CloudManager:
-		CloudManager.update_progress(current_wave + 1, total_kills_session)
+	if typeof(CloudManager) != TYPE_NIL:
+		if CloudManager.is_multiplayer_match:
+			if CloudManager.match_mode == "kill_count":
+				var mp_ui = get_tree().current_scene.get_node_or_null("MultiplayerUI")
+				if mp_ui: mp_ui.add_player_score(1)
+		else:
+			total_kills_session += 1
+			CloudManager.update_progress(current_wave + 1, total_kills_session)
 	
 	if current_kills >= wave_data.kills_to_advance:
 		advance_to_next_wave()
 
 func advance_to_next_wave() -> void:
+	if typeof(CloudManager) != TYPE_NIL and CloudManager.is_multiplayer_match:
+		if CloudManager.match_mode == "wave_survival":
+			var mp_ui = get_tree().current_scene.get_node_or_null("MultiplayerUI")
+			if mp_ui: mp_ui.add_player_score(1)
+			
 	current_wave += 1
 	if current_wave < waves.size():
-		# تحديث الويف والقتلات في السحابة لما يترقى للويف الجديد
-		if CloudManager:
+		if typeof(CloudManager) != TYPE_NIL and not CloudManager.is_multiplayer_match:
 			CloudManager.update_progress(current_wave + 1, total_kills_session)
 			
 		start_wave()
 	else:
-		print("مبروك! أنهيت جميع الويفات بنجاح!")
 		if wave_label:
 			wave_label.modulate = Color.GREEN
-		play_wave_intro("لقد فزت!")
+		play_wave_intro("لقد أنهيت الخريطة!")
+		
+		# إذا خلصت الويفات في الأونلاين ولسه الجيم شغال، ننهيه ونحسب الفايز
+		if typeof(CloudManager) != TYPE_NIL and CloudManager.is_multiplayer_match:
+			var mp_ui = get_tree().current_scene.get_node_or_null("MultiplayerUI")
+			if mp_ui and not mp_ui.game_ended:
+				mp_ui.evaluate_winner_by_time()

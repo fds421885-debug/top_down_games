@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cdurehs1inibg" path="res://Scenes/back_ground.tscn" id="1_28flt"]
 [ext_resource type="Script" uid="uid://cipqlgw7xvdfn" path="res://Scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="Texture2D" uid="uid://bn33ykhi7kvt0" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Swords/Swords.png" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://siafnp8xko4q" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner_Slots.png" id="3_opfnp"]
 [ext_resource type="Script" uid="uid://3w5mwfyr15mh" path="res://Scripts/control.gd" id="4_ce3w2"]
 [ext_resource type="PackedScene" uid="uid://dbd4vy5esx1vk" path="res://Scenes/player_hud.tscn" id="5_n45e2"]
 
@@ -21,7 +22,7 @@ load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.c
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yhxw7"]
 load_path = "res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex"
 
-[node name="MainMenu" type="Control" unique_id=370220947 node_paths=PackedStringArray("play_button", "logout_button", "leaderboard_button")]
+[node name="MainMenu" type="Control" unique_id=370220947 node_paths=PackedStringArray("play_button", "online_button", "logout_button", "leaderboard_button", "welcome_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,13 +31,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_48xlc")
 play_button = NodePath("button/start")
+online_button = NodePath("button/top2")
 logout_button = NodePath("button/quitr")
 leaderboard_button = NodePath("button/top")
+welcome_label = NodePath("")
 game_scene_path = "uid://brch3d0oybrmv"
+matchmaking_scene_path = "uid://dkpm1ggsuhkfg"
 login_scene_path = "uid://cult8kt0i8q3j"
 leaderboard_scene_path = "uid://c8ayq238els00"
 
 [node name="back ground" parent="." unique_id=26277604 instance=ExtResource("1_28flt")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=123400667]
+position = Vector2(998, 106)
+texture = ExtResource("3_opfnp")
 
 [node name="start" type="Node2D" parent="." unique_id=72021602]
 
@@ -118,8 +126,8 @@ region_enabled = true
 region_rect = Rect2(192, 19, 64, 90)
 
 [node name="quite2" type="Node2D" parent="." unique_id=2084365229]
-position = Vector2(1045, 888)
-rotation = -3.1436968
+position = Vector2(1052.0001, 969.00006)
+rotation = 3.1394885
 scale = Vector2(0.8, 0.8)
 
 [node name="TextureRect" type="Sprite2D" parent="quite2" unique_id=17048893]
@@ -159,11 +167,12 @@ texture = SubResource("CompressedTexture2D_yhxw7")
 region_enabled = true
 region_rect = Rect2(192, 19, 64, 90)
 
-[node name="quite3" type="Node2D" parent="." unique_id=905535942]
-position = Vector2(-605, 31)
-scale = Vector2(0.8, 0.8)
+[node name="quite3" type="Node2D" parent="quite2" unique_id=905535942]
+position = Vector2(2060.2412, 1075.5873)
+rotation = -3.1394885
+scale = Vector2(0.99999994, 0.99999994)
 
-[node name="TextureRect" type="Sprite2D" parent="quite3" unique_id=231520397]
+[node name="TextureRect" type="Sprite2D" parent="quite2/quite3" unique_id=231520397]
 texture_filter = 1
 position = Vector2(837, 537)
 texture = SubResource("CompressedTexture2D_ce3w2")
@@ -171,21 +180,95 @@ region_enabled = true
 region_rect = Rect2(16, 256, 128, 128)
 region_filter_clip_enabled = true
 
-[node name="TextureRect3" type="Sprite2D" parent="quite3" unique_id=1163542296]
+[node name="TextureRect3" type="Sprite2D" parent="quite2/quite3" unique_id=1163542296]
 texture_filter = 1
 position = Vector2(951, 538)
 texture = SubResource("CompressedTexture2D_opfnp")
 region_enabled = true
 region_rect = Rect2(192, 19, 64, 90)
 
-[node name="TextureRect4" type="Sprite2D" parent="quite3" unique_id=1860247043]
+[node name="TextureRect4" type="Sprite2D" parent="quite2/quite3" unique_id=1860247043]
 texture_filter = 1
 position = Vector2(908, 538)
 texture = SubResource("CompressedTexture2D_cp0ys")
 region_enabled = true
 region_rect = Rect2(192, 19, 64, 90)
 
-[node name="TextureRect5" type="Sprite2D" parent="quite3" unique_id=1139494813]
+[node name="TextureRect5" type="Sprite2D" parent="quite2/quite3" unique_id=1139494813]
+texture_filter = 1
+position = Vector2(1014, 537)
+texture = SubResource("CompressedTexture2D_yhxw7")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="quite3" type="Node2D" parent="." unique_id=1170420036]
+position = Vector2(1729, 657.0001)
+rotation = 3.1394885
+scale = Vector2(0.8, 0.8)
+
+[node name="TextureRect" type="Sprite2D" parent="quite3" unique_id=216663373]
+texture_filter = 1
+position = Vector2(837, 537)
+texture = SubResource("CompressedTexture2D_ce3w2")
+region_enabled = true
+region_rect = Rect2(8, 512, 128, 136)
+
+[node name="TextureRect2" type="Sprite2D" parent="quite3" unique_id=802340566]
+texture_filter = 1
+position = Vector2(1077, 537)
+texture = SubResource("CompressedTexture2D_n45e2")
+region_enabled = true
+region_rect = Rect2(320, 20, 92, 88)
+region_filter_clip_enabled = true
+
+[node name="TextureRect3" type="Sprite2D" parent="quite3" unique_id=614691122]
+texture_filter = 1
+position = Vector2(951, 538)
+texture = SubResource("CompressedTexture2D_opfnp")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect4" type="Sprite2D" parent="quite3" unique_id=604908202]
+texture_filter = 1
+position = Vector2(908, 538)
+texture = SubResource("CompressedTexture2D_cp0ys")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect5" type="Sprite2D" parent="quite3" unique_id=1383749759]
+texture_filter = 1
+position = Vector2(1014, 537)
+texture = SubResource("CompressedTexture2D_yhxw7")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="quite3" type="Node2D" parent="quite3" unique_id=394453064]
+position = Vector2(2060.2412, 1075.5873)
+rotation = -3.1394885
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="TextureRect" type="Sprite2D" parent="quite3/quite3" unique_id=126993153]
+texture_filter = 1
+position = Vector2(837, 537)
+texture = SubResource("CompressedTexture2D_ce3w2")
+region_enabled = true
+region_rect = Rect2(16, 384, 120, 128)
+
+[node name="TextureRect3" type="Sprite2D" parent="quite3/quite3" unique_id=120161175]
+texture_filter = 1
+position = Vector2(951, 538)
+texture = SubResource("CompressedTexture2D_opfnp")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect4" type="Sprite2D" parent="quite3/quite3" unique_id=985008880]
+texture_filter = 1
+position = Vector2(908, 538)
+texture = SubResource("CompressedTexture2D_cp0ys")
+region_enabled = true
+region_rect = Rect2(192, 19, 64, 90)
+
+[node name="TextureRect5" type="Sprite2D" parent="quite3/quite3" unique_id=1118822264]
 texture_filter = 1
 position = Vector2(1014, 537)
 texture = SubResource("CompressedTexture2D_yhxw7")
@@ -216,15 +299,28 @@ flat = true
 
 [node name="top" type="Button" parent="button" unique_id=612432878]
 layout_mode = 0
-offset_left = 792.0
-offset_top = 415.0
-offset_right = 1078.0
-offset_bottom = 511.0
+offset_left = 791.0
+offset_top = 495.0
+offset_right = 1077.0
+offset_bottom = 591.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.104493, 0.10449313, 0.10449346, 1)
 theme_override_font_sizes/font_size = 32
 text = "ترتيب الافضل"
+flat = true
+
+[node name="top2" type="Button" parent="button" unique_id=1844399112]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 183.0
+offset_right = 396.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.104493, 0.10449313, 0.10449346, 1)
+theme_override_font_sizes/font_size = 32
+text = "العب اولاين"
 flat = true
 
 [node name="quitr" type="Button" parent="button" unique_id=1756784856]

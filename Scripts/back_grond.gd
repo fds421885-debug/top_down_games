@@ -1,36 +1,46 @@
 extends Control
 
-@export var play_again_button: Button
-@export var menu_button: Button
-@export var panel_box: Control
+@export var result_title: Label
+@export var result_details: Label
+@export var play_again_btn: Button
+@export var menu_btn: Button
 
-@export_file("*.tscn") var game_scene_path: String = "res://Scenes/game.tscn"
-@export_file("*.tscn") var main_menu_path: String = "res://Scenes/main_menu.tscn"
+@export_file("*.tscn") var matchmaking_scene: String = "res://Scenes/matchmaking_screen.tscn"
+@export_file("*.tscn") var menu_scene: String = "res://Scenes/main_menu.tscn"
 
 func _ready() -> void:
-	# مهم جداً: نخلي هذي النافذة تشتغل حتى واللعبة متوقفة (Paused)
-	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	process_mode = Node.PROCESS_MODE_ALWAYS # عشان تشتغل واللعبة واقفة
+	hide()
 	
-	if play_again_button:
-		play_again_button.pressed.connect(_on_play_again_pressed)
-	if menu_button:
-		menu_button.pressed.connect(_on_menu_pressed)
+	if play_again_btn:
+		play_again_btn.pressed.connect(_on_play_again)
+	if menu_btn:
+		menu_btn.pressed.connect(_on_menu)
+
+func show_result(is_winner: bool, points: int) -> void:
+	show()
+	
+	if is_winner:
+		result_title.text = "لقد فـزت!"
+		result_title.modulate = Color.GREEN
+		result_details.text = "ربحت " + str(points) + " نقطة تمت إضافتها لرصيدك!"
+	else:
+		result_title.text = "لقد خسـرت!"
+		result_title.modulate = Color.RED
+		result_details.text = "تم خصم 5 نقاط من رصيدك الأساسي."
 		
-	# تأثير الانبثاق
-	if panel_box:
-		panel_box.scale = Vector2(0.1, 0.1)
-		panel_box.pivot_offset = panel_box.size / 2
-		var tween = create_tween().set_ignore_time_scale(true).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		tween.tween_property(panel_box, "scale", Vector2(1, 1), 0.5)
+	# حركة انبثاق خفيفة
+	scale = Vector2(0.5, 0.5)
+	pivot_offset = size / 2
+	var tween = create_tween().set_ignore_time_scale(true).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "scale", Vector2(1, 1), 0.5)
 
-func _on_play_again_pressed() -> void:
-	# نرجع نفعل الوقت قبل ما نغير المشهد
+func _on_play_again() -> void:
 	get_tree().paused = false
-	if game_scene_path != "":
-		get_tree().change_scene_to_file(game_scene_path)
+	if matchmaking_scene != "":
+		get_tree().change_scene_to_file(matchmaking_scene)
 
-func _on_menu_pressed() -> void:
-	# نرجع نفعل الوقت قبل ما نغير المشهد
+func _on_menu() -> void:
 	get_tree().paused = false
-	if main_menu_path != "":
-		get_tree().change_scene_to_file(main_menu_path)
+	if menu_scene != "":
+		get_tree().change_scene_to_file(menu_scene)
