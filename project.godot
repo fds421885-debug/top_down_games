@@ -17,12 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-LootLockerSDK="uid://pchcwak7fv2u"
 SupabaseManager="*uid://csnwfyu3lhstb"
 SaveManager="*uid://dd5adeuv2y3jr"
 NamePrompt="*uid://cmt5uob00iui8"
 CloudManager="*uid://cfioj8osoyiq8"
 SceneManager="*uid://bulyyl3svrka2"
+NetworkManager="*uid://dh1opp0gam0rx"
 
 [display]
 

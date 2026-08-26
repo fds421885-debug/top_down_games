@@ -1,23 +1,23 @@
 extends CharacterBody2D
 
-@export_category("Movement Settings")
-@export var max_speed: float = 400.0
-@export var acceleration: float = 3000.0
-@export var friction: float = 2500.0
+@export_category("إعدادات الحركة")
+@export var max_speed: float = 420.0
+@export var acceleration: float = 3500.0
+@export var friction: float = 3000.0
 
-@export_category("Dash Settings")
-@export var dash_speed: float = 1000.0
+@export_category("إعدادات الـ Dash")
+@export var dash_speed: float = 1100.0
 @export var dash_duration: float = 0.12
-@export var dash_cooldown: float = 0.8
+@export var dash_cooldown: float = 0.7
 @export var max_drag_distance: float = 80.0
 
-@export_category("Animation Settings")
+@export_category("إعدادات الأنميشن")
 @export var animated_sprite: AnimatedSprite2D
 @export var anim_idle: String = "idle"
 @export var anim_run: String = "run"
 @export var anim_attack: String = "attack"
 
-@export_category("Combat & Health")
+@export_category("القتال والصحة")
 @export var attack_area: Area2D
 @export var max_health: int = 100
 @export var health_bar: ProgressBar
@@ -34,7 +34,6 @@ var current_dash_dir: Vector2 = Vector2.RIGHT
 var enemies_in_range: Array = []
 var has_dealt_damage: bool = false
 
-# متغير لتحديد نوع الجهاز (true = جوال/لمس، false = كمبيوتر/ماوس وكيبورد)
 var is_mobile_device: bool = false
 
 var joystick_touch_index: int = -1
@@ -52,16 +51,13 @@ func _ready() -> void:
 	current_health = max_health
 	update_health_bar()
 
-	# الكشف التلقائي عن نوع الجهاز أول ما يبدأ الجيم
 	is_mobile_device = DisplayServer.is_touchscreen_available() or OS.has_feature("mobile")
-	if is_mobile_device:
-		print("تم التعرف على الجهاز: جوال (تم تفعيل تحكم اللمس وإلغاء الماوس)")
-	else:
-		print("تم التعرف على الجهاز: كمبيوتر (تم تفعيل تحكم الماوس والكيبورد وإلغاء اللمس)")
 
 	if attack_area:
-		attack_area.body_entered.connect(_on_attack_area_body_entered)
-		attack_area.body_exited.connect(_on_attack_area_body_exited)
+		if not attack_area.body_entered.is_connected(_on_attack_area_body_entered):
+			attack_area.body_entered.connect(_on_attack_area_body_entered)
+		if not attack_area.body_exited.is_connected(_on_attack_area_body_exited):
+			attack_area.body_exited.connect(_on_attack_area_body_exited)
 
 	if animated_sprite:
 		if not animated_sprite.animation_finished.is_connected(_on_animation_finished):
@@ -71,7 +67,6 @@ func _input(event: InputEvent) -> void:
 	if is_dead:
 		return
 
-	# --- تحكم الكمبيوتر (يعمل فقط لو الجهاز مو جوال) ---
 	if not is_mobile_device:
 		if event is InputEventMouseButton and event.pressed:
 			if event.button_index == MOUSE_BUTTON_LEFT:
@@ -82,9 +77,8 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventKey and event.pressed:
 			if event.keycode == KEY_SHIFT:
 				trigger_dash()
-		return # نقفل أي معالجة إضافية لevents الجوال لو كنا على كمبيوتر
+		return
 
-	# --- تحكم الجوال (يعمل فقط لو الجهاز لمس/جوال) ---
 	if is_mobile_device:
 		var screen_width = get_viewport().get_visible_rect().size.x
 
@@ -150,27 +144,31 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		move_and_slide()
 		
-		# للكمبيوتر أثناء الهجوم: يثبت اتجاهه نحو الماوس
 		if not is_mobile_device:
 			var mouse_dir = (get_global_mouse_position() - global_position).normalized()
-			rotation = mouse_dir.angle()
+			rotation = lerp_angle(rotation, mouse_dir.angle(), 25.0 * delta)
 
 		if animated_sprite and animated_sprite.animation == anim_attack:
 			if animated_sprite.frame == attack_hit_frame and not has_dealt_damage:
 				has_dealt_damage = true
 				execute_attack_damage()
-				
 		return
 
-	# حساب الاتجاه حسب نوع الجهاز المكتشف
 	var direction = Vector2.ZERO
 	if is_mobile_device:
 		direction = joystick_vector
 	else:
-		var pc_x = 0.0
-		if Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
-			pc_x = 1.0
-		direction = Vector2(pc_x, 0.0)
+		var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		if input_vector != Vector2.ZERO:
+			direction = input_vector.normalized()
+		else:
+			var pc_x = 0.0
+			var pc_y = 0.0
+			if Input.is_key_pressed(KEY_D) or Input.is_key_pressed(KEY_RIGHT): pc_x += 1.0
+			if Input.is_key_pressed(KEY_A) or Input.is_key_pressed(KEY_LEFT): pc_x -= 1.0
+			if Input.is_key_pressed(KEY_S) or Input.is_key_pressed(KEY_DOWN): pc_y += 1.0
+			if Input.is_key_pressed(KEY_W) or Input.is_key_pressed(KEY_UP): pc_y -= 1.0
+			direction = Vector2(pc_x, pc_y).normalized()
 
 	if direction != Vector2.ZERO:
 		velocity = velocity.move_toward(direction * max_speed, acceleration * delta)
@@ -178,21 +176,17 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
-	# نظام التوجيه والدوران حسب الجهاز
 	if is_mobile_device:
 		if joystick_vector != Vector2.ZERO:
-			var target_angle = joystick_vector.angle()
-			rotation = lerp_angle(rotation, target_angle, 15.0 * delta)
+			rotation = lerp_angle(rotation, joystick_vector.angle(), 18.0 * delta)
 	else:
-		# الكمبيوتر يناظر الماوس دائماً
 		var mouse_pos = get_global_mouse_position()
-		var target_angle = (mouse_pos - global_position).angle()
-		rotation = lerp_angle(rotation, target_angle, 25.0 * delta)
+		rotation = lerp_angle(rotation, (mouse_pos - global_position).angle(), 25.0 * delta)
 
 	move_and_slide()
-	update_animations(direction)
+	update_animations()
 
-func update_animations(dir: Vector2) -> void:
+func update_animations() -> void:
 	if not animated_sprite or is_attacking:
 		return
 
@@ -227,7 +221,7 @@ func trigger_attack() -> void:
 func execute_attack_damage() -> void:
 	for enemy in enemies_in_range:
 		if is_instance_valid(enemy) and enemy.has_method("take_damage"):
-			enemy.take_damage(30)
+			enemy.take_damage(35)
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy") and not enemies_in_range.has(body):
@@ -268,10 +262,7 @@ func die() -> void:
 	is_dead = true
 	
 	if CloudManager.is_multiplayer_match:
-		print("اللاعب مات في الأونلاين - سيتم إظهار شاشة الخسارة")
 		velocity = Vector2.ZERO
-		# استدعاء دالة player_died الموجودة في سكربت multiplayer_manager
 		get_tree().call_group("multiplayer_manager", "player_died")
 	else:
-		print("اللاعب مات في اللعب الفردي - جاري إعادة المرحلة")
 		get_tree().reload_current_scene()
