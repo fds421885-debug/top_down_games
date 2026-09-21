@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://kapgl3a7bar2" path="res://Scenes/scene_manager.tscn" id="11_kkflu"]
 [ext_resource type="Script" uid="uid://gb6fb2fwdpt" path="res://Scripts/multiplayer_ui.gd" id="13_uons7"]
 [ext_resource type="Texture2D" uid="uid://bqjymaj3gfjvp" path="res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png" id="15_e3efu"]
-[ext_resource type="PackedScene" uid="uid://cc2g6tgal4gpv" path="res://Scenes/game_over.tscn" id="15_ofktq"]
 [ext_resource type="AudioStream" uid="uid://b3jnex7usmlfr" path="res://intro_scen/moonlight_over_the_canyon_floor.mp3" id="16_e3efu"]
 
 [sub_resource type="Resource" id="Resource_qxrlw"]
@@ -222,13 +221,12 @@ text = "Wave 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MultiplayerUI" type="CanvasLayer" parent="." unique_id=1654651367 node_paths=PackedStringArray("mission_label", "time_label", "player_progress", "enemy_progress", "result_screen")]
+[node name="MultiplayerUI" type="CanvasLayer" parent="." unique_id=1654651367 node_paths=PackedStringArray("mission_label", "time_label", "player_progress", "enemy_progress")]
 script = ExtResource("13_uons7")
 mission_label = NodePath("Label2")
 time_label = NodePath("Label")
 player_progress = NodePath("ProgressBar")
 enemy_progress = NodePath("ProgressBar2")
-result_screen = NodePath("game over")
 
 [node name="back_ground_button" type="Sprite2D" parent="MultiplayerUI" unique_id=1189850682]
 texture_filter = 1
@@ -951,16 +949,6 @@ offset_left = 804.0
 offset_top = 27.0
 offset_right = 844.0
 offset_bottom = 50.0
-
-[node name="game over" parent="MultiplayerUI" unique_id=748280159 instance=ExtResource("15_ofktq")]
-
-[node name="Label3" type="Label" parent="MultiplayerUI" unique_id=1212218685]
-offset_left = 460.0
-offset_top = 20.0
-offset_right = 638.0
-offset_bottom = 62.0
-theme_override_font_sizes/font_size = 20
-text = "نسبة تقدمك :"
 
 [node name="Label4" type="Label" parent="MultiplayerUI" unique_id=1012965346]
 offset_left = 430.0
