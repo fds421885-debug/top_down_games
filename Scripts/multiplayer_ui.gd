@@ -4,7 +4,6 @@ extends CanvasLayer
 @export var time_label: Label
 @export var player_progress: ProgressBar
 @export var enemy_progress: ProgressBar
-@export var result_screen: Control 
 
 var current_player_score: int = 0
 var current_enemy_score: int = 0
@@ -162,8 +161,4 @@ func declare_winner(winner: String) -> void:
 		is_win = false
 		points = 0
 		
-	if result_screen:
-		# نخلي شاشة النتيجة تشتغل حتى لو اللعبة (paused) عشان ما تعلق
-		result_screen.process_mode = Node.PROCESS_MODE_ALWAYS
-		result_screen.visible = true
-		result_screen.show_result(is_win, points)
+	print("انتهت اللعبة! الفائز: " + winner)
