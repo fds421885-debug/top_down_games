@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://btx7vipjcwruj"]
+
+[ext_resource type="Texture2D" uid="uid://dvlxwi5l4atse" path="res://icon.svg" id="1_5drdy"]
+[ext_resource type="Script" uid="uid://cktbbchu1pg5" path="res://Scripts/Shop/upgrade_data.gd" id="1_rwqb5"]
+
+[resource]
+script = ExtResource("1_rwqb5")
+upgrade_id = "speed"
+display_name = "السرعة"
+icon = ExtResource("1_5drdy")
+target_property = "max_speed"
+base_value = 420.0
+value_per_level = 30.0
+metadata/_custom_type_script = "uid://cktbbchu1pg5"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://bq743xdsh4n2m"]
+
+[ext_resource type="Texture2D" uid="uid://dvlxwi5l4atse" path="res://icon.svg" id="1_5lcay"]
+[ext_resource type="Script" uid="uid://dtuajl0imwdyq" path="res://Scripts/Shop/character_data.gd" id="1_qnkyx"]
+[ext_resource type="Script" uid="uid://cktbbchu1pg5" path="res://Scripts/Shop/upgrade_data.gd" id="2_5lcay"]
+[ext_resource type="SpriteFrames" uid="uid://dkxygq5vkke1g" path="res://Resources/Upgrades/player.tres" id="3_l81mh"]
+[ext_resource type="Resource" uid="uid://btx7vipjcwruj" path="res://Resources/Upgrades/speed_upgrade.tres" id="5_alir3"]
+
+[resource]
+script = ExtResource("1_qnkyx")
+character_id = "default"
+icon = ExtResource("1_5lcay")
+sprite_frames = ExtResource("3_l81mh")
+upgrades = Array[ExtResource("2_5lcay")]([ExtResource("5_alir3")])
+metadata/_custom_type_script = "uid://dtuajl0imwdyq"

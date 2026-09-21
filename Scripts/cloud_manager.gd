@@ -5,6 +5,12 @@ const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const LOCAL_SESSION_PATH = "user://player_session.json"
 const OFFLINE_SAVE_PATH = "user://offline_save.json"
 
+# ============================================================
+# إعدادات اقتصاد اللعبة (النقود)
+# ============================================================
+const MONEY_PER_KILL: int = 1          # أوفلاين: كل قتلة = وحدة نقود واحدة
+const WIN_BONUS_PERCENT: float = 0.25   # اونلاين: الفائز يأخذ 25% إضافية فوق "قيمة المباراة"
+
 var table_url = SUPABASE_URL + "/rest/v1/cloud_saves"
 var matches_url = SUPABASE_URL + "/rest/v1/active_matches"
 
@@ -23,15 +29,28 @@ var current_wave: int = 1
 var current_kills: int = 0
 var is_offline_mode: bool = false
 
+# --- نقود اللاعب ---
+var money: int = 0              # الرصيد الكلي (المحفوظ بالسحابة)
+var session_run_money: int = 0  # كم ربح في هذه الجولة/المباراة الحالية بس (يُصفّر كل جولة جديدة)
+
+# --- بيانات المتجر: الشخصيات المفتوحة + المختارة + مستويات التطوير ---
+# الشكل: { "unlocked": ["default"], "selected": "default", "upgrades": { "default": {"speed": 2} } }
+var shop_data: Dictionary = {
+	"unlocked": ["default"],
+	"selected": "default",
+	"upgrades": {}
+}
+
 # --- متغيرات نظام الأونلاين ---
 var is_multiplayer_match: bool = false
-var match_mode: String = "" 
+var match_mode: String = ""
 var match_goal: int = 0
 var match_time_limit: int = 0
 var enemy_is_bot: bool = false
 var enemy_bot_difficulty: int = 0
 var enemy_name: String = ""
-var current_bot_delay: float = 2.0 
+var current_bot_delay: float = 2.0
+var match_money_value: int = 0  # "قيمة المباراة" بالفلوس (M) - تُحسب عند بدء كل ماتش أونلاين
 
 var current_match_id: int = -1
 var is_player_one: bool = true
@@ -39,7 +58,7 @@ var is_player_one: bool = true
 func _ready():
 	http_request = HTTPRequest.new()
 	add_child(http_request)
-	http_request.accept_gzip = false # إيقاف الـ Gzip للويب
+	http_request.accept_gzip = false
 	load_session()
 
 func reset_player_memory():
@@ -48,28 +67,29 @@ func reset_player_memory():
 	current_wave = 1
 	current_kills = 0
 	is_offline_mode = false
+	money = 0
+	shop_data = {"unlocked": ["default"], "selected": "default", "upgrades": {}}
 
-func generate_signature(wave: int, kills: int) -> String:
-	var raw_string = str(wave) + "_" + str(kills) + "_GodotSecureToken2026"
+func generate_signature(wave: int, kills: int, coins: int) -> String:
+	var raw_string = str(wave) + "_" + str(kills) + "_" + str(coins) + "_GodotSecureToken2026"
 	return raw_string.sha256_text()
 
 func login_or_register(email: String) -> Dictionary:
 	reset_player_memory()
 	current_email = email
-	
+
 	var query_url = table_url + "?email=eq." + email.uri_encode()
-	
+
 	var err = http_request.request(query_url, headers, HTTPClient.METHOD_GET)
-	if err != OK: 
+	if err != OK:
 		is_offline_mode = true
 		return {"success": true, "is_new": false, "offline": true}
-		
+
 	var response = await http_request.request_completed
-	
-	# 🛠️ تصليح تفكيك مصفوفة الويب:
-	var code = response[1] 
+
+	var code = response[1]
 	var body = response[3].get_string_from_utf8()
-	
+
 	if code == 200:
 		is_offline_mode = false
 		var json = JSON.new()
@@ -81,72 +101,163 @@ func login_or_register(email: String) -> Dictionary:
 				current_player_name = data[0].get("player_name", "")
 				current_wave = int(data[0].get("wave", 1))
 				current_kills = int(data[0].get("kills", 0))
+				money = int(data[0].get("money", 0))
+				var loaded_shop = data[0].get("shop_data", null)
+				if loaded_shop != null and typeof(loaded_shop) == TYPE_DICTIONARY:
+					shop_data = loaded_shop
 				save_session()
 				return {"success": true, "is_new": false}
-				
+
 	return {"success": false, "message": "فشل الاتصال بالسيرفر، كود الاستجابة: " + str(code)}
 
 func save_new_player(player_name: String) -> bool:
 	current_player_name = player_name
 	current_wave = 1
 	current_kills = 0
-	
+	money = 0
+	shop_data = {"unlocked": ["default"], "selected": "default", "upgrades": {}}
+
 	var body = JSON.stringify({
 		"email": current_email,
 		"player_name": current_player_name,
 		"wave": 1,
 		"kills": 0,
-		"signature": generate_signature(1, 0)
+		"money": 0,
+		"shop_data": shop_data,
+		"signature": generate_signature(1, 0, 0)
 	})
-	
+
 	var err = http_request.request(table_url, headers, HTTPClient.METHOD_POST, body)
 	if err != OK: return false
-	
+
 	var response = await http_request.request_completed
-	var code = response[1] # 🛠️ تصليح المصفوفة
-	
+	var code = response[1]
+
 	if code == 201 or code == 200:
 		save_session()
 		return true
 	return false
 
 func update_progress(new_wave: int, new_kills: int) -> void:
-	if is_multiplayer_match: return 
+	if is_multiplayer_match: return
 
 	current_wave = new_wave
 	current_kills = new_kills
 	save_session()
-	
+
 	if is_offline_mode: return
-		
+
 	var body = JSON.stringify({
 		"wave": current_wave,
 		"kills": current_kills,
-		"signature": generate_signature(current_wave, current_kills)
+		"money": money,
+		"shop_data": shop_data,
+		"signature": generate_signature(current_wave, current_kills, money)
 	})
-	
+
 	var update_url = table_url + "?email=eq." + current_email.uri_encode()
 	http_request.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
 
-func update_multiplayer_result(is_winner: bool, points_gained: int) -> void:
+# مزامنة سريعة للفلوس وبيانات المتجر بس (تُستخدم عند أي شراء/تطوير أو نهاية أي جولة/ماتش)
+func sync_economy_to_server() -> void:
+	save_session()
+	if is_offline_mode or current_email == "":
+		return
+
+	var body = JSON.stringify({
+		"money": money,
+		"shop_data": shop_data,
+		"signature": generate_signature(current_wave, current_kills, money)
+	})
+	var update_url = table_url + "?email=eq." + current_email.uri_encode()
+
+	var temp_http = HTTPRequest.new()
+	add_child(temp_http)
+	temp_http.accept_gzip = false
+	temp_http.request(update_url, headers.duplicate(), HTTPClient.METHOD_PATCH, body)
+	await temp_http.request_completed
+	temp_http.queue_free()
+
+# ============================================================
+# دوال النقود
+# ============================================================
+func reset_session_money() -> void:
+	session_run_money = 0
+
+func add_money(amount: int) -> void:
+	if amount <= 0: return
+	money += amount
+	session_run_money += amount
+
+func register_kill_reward() -> void:
+	add_money(MONEY_PER_KILL)
+
+func spend_money(amount: int) -> bool:
+	if amount <= 0: return true
+	if money < amount:
+		return false
+	money -= amount
+	return true
+
+func lose_money(amount: int) -> void:
+	money -= amount
+	if money < 0:
+		money = 0
+
+# ============================================================
+# دوال المتجر (فتح/اختيار الشخصيات + مستويات التطوير)
+# ============================================================
+func is_character_unlocked(character_id: String) -> bool:
+	var unlocked: Array = shop_data.get("unlocked", [])
+	return unlocked.has(character_id)
+
+func unlock_character(character_id: String) -> void:
+	var unlocked: Array = shop_data.get("unlocked", [])
+	if not unlocked.has(character_id):
+		unlocked.append(character_id)
+	shop_data["unlocked"] = unlocked
+
+func select_character(character_id: String) -> void:
+	shop_data["selected"] = character_id
+
+func get_selected_character() -> String:
+	return shop_data.get("selected", "default")
+
+func get_upgrade_level(character_id: String, upgrade_id: String) -> int:
+	var all_upgrades: Dictionary = shop_data.get("upgrades", {})
+	var char_upgrades: Dictionary = all_upgrades.get(character_id, {})
+	return int(char_upgrades.get(upgrade_id, 0))
+
+func set_upgrade_level(character_id: String, upgrade_id: String, level: int) -> void:
+	var all_upgrades: Dictionary = shop_data.get("upgrades", {})
+	var char_upgrades: Dictionary = all_upgrades.get(character_id, {})
+	char_upgrades[upgrade_id] = level
+	all_upgrades[character_id] = char_upgrades
+	shop_data["upgrades"] = all_upgrades
+
+# ============================================================
+# نتيجة المباراة أونلاين (فوز/خسارة) - تعتمد على match_money_value
+# ============================================================
+func apply_multiplayer_result(is_winner: bool) -> void:
 	if is_winner:
-		current_kills += points_gained
+		var reward = int(round(match_money_value * (1.0 + WIN_BONUS_PERCENT)))
+		add_money(reward)
 	else:
-		current_kills -= 5
-		if current_kills < 0: current_kills = 0
-	
+		lose_money(match_money_value)
+
 	if not enemy_is_bot and current_match_id != -1:
 		end_real_match()
-		
-	is_multiplayer_match = false 
+
+	is_multiplayer_match = false
 	update_progress(current_wave, current_kills)
+	sync_economy_to_server()
 
 func sync_my_score_to_server(my_score: int) -> void:
 	if current_match_id == -1 or enemy_is_bot: return
 	var score_field = "player1_score" if is_player_one else "player2_score"
-	var body = JSON.stringify({ score_field: my_score })
+	var body = JSON.stringify({score_field: my_score})
 	var update_url = matches_url + "?id=eq." + str(current_match_id)
-	
+
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
 	temp_http.accept_gzip = false
@@ -155,7 +266,7 @@ func sync_my_score_to_server(my_score: int) -> void:
 	temp_http.queue_free()
 
 func end_real_match() -> void:
-	var body = JSON.stringify({ "status": "finished" })
+	var body = JSON.stringify({"status": "finished"})
 	var update_url = matches_url + "?id=eq." + str(current_match_id)
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
@@ -169,7 +280,9 @@ func save_session():
 		"email": current_email,
 		"name": current_player_name,
 		"wave": current_wave,
-		"kills": current_kills
+		"kills": current_kills,
+		"money": money,
+		"shop_data": shop_data
 	}
 	var file = FileAccess.open(LOCAL_SESSION_PATH, FileAccess.WRITE)
 	if file:
@@ -185,6 +298,10 @@ func load_session():
 			current_player_name = data.get("name", "")
 			current_wave = int(data.get("wave", 1))
 			current_kills = int(data.get("kills", 0))
+			money = int(data.get("money", 0))
+			var loaded_shop = data.get("shop_data", null)
+			if loaded_shop != null and typeof(loaded_shop) == TYPE_DICTIONARY:
+				shop_data = loaded_shop
 
 func logout():
 	reset_player_memory()
@@ -201,8 +318,8 @@ func fetch_leaderboard() -> Array:
 	temp_http.request(req_url, headers)
 	var response = await temp_http.request_completed
 	temp_http.queue_free()
-	
-	var code = response[1] # 🛠️ تصليح المصفوفة
+
+	var code = response[1]
 	if code == 200:
 		var json = JSON.new()
 		if json.parse(response[3].get_string_from_utf8()) == OK:
@@ -217,8 +334,8 @@ func search_players_by_query(query_str: String) -> Array:
 	temp_http.request(req_url, headers)
 	var response = await temp_http.request_completed
 	temp_http.queue_free()
-	
-	var code = response[1] # 🛠️ تصليح المصفوفة
+
+	var code = response[1]
 	if code == 200:
 		var json = JSON.new()
 		if json.parse(response[3].get_string_from_utf8()) == OK:
