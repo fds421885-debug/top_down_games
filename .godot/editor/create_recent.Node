@@ -1,0 +1,15 @@
+CenterContainer
+Button
+Label
+VBoxContainer
+Control
+TextureRect
+HBoxContainer
+PanelContainer
+TextureButton
+AudioStreamPlayer
+Sprite2D
+AnimationPlayer
+ProgressBar
+CanvasLayer
+ColorRect

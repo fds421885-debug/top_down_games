@@ -1,0 +1,556 @@
+188240d5d1e2ee21c8e3a7f5b6c387e8
+::res://::1790019914
+bree-ara-tn-trial-regular.otf.ttf::FontFile::6002948562230089427::1786865548::1786866274::1::::<><><>0<>0<>b760f7d04648758ac40632c3d77e7501<>res://.godot/imported/bree-ara-tn-trial-regular.otf.ttf-98ce5e908ccb45d0d7b297c512caaf04.fontdata::
+Cairo-VariableFont_slnt,wght.ttf::FontFile::1245205836447651372::1786866274::1786866305::1::::<><><>0<>0<>3fd914450a73010a9f5ccfea31a48c4f<>res://.godot/imported/Cairo-VariableFont_slnt,wght.ttf-87a3cfd1279938e727f407f9a8e50f98.fontdata::
+export_presets.cfg::TextFile::-1::1786906423::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::8657372168141676772::1786327044::1786327044::1::::<><><>0<>0<>6c8bd78bbe7319fdf61677dd8691606c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+LootLockerSettings.cfg::TextFile::-1::1786661896::0::1::::<><><>0<>0<><>::
+::res://addons/::1786638626
+::res://Assets/::1790018581
+::res://Assets/Tiny Swords (Free Pack)/::1786303221
+::res://Assets/Tiny Swords (Free Pack)/Buildings/::1786303219
+::res://Assets/Tiny Swords (Free Pack)/Buildings/Black Buildings/::1786303514
+Archery.png::CompressedTexture2D::1145779226573080642::1786303982::1786303982::1::::<><><>0<>0<>91008b3ff382d08f6073dbbf71779172<>res://.godot/imported/Archery.png-77088389ab005fa883f87ae50ed36e89.ctex::
+Barracks.png::CompressedTexture2D::1245804678535530604::1786303982::1786303982::1::::<><><>0<>0<>2c9884189bd2a4f7fcb0fa250bc81a10<>res://.godot/imported/Barracks.png-211d39040e3dc0c2df1db7411fa793d6.ctex::
+Castle.png::CompressedTexture2D::1603929230850811359::1786303982::1786303982::1::::<><><>0<>0<>9e35cd3b3f41067634af7de74c82ca33<>res://.godot/imported/Castle.png-d7a2ef062a1c44c40cb1dc73f9c52b1c.ctex::
+House1.png::CompressedTexture2D::7179094863898333558::1786303982::1786303982::1::::<><><>0<>0<>0b497f8cc5ec9e807386214ed67b82a8<>res://.godot/imported/House1.png-ee1b3674074eb76337f7afc99ba76240.ctex::
+House2.png::CompressedTexture2D::6274687359640457942::1786303982::1786303982::1::::<><><>0<>0<>44ff43a2eae74cc018ddb075de3966df<>res://.godot/imported/House2.png-68037bc1261cd6bb8ff3dbbd31a74779.ctex::
+House3.png::CompressedTexture2D::5753508155567233892::1786303983::1786303983::1::::<><><>0<>0<>2e20e67429b758480e7331ed17533d7e<>res://.godot/imported/House3.png-c1fba84ded0176a11e892785e1ca9116.ctex::
+Monastery.png::CompressedTexture2D::9200902239174905945::1786303983::1786303983::1::::<><><>0<>0<>0d43c213f97e47a6f39ce90116e08def<>res://.godot/imported/Monastery.png-44ad1796715b81b2cfe895ebaf096ef2.ctex::
+Tower.png::CompressedTexture2D::4500375966290993496::1786303983::1786303983::1::::<><><>0<>0<>0cc8e185d225362e5bce3a4cbe15a73e<>res://.godot/imported/Tower.png-a92dfefcf95bda61cf0f8b5b24236951.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Buildings/Blue Buildings/::1786303514
+Archery.png::CompressedTexture2D::7950984556355041607::1786303983::1786303983::1::::<><><>0<>0<>3c4d5b3741e1f70a62ac6d75333121d3<>res://.godot/imported/Archery.png-9c319f7698552cee15a4a636aa77041f.ctex::
+Barracks.png::CompressedTexture2D::4845103676009954354::1786303983::1786303983::1::::<><><>0<>0<>5a0495e7f63e2ec84e25d3e18f8d577b<>res://.godot/imported/Barracks.png-a94941c3c80854fb25cf9e467ab8ac47.ctex::
+Castle.png::CompressedTexture2D::8017807693490349897::1786303983::1786303983::1::::<><><>0<>0<>7cf5365ad0633f9a49e08f8ee79156d6<>res://.godot/imported/Castle.png-45d2f3eacc878a4484049ada4b28263e.ctex::
+House1.png::CompressedTexture2D::6915485269776430462::1786303983::1786303983::1::::<><><>0<>0<>8d81f887e26dd6fd7b981d081cf8520c<>res://.godot/imported/House1.png-0b7f0e7a653d27363cc6994ef25cdf12.ctex::
+House2.png::CompressedTexture2D::4483864367903835196::1786303983::1786303983::1::::<><><>0<>0<>f5327950eec7c57902f6c2eb3875caf7<>res://.godot/imported/House2.png-7f0bc6547bdedff302fb624a75a3ef6e.ctex::
+House3.png::CompressedTexture2D::1359958656409351761::1786303983::1786303983::1::::<><><>0<>0<>dc7081102eb560e6b49d577620d4f040<>res://.godot/imported/House3.png-2ce923be30b57c2a419c03df2835404c.ctex::
+Monastery.png::CompressedTexture2D::4096173857469134868::1786303983::1786303983::1::::<><><>0<>0<>9bf7d83f71f04dbfb71fdb7b966c62b3<>res://.godot/imported/Monastery.png-84da5bf333260fb8450aa1a65e6e25ac.ctex::
+Tower.png::CompressedTexture2D::1185881609807349938::1786303983::1786303983::1::::<><><>0<>0<>6422c88772d7870a18b904c41d500e6a<>res://.godot/imported/Tower.png-3ec812646b7909bd20c6a18d8ca8783f.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Buildings/Purple Buildings/::1786303514
+Archery.png::CompressedTexture2D::3989170080713027639::1786303983::1786303983::1::::<><><>0<>0<>b51f3636c7b7c98ee7f828338ace7722<>res://.godot/imported/Archery.png-e1f891a1847548b386b3bc6ba031fd37.ctex::
+Barracks.png::CompressedTexture2D::2353851744331387854::1786303983::1786303983::1::::<><><>0<>0<>2ea87babd96c93c6368dd7cb0f015b84<>res://.godot/imported/Barracks.png-ea159bf07d7debcec3a4c9223f66fa9d.ctex::
+Castle.png::CompressedTexture2D::1588366777349753386::1786303983::1786303983::1::::<><><>0<>0<>76747a4837a6f27eab8fb6f454174dd6<>res://.godot/imported/Castle.png-8d67a1edb7239e6648ac454cd51cc718.ctex::
+House1.png::CompressedTexture2D::8445199766821781382::1786303983::1786303983::1::::<><><>0<>0<>83d1c6182d2acdbe6d2e7a7d01111d40<>res://.godot/imported/House1.png-997ebc5472ece685675dab41d5687af9.ctex::
+House2.png::CompressedTexture2D::3922955384770885314::1786303983::1786303983::1::::<><><>0<>0<>6c480eabf71a34a0abd4e6d045af5d62<>res://.godot/imported/House2.png-01cefe82bbe5bf9bd260450c508c4c2d.ctex::
+House3.png::CompressedTexture2D::6989814940743649616::1786303983::1786303983::1::::<><><>0<>0<>814aaa1a33945a3487c88a607a3469a6<>res://.godot/imported/House3.png-c0d5adeee39a81daf9c94106359224e5.ctex::
+Monastery.png::CompressedTexture2D::3240496447293236925::1786303983::1786303983::1::::<><><>0<>0<>40676dcebe54a142df6304a56f8ef535<>res://.godot/imported/Monastery.png-87e71df1dae716df5f7db36dec7388ac.ctex::
+Tower.png::CompressedTexture2D::4875365245915271976::1786303983::1786303983::1::::<><><>0<>0<>5e8f5de061f3058f35f38974d77a37ca<>res://.godot/imported/Tower.png-430a9a28e30b4d16d770621eae76497f.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Buildings/Red Buildings/::1786303515
+Archery.png::CompressedTexture2D::8303699257825050192::1786303983::1786303983::1::::<><><>0<>0<>2fa0b9d9f69113f2833b33e1f6516b59<>res://.godot/imported/Archery.png-642fea207f8b4855a16a1b4e5fc0bf6e.ctex::
+Barracks.png::CompressedTexture2D::7246633500080265992::1786303983::1786303983::1::::<><><>0<>0<>fde01fc737673292c13383056ac80aec<>res://.godot/imported/Barracks.png-e2be63387192bfa55743ae9dd026ae6c.ctex::
+Castle.png::CompressedTexture2D::314264166085542672::1786303983::1786303983::1::::<><><>0<>0<>941ccc5a40ed59d8722356ca8e8ed568<>res://.godot/imported/Castle.png-1cf3cd29c8055fd40896cac235e4151f.ctex::
+House1.png::CompressedTexture2D::3155231104027316055::1786303983::1786303983::1::::<><><>0<>0<>128f59a7ed65f0fabb58dd0080320d3f<>res://.godot/imported/House1.png-f8d391eab346639c1117ccb4a6b71a16.ctex::
+House2.png::CompressedTexture2D::2191570578674674701::1786303983::1786303983::1::::<><><>0<>0<>dac8a2e10b3e7b1d469bb40cac9098bf<>res://.godot/imported/House2.png-0d3b6b12f45859e5ac5e2683b33577bd.ctex::
+House3.png::CompressedTexture2D::7101103945771411233::1786303983::1786303983::1::::<><><>0<>0<>6c4dec39db42fc38d89c43f36332ddbd<>res://.godot/imported/House3.png-34c7c01069dfe5811acc0e4c17c548e2.ctex::
+Monastery.png::CompressedTexture2D::2676274696216088679::1786303983::1786303983::1::::<><><>0<>0<>695aa3be2bc18f054b370eccedf71a0f<>res://.godot/imported/Monastery.png-ca6153601442ef27e299bf02fdf53694.ctex::
+Tower.png::CompressedTexture2D::1514393134949487824::1786303983::1786303983::1::::<><><>0<>0<>a24cbca381cb0f1d97e8aa552976f87a<>res://.godot/imported/Tower.png-dc9a0e4b22d87bfc1aa6e98db7164d0b.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Buildings/Yellow Buildings/::1786303515
+Archery.png::CompressedTexture2D::7089669801631534209::1786303983::1786303983::1::::<><><>0<>0<>f184f8d5004fecd6387b9fc5403195a5<>res://.godot/imported/Archery.png-91165251649f58ebc505a33630b3714b.ctex::
+Barracks.png::CompressedTexture2D::109640434358117329::1786303983::1786303983::1::::<><><>0<>0<>c741544890bdc3059ed39e283621b685<>res://.godot/imported/Barracks.png-26b44423fe854ac0ca4e67922f8f373a.ctex::
+Castle.png::CompressedTexture2D::1793384985316351243::1786303983::1786303983::1::::<><><>0<>0<>e7e6c3d4c494f7c0ad8e1d483d48ccf6<>res://.godot/imported/Castle.png-eb59b6f706834867cd0027bc8bab3833.ctex::
+House1.png::CompressedTexture2D::3324939078862369983::1786303983::1786303983::1::::<><><>0<>0<>dcfae662279a47a527e9c7a0d748cfae<>res://.godot/imported/House1.png-17089a5b42c40aedd6af314520b3ca2a.ctex::
+House2.png::CompressedTexture2D::7009642567251261576::1786303983::1786303983::1::::<><><>0<>0<>8852d189e8cc525af2ab1e404f8b2d30<>res://.godot/imported/House2.png-877d63b8c22641a8710b0a727a1b4979.ctex::
+House3.png::CompressedTexture2D::7518825664286883981::1786303983::1786303983::1::::<><><>0<>0<>9ef1f923da4aec8b186a75d5e09a0466<>res://.godot/imported/House3.png-a7c0dc0ffdb6b2c9243191cd8f37290c.ctex::
+Monastery.png::CompressedTexture2D::1066106527364915323::1786303983::1786303983::1::::<><><>0<>0<>87f8e107809047eded30fb5955d35cec<>res://.godot/imported/Monastery.png-5642f1192d32ccc410e2167e325c8614.ctex::
+Tower.png::CompressedTexture2D::1245463567667601833::1786303983::1786303983::1::::<><><>0<>0<>f23a5e38a0c801c36a795e9c48cc7e68<>res://.godot/imported/Tower.png-55a969c6a7256abbaf49850a33cd1d17.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Particle FX/::1786303514
+Dust_01.png::CompressedTexture2D::7818739431030721339::1786303983::1786303983::1::::<><><>0<>0<>05cbe2b4b428aae4616aa48e68dfe8e4<>res://.godot/imported/Dust_01.png-d472eb56e9b49dcd9e95def0c19e605f.ctex::
+Dust_02.png::CompressedTexture2D::7306052416065372047::1786303983::1786303983::1::::<><><>0<>0<>147764c5be2ffd1711e240e08361571e<>res://.godot/imported/Dust_02.png-1fa5c3aceb6bd327d6010203ab1d02e2.ctex::
+Explosion_01.png::CompressedTexture2D::2532606234415275278::1786303983::1786303983::1::::<><><>0<>0<>4032d0633f15891879fa50f1147c7137<>res://.godot/imported/Explosion_01.png-473177d3577411785337780868f58074.ctex::
+Explosion_02.png::CompressedTexture2D::8191577519269767599::1786303983::1786303983::1::::<><><>0<>0<>4fdc1e08257bf6fc07d00ee8c92514b7<>res://.godot/imported/Explosion_02.png-7d1fe9f9a4febbc363ed87cd3ec5349a.ctex::
+Fire_01.png::CompressedTexture2D::33511534571382179::1786303983::1786303983::1::::<><><>0<>0<>a9109cdf65f7e869ba28d860d0a51b97<>res://.godot/imported/Fire_01.png-bacc6fbde36e157df18a2fc3a6f63b6c.ctex::
+Fire_02.png::CompressedTexture2D::8907996864382421065::1786303983::1786303983::1::::<><><>0<>0<>fd2c396ed5548900fa462bdb86b287e6<>res://.godot/imported/Fire_02.png-43f1776550304fc6dbacb0e949b647a2.ctex::
+Fire_03.png::CompressedTexture2D::9222451524810993047::1786303983::1786303983::1::::<><><>0<>0<>8f17075eba5e8c61070137ea4fb8fd31<>res://.godot/imported/Fire_03.png-dfa813a073c1e8c921614a736adec1a1.ctex::
+Water Splash.png::CompressedTexture2D::6498678527798567854::1786303983::1786303983::1::::<><><>0<>0<>60c93fc84c9dde1ffc1af1513c9656c1<>res://.godot/imported/Water Splash.png-21de632a6ac15fd71b19a6227c297e93.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/::1786303220
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/::1786303219
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/::1786303514
+Bushe1.png::CompressedTexture2D::8489503711785949078::1786303983::1786303983::1::::<><><>0<>0<>d87eeec985498a6ddb0738767c72c0b5<>res://.godot/imported/Bushe1.png-05274fa4544daf81b54f2957391de512.ctex::
+Bushe2.png::CompressedTexture2D::253861049227816291::1786303983::1786303983::1::::<><><>0<>0<>e9e08a74905c58b6dab744505fc19256<>res://.godot/imported/Bushe2.png-49f6ce8600da4233eb7aa3bea7d85a62.ctex::
+Bushe3.png::CompressedTexture2D::3736221955655300789::1786303983::1786303983::1::::<><><>0<>0<>6db4e7c0ec4d1a66c535cb88983a8936<>res://.godot/imported/Bushe3.png-1013be05687ce94bc6696bdeac2cd023.ctex::
+Bushe4.png::CompressedTexture2D::5965727431139335599::1786303983::1786303983::1::::<><><>0<>0<>8de6655eb65a6dac1b0fe59161134f34<>res://.godot/imported/Bushe4.png-f44590b1157f8ba824c71878a417102a.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Clouds/::1786303512
+Clouds_01.png::CompressedTexture2D::7969350391236529981::1786303983::1786303983::1::::<><><>0<>0<>4c0f9910e31e5b51d1fbe2cd33adcc23<>res://.godot/imported/Clouds_01.png-8a478f3cc2c0ebb9bee2411f576c0462.ctex::
+Clouds_02.png::CompressedTexture2D::6742670777244199464::1786303983::1786303983::1::::<><><>0<>0<>5479865aeb5e881bb065c2c69504825f<>res://.godot/imported/Clouds_02.png-da08b7d876bfed0726a3269d26917670.ctex::
+Clouds_03.png::CompressedTexture2D::7221115208516405804::1786303983::1786303983::1::::<><><>0<>0<>b790586980a3444a75a8cfaae3a6d493<>res://.godot/imported/Clouds_03.png-2deb9876ace236594ab7edf5e06a71f8.ctex::
+Clouds_04.png::CompressedTexture2D::4035506607102311178::1786303983::1786303983::1::::<><><>0<>0<>5536626b055595ca43ec7bf4743e9ee7<>res://.godot/imported/Clouds_04.png-6bad1671aae461359dbab54e7fda884f.ctex::
+Clouds_05.png::CompressedTexture2D::1075582977802539506::1786303983::1786303983::1::::<><><>0<>0<>2f6290eaf1d6eafdaeef16b9838e3777<>res://.godot/imported/Clouds_05.png-d02c20e7dba7e0e7e324eefb1531e48b.ctex::
+Clouds_06.png::CompressedTexture2D::594431770427778273::1786303983::1786303983::1::::<><><>0<>0<>4d164e0aa0f91931eaa958476aad5e97<>res://.godot/imported/Clouds_06.png-ca2aefb6cee944be91d3afe08f2550d9.ctex::
+Clouds_07.png::CompressedTexture2D::5977988299218152936::1786303983::1786303984::1::::<><><>0<>0<>83df963e38309139695897d0eeff4da2<>res://.godot/imported/Clouds_07.png-859b9806444033991f90aa34889194d9.ctex::
+Clouds_08.png::CompressedTexture2D::7612353675634796430::1786303984::1786303984::1::::<><><>0<>0<>082b86bd5e2cedccfa426da1825cb728<>res://.godot/imported/Clouds_08.png-9ddafba94383eb38fd113243691700ee.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks/::1786303512
+Rock1.png::CompressedTexture2D::6435031845333502676::1786303984::1786303984::1::::<><><>0<>0<>377dfcb1396fbe41822d68b7def3c75f<>res://.godot/imported/Rock1.png-c15efb9ebfe21153f410bf0bb991be4d.ctex::
+Rock2.png::CompressedTexture2D::7545852938867718087::1786303984::1786303984::1::::<><><>0<>0<>7d7d5cff3321a25b79ef11448796c65f<>res://.godot/imported/Rock2.png-d239137353bb3fe8bbe9614bcfa43cc0.ctex::
+Rock3.png::CompressedTexture2D::4198302639867281224::1786303984::1786303984::1::::<><><>0<>0<>b298d4fbfe385b37c182b7180b99781e<>res://.godot/imported/Rock3.png-b421d529a05c121f019cb24203467fdd.ctex::
+Rock4.png::CompressedTexture2D::6818965375533790602::1786303984::1786303984::1::::<><><>0<>0<>11c8fbcedbc2b11b2fb00b8c874086ff<>res://.godot/imported/Rock4.png-a3a5e0d2c808e7b135c55952e625e4fb.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rocks in the Water/::1786303512
+Water Rocks_01.png::CompressedTexture2D::7817784547492204881::1786303984::1786303984::1::::<><><>0<>0<>ef60e963fd078c6bcd6ffe5bb0ba9547<>res://.godot/imported/Water Rocks_01.png-1ed3326770628bfb582b9beefb7c9e4c.ctex::
+Water Rocks_02.png::CompressedTexture2D::5932957567146139004::1786303984::1786303984::1::::<><><>0<>0<>adce1b661b529135db88d1530d2ea665<>res://.godot/imported/Water Rocks_02.png-67fc043aabc1765d2ea47ddbbd011fb1.ctex::
+Water Rocks_03.png::CompressedTexture2D::4377235541101623079::1786303984::1786303984::1::::<><><>0<>0<>e45a4b4c4882408270a3b86388513335<>res://.godot/imported/Water Rocks_03.png-fd1dc36d8e0e9502471a6acee4ac6159.ctex::
+Water Rocks_04.png::CompressedTexture2D::6466899065012568489::1786303984::1786303984::1::::<><><>0<>0<>2af14b8b31510272506b352cd78389d1<>res://.godot/imported/Water Rocks_04.png-022ad43345f3fc2e0160b52016143676.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Rubber Duck/::1786303512
+Rubber duck.png::CompressedTexture2D::8092056105573888618::1786303984::1786303984::1::::<><><>0<>0<>e7697339d842f26e8cc115103baa900c<>res://.godot/imported/Rubber duck.png-e204ce58206ddac8e2bfe75e3fdeae85.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/::1786303220
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Gold/::1786303219
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Gold/Gold Resource/::1786303512
+Gold_Resource.png::CompressedTexture2D::3608158203640643946::1786303984::1786303984::1::::<><><>0<>0<>77a9550471ca53cbbe974419987be705<>res://.godot/imported/Gold_Resource.png-fbb8f1bb62ce9cfd5dd81b1e0e9c9765.ctex::
+Gold_Resource_Highlight.png::CompressedTexture2D::2656906800334235203::1786303984::1786303984::1::::<><><>0<>0<>d91887af6fd3cd9742d5f997d69f9630<>res://.godot/imported/Gold_Resource_Highlight.png-ca04b197c5a412db4d65dfd03ff757df.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Gold/Gold Stones/::1786303513
+Gold Stone 1.png::CompressedTexture2D::2548855237701591791::1786303984::1786303984::1::::<><><>0<>0<>b50484bd80231035f4a4b90025cfc4bc<>res://.godot/imported/Gold Stone 1.png-6fa1a35d7b4965247697db643a642acf.ctex::
+Gold Stone 1_Highlight.png::CompressedTexture2D::4150111095449785891::1786303984::1786303984::1::::<><><>0<>0<>d9b965fb06032eb85f5d8a4094bda335<>res://.godot/imported/Gold Stone 1_Highlight.png-3261a9a441b11c7aa7c15b17628428df.ctex::
+Gold Stone 2.png::CompressedTexture2D::5180575570989930288::1786303984::1786303984::1::::<><><>0<>0<>92b3feeb977af0ec05931f4861578245<>res://.godot/imported/Gold Stone 2.png-b3406fd7a62c8e5994d7955ef06430d9.ctex::
+Gold Stone 2_Highlight.png::CompressedTexture2D::688188172401941167::1786303984::1786303984::1::::<><><>0<>0<>3d3ad275378d31a4b83e5c34e90923ff<>res://.godot/imported/Gold Stone 2_Highlight.png-9d85084c324f12a6bd04d33844eda16e.ctex::
+Gold Stone 3.png::CompressedTexture2D::1386902685594618615::1786303984::1786303984::1::::<><><>0<>0<>60e844e60da9986074bbb312c13cbfc6<>res://.godot/imported/Gold Stone 3.png-fd0bd10b1dd4e2779b2fe1b13e8a6cf6.ctex::
+Gold Stone 3_Highlight.png::CompressedTexture2D::3077028144311580496::1786303984::1786303984::1::::<><><>0<>0<>a59a8a43d3ba0580314b384f37361662<>res://.godot/imported/Gold Stone 3_Highlight.png-f62a7db706898daf8bde5c19d8cc9cec.ctex::
+Gold Stone 4.png::CompressedTexture2D::8706045104044625715::1786303984::1786303984::1::::<><><>0<>0<>961a746626c29dd3462f45b9fbb6d6df<>res://.godot/imported/Gold Stone 4.png-a63355e2f4984b90a73314724b0c57c7.ctex::
+Gold Stone 4_Highlight.png::CompressedTexture2D::3573578629890291971::1786303984::1786303984::1::::<><><>0<>0<>4bc07bf979cc99ad73f5c02b8f77b098<>res://.godot/imported/Gold Stone 4_Highlight.png-04378ab0d782b7ae3e20ceaaaa0cd4f2.ctex::
+Gold Stone 5.png::CompressedTexture2D::3690954302422481310::1786303984::1786303984::1::::<><><>0<>0<>b07aab9b8cce11ab3abc791884adf761<>res://.godot/imported/Gold Stone 5.png-8c819a16c97a302353ceb8d6ead4b1d0.ctex::
+Gold Stone 5_Highlight.png::CompressedTexture2D::8334246188533989643::1786303984::1786303984::1::::<><><>0<>0<>b3e0bd2fd23bbc2438260ccf2a397c4a<>res://.godot/imported/Gold Stone 5_Highlight.png-d0df59f01440feb9a228fa80fcbdae2e.ctex::
+Gold Stone 6.png::CompressedTexture2D::8828194474745860251::1786303984::1786303984::1::::<><><>0<>0<>3348d6f1c103d081d00a9201af1ff496<>res://.godot/imported/Gold Stone 6.png-429ef56b4eb1b643d7d7ee0cd80d3696.ctex::
+Gold Stone 6_Highlight.png::CompressedTexture2D::6355718728255566372::1786303984::1786303984::1::::<><><>0<>0<>0f4f0bfa77622c773712f739aa8a1405<>res://.godot/imported/Gold Stone 6_Highlight.png-f9f96d56ba4edf23246df61b59b15839.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/::1786303220
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Meat Resource/::1786303513
+Meat Resource.png::CompressedTexture2D::197926827025049751::1786303984::1786303984::1::::<><><>0<>0<>82babefd567d390577d7a180df9374da<>res://.godot/imported/Meat Resource.png-7a7c552a8c24f80df3599d364e9366e6.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Meat/Sheep/::1786303513
+Sheep_Grass.png::CompressedTexture2D::5791067051186276401::1786303984::1786303984::1::::<><><>0<>0<>37b7e502b923630975c7504adbc9c106<>res://.godot/imported/Sheep_Grass.png-757831787351bb5078429f709fcb2536.ctex::
+Sheep_Idle.png::CompressedTexture2D::8816437186028294234::1786303984::1786303984::1::::<><><>0<>0<>8ee17a85f5856cacdeb57b177ae54271<>res://.godot/imported/Sheep_Idle.png-47270afb5b7fde2950bf8d9080a4ddcb.ctex::
+Sheep_Move.png::CompressedTexture2D::7099104283658202161::1786303984::1786303984::1::::<><><>0<>0<>47b8ee9db2c9f817a4351c85611c6826<>res://.godot/imported/Sheep_Move.png-110509146798717c0fb53e38737b1c42.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Tools/::1786303513
+Tool_01.png::CompressedTexture2D::367268146922152019::1786303984::1786303984::1::::<><><>0<>0<>49c9d82c58b406a5e9ab674a63bcf2a1<>res://.godot/imported/Tool_01.png-060ffc6788575e3e5cb25e803305e3e7.ctex::
+Tool_02.png::CompressedTexture2D::1095119159228482772::1786303984::1786303984::1::::<><><>0<>0<>ba4581398df844047d8be4073ccbdffe<>res://.godot/imported/Tool_02.png-60c038483b0be26a94bf31d487302b4a.ctex::
+Tool_03.png::CompressedTexture2D::2109188204013032323::1786303984::1786303984::1::::<><><>0<>0<>53c654cd721143f7a7cadfdec26ac633<>res://.godot/imported/Tool_03.png-fbdb28d48ce1a32848f1d599aa194d41.ctex::
+Tool_04.png::CompressedTexture2D::2389354611473852394::1786303984::1786303984::1::::<><><>0<>0<>d963367ea2eaa33e2eb47b2b12844c7b<>res://.godot/imported/Tool_04.png-81f0814c80ce7a32137c838433ce87cf.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/::1786303220
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/::1786303513
+Stump 1.png::CompressedTexture2D::881848076241239219::1786303984::1786303984::1::::<><><>0<>0<>4170837e966ddd45f80db24ad5d8695d<>res://.godot/imported/Stump 1.png-b2d5ea1125404afbe1a16d92e1483573.ctex::
+Stump 2.png::CompressedTexture2D::576335815454751795::1786303984::1786303984::1::::<><><>0<>0<>8135e8f353e0b019e2f18082f8b97f9b<>res://.godot/imported/Stump 2.png-aa4ba362c4ec9dde00fec120bef1ec56.ctex::
+Stump 3.png::CompressedTexture2D::8635551710609180605::1786303984::1786303984::1::::<><><>0<>0<>8b00b207ddc13f36b7ebaf2c5344a060<>res://.godot/imported/Stump 3.png-d70aae7d368c2fd8f660e3646410affd.ctex::
+Stump 4.png::CompressedTexture2D::2282608929322220727::1786303984::1786303984::1::::<><><>0<>0<>07b087581aa6855e403424150c96d874<>res://.godot/imported/Stump 4.png-8fcdfee66dfdf65f0bae7099147cb8d7.ctex::
+Tree1.png::CompressedTexture2D::7390817285903247077::1786303984::1786303984::1::::<><><>0<>0<>ec29a892db513e862ecc358dd31cb802<>res://.godot/imported/Tree1.png-6ffacd9053923ca8e0b639131e549579.ctex::
+Tree2.png::CompressedTexture2D::8347389349733255416::1786303984::1786303984::1::::<><><>0<>0<>d8a2beeb6fb2baf0e3448532bdd29eac<>res://.godot/imported/Tree2.png-18924a65bb96d7d498b200a179b15732.ctex::
+Tree3.png::CompressedTexture2D::5147617249205365927::1786303984::1786303984::1::::<><><>0<>0<>28f547b6f9f42b6797f116e4a084a501<>res://.godot/imported/Tree3.png-c4ef388ab490b343638988effbb875d6.ctex::
+Tree4.png::CompressedTexture2D::962132065747256158::1786303984::1786303984::1::::<><><>0<>0<>e830d896381d17b244a5a946de3d7cdd<>res://.godot/imported/Tree4.png-a2149c17a640c4b61fd8cd5711c71767.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Wood Resource/::1786303513
+Wood Resource.png::CompressedTexture2D::1261252468585921134::1786303984::1786303984::1::::<><><>0<>0<>8d77eeaa8d9819773f286780f488a126<>res://.godot/imported/Wood Resource.png-3f82503e4277264b9c85e12709454054.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/::1786303517
+Shadow.png::CompressedTexture2D::5885728442304313022::1786303984::1786303984::1::::<><><>0<>0<>a5b91e28b20859a06638db5addc9958d<>res://.godot/imported/Shadow.png-86bc08fd7b8c9b03e4b70e4a3cb2c2af.ctex::
+Tilemap_color1.png::CompressedTexture2D::6243753029363054661::1786303984::1786303984::1::::<><><>0<>0<>82742d9f39fe267f480b7f8051b5e65b<>res://.godot/imported/Tilemap_color1.png-c93e6f8e7820bdab4a11259c704c2ee3.ctex::
+Tilemap_color2.png::CompressedTexture2D::2927510914090973045::1786303984::1786303984::1::::<><><>0<>0<>fa3d3d8d623592d60c5c67fb1976dd18<>res://.godot/imported/Tilemap_color2.png-53290f6dc941e782122b525bc91c02a9.ctex::
+Tilemap_color3.png::CompressedTexture2D::1693883431237362946::1786303984::1786303984::1::::<><><>0<>0<>ad1b604d6b563b856bf0ff2f60672138<>res://.godot/imported/Tilemap_color3.png-5a91817c76ccde2bf26e512ce0691e63.ctex::
+Tilemap_color4.png::CompressedTexture2D::5918962840715072078::1786303984::1786303984::1::::<><><>0<>0<>0cfea39f6cabb716bcc2a4de3c0db9a0<>res://.godot/imported/Tilemap_color4.png-683a4605e63420f3830fff6e14869507.ctex::
+Tilemap_color5.png::CompressedTexture2D::2909891993639826257::1786303984::1786303984::1::::<><><>0<>0<>b832c328dcf221b7189fc7482e363141<>res://.godot/imported/Tilemap_color5.png-0d1110d12acf2bd10094478cf341f81c.ctex::
+Water Background color.png::CompressedTexture2D::3747169938704640071::1786303984::1786303984::1::::<><><>0<>0<>9b02a718b6a835bc21aa9691520dc091<>res://.godot/imported/Water Background color.png-bbda6205d1d507d89637bb75466efc73.ctex::
+Water Foam.png::CompressedTexture2D::6321264128828154334::1786303984::1786303984::1::::<><><>0<>0<>6997c311764b67dbf3ac4d57b2d10ed3<>res://.godot/imported/Water Foam.png-3e4c3706e64b7140f35762fba9c84212.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/::1786303220
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Banners from the store page/::1786303220
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Banners from the store page/Banner/::1786303517
+Banner.png::CompressedTexture2D::6425854746869672813::1786303984::1786303984::1::::<><><>0<>0<>0f1ceb1b2af41d975c1d5b041effa0e2<>res://.godot/imported/Banner.png-f65673f70bd73a27200d868d810a9e79.ctex::
+Slots.png::CompressedTexture2D::841535480556609667::1786303984::1786303984::1::::<><><>0<>0<>4dc11a7eb15244a3e50ddc43bd714ab1<>res://.godot/imported/Slots.png-7e14541e68363091b3b0eaf7ec08443e.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Banners from the store page/Ribbons/::1786303517
+Ribbon_Black.png::CompressedTexture2D::1765850532349760795::1786303984::1786303984::1::::<><><>0<>0<>5bcf5aff19491f0ece57f74f0cce876b<>res://.godot/imported/Ribbon_Black.png-3876b68e7c11fe7271387a9f9b65c0f3.ctex::
+Ribbon_Blue.png::CompressedTexture2D::2879007293780662759::1786303984::1786303984::1::::<><><>0<>0<>928e82eb857ceaddbcace28e61878d47<>res://.godot/imported/Ribbon_Blue.png-334e5e34bc2a82867bb6e2db0d40fc11.ctex::
+Ribbon_Purple.png::CompressedTexture2D::3956266149241953748::1786303984::1786303984::1::::<><><>0<>0<>b78b02c1ad3a5370613d09701eaa3ddb<>res://.godot/imported/Ribbon_Purple.png-1eed792bbc7bff650b50c9daa11c3e5d.ctex::
+Ribbon_Red.png::CompressedTexture2D::4642536775774375235::1786303984::1786303984::1::::<><><>0<>0<>9e7555c435452a3bc12dcf2a7a75d131<>res://.godot/imported/Ribbon_Red.png-e02f3d40b61f599bbe99fd07e78c8b88.ctex::
+Ribbon_Yellow.png::CompressedTexture2D::1677636676862434554::1786303984::1786303984::1::::<><><>0<>0<>4496d922b2f232b356bf416cc1893adf<>res://.godot/imported/Ribbon_Yellow.png-69345e83ad788fc59fa7357935f25036.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/::1786303221
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/::1786303517
+Banner.png::CompressedTexture2D::3529500234225068357::1786303984::1786303984::1::::<><><>0<>0<>302560cb637e1f830d765fc4ad0a7f79<>res://.godot/imported/Banner.png-15091300a09392c0f4a8f6a622e045b9.ctex::
+Banner_Slots.png::CompressedTexture2D::1279923843992718658::1786303984::1786303984::1::::<><><>0<>0<>08ab18923599a0868a4d8266febcc30e<>res://.godot/imported/Banner_Slots.png-f8d7fd94290b4b745a01e893e068f7ab.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Bars/::1786303517
+BigBar_Base.png::CompressedTexture2D::8690013433634546926::1786303984::1786303984::1::::<><><>0<>0<>f2305d067a931015dd5a8f24e4d446cc<>res://.godot/imported/BigBar_Base.png-e3143990809fc63d27ae48f9e8c7573b.ctex::
+BigBar_Fill.png::CompressedTexture2D::5508819265760886031::1786303984::1786303984::1::::<><><>0<>0<>f8716333cc2741c50fd7499b2b856381<>res://.godot/imported/BigBar_Fill.png-7c5bfe8baeead604658d7dfe9209bc84.ctex::
+SmallBar_Base.png::CompressedTexture2D::7470418475786912588::1786303984::1786303984::1::::<><><>0<>0<>41577d719c96b78b5577c851af471d5e<>res://.godot/imported/SmallBar_Base.png-f3a9edc6676e2697ffe9710e217d68da.ctex::
+SmallBar_Fill.png::CompressedTexture2D::3952788817891716987::1786303984::1786303984::1::::<><><>0<>0<>1bbfbc06c6d0b252f5f45b8e6514bd6d<>res://.godot/imported/SmallBar_Fill.png-1ba804d18dd909295389a6d3339a2ad9.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/::1786303518
+BigBlueButton_Pressed.png::CompressedTexture2D::476021997665427363::1786303984::1786303984::1::::<><><>0<>0<>9f4e34969ba90690b44cfb67c4bd8b13<>res://.godot/imported/BigBlueButton_Pressed.png-a4cae7e41108a0db26acc59ec9f5b985.ctex::
+BigBlueButton_Regular.png::CompressedTexture2D::907595988404641043::1786303984::1786303984::1::::<><><>0<>0<>9ec92c99b39ba7e9757f0ac81a001fb9<>res://.godot/imported/BigBlueButton_Regular.png-705717495d8b179c103a59b9854b32b0.ctex::
+BigRedButton_Pressed.png::CompressedTexture2D::8918102597003015216::1786303984::1786303984::1::::<><><>0<>0<>94c4730987336dd0e6ad609f38530bd5<>res://.godot/imported/BigRedButton_Pressed.png-81f708acf2d5a2adff9f6ff043ec332b.ctex::
+BigRedButton_Regular.png::CompressedTexture2D::5159370782162778071::1786303984::1786303984::1::::<><><>0<>0<>a3e14726abdaf1bdb76509c1ec4a5ccc<>res://.godot/imported/BigRedButton_Regular.png-a7d0428751eda507f3e4a79c5d7dd58e.ctex::
+SmallBlueRoundButton_Pressed.png::CompressedTexture2D::4538626198829570190::1786303984::1786303984::1::::<><><>0<>0<>b33f837f31201cbbfbfe041a3d672e03<>res://.godot/imported/SmallBlueRoundButton_Pressed.png-ce79853b51f2e22da6f391ef29892468.ctex::
+SmallBlueRoundButton_Regular.png::CompressedTexture2D::2882846103692419438::1786303984::1786303984::1::::<><><>0<>0<>1b7bb40abcca15e05f79a3aa3e2cdc6b<>res://.godot/imported/SmallBlueRoundButton_Regular.png-60a957ae81b90c8e9cdeea3bc914c7a3.ctex::
+SmallBlueSquareButton_Pressed.png::CompressedTexture2D::1666216534755089891::1786303984::1786303984::1::::<><><>0<>0<>62796d854b7926ab85a59c55962ef4e9<>res://.godot/imported/SmallBlueSquareButton_Pressed.png-1e252d880eef5591ca59b6a09e2ae12b.ctex::
+SmallBlueSquareButton_Regular.png::CompressedTexture2D::6457736339297273303::1786303984::1786303984::1::::<><><>0<>0<>c14f1feb10ca85a35d0145387b337858<>res://.godot/imported/SmallBlueSquareButton_Regular.png-30b9cd63263646f2361d1d1da01e46a8.ctex::
+SmallRedRoundButton_Pressed.png::CompressedTexture2D::7372277023125859967::1786303984::1786303984::1::::<><><>0<>0<>84bfaac6409545ec158d4cf80d45dc4b<>res://.godot/imported/SmallRedRoundButton_Pressed.png-a3088a3ed34a6ed72ac0ef0c81c7cf94.ctex::
+SmallRedRoundButton_Regular.png::CompressedTexture2D::1571887783527702039::1786303984::1786303984::1::::<><><>0<>0<>1f11c46cd81bd7d6e93af1751b31b590<>res://.godot/imported/SmallRedRoundButton_Regular.png-8fdfbc7ae8b6240b1a9b1d4d7cbabc1d.ctex::
+SmallRedSquareButton_Pressed.png::CompressedTexture2D::3004914593291411703::1786303984::1786303984::1::::<><><>0<>0<>2653b2d9eb3b5454d8b82b521134c305<>res://.godot/imported/SmallRedSquareButton_Pressed.png-bfae52d0043410565b17353a6a451760.ctex::
+SmallRedSquareButton_Regular.png::CompressedTexture2D::6781130874365342271::1786303984::1786303984::1::::<><><>0<>0<>7a3acfeadd61e4a6edea161df16b6c8d<>res://.godot/imported/SmallRedSquareButton_Regular.png-8f76e80b0393eeacd624a29a9ef1eeb1.ctex::
+TinyRoundBlueButton.png::CompressedTexture2D::3483213301782507743::1786303984::1786303984::1::::<><><>0<>0<>e013981e40d008e7a00bf62753ee41cf<>res://.godot/imported/TinyRoundBlueButton.png-a00689b257d1ca27062f6f95b686b302.ctex::
+TinyRoundRedButton.png::CompressedTexture2D::5021073462972147876::1786303984::1786303984::1::::<><><>0<>0<>8b2cc0784a41bccba88e89565bf156c7<>res://.godot/imported/TinyRoundRedButton.png-437c02a0529d06337e0fed5ae17ab166.ctex::
+TinySquareBlueButton.png::CompressedTexture2D::8204772500369279050::1786303984::1786303984::1::::<><><>0<>0<>fea28231cebc2ef1a6ab46b62530cc04<>res://.godot/imported/TinySquareBlueButton.png-09967629821625feffe411851ddbdd00.ctex::
+TinySquareRedButton.png::CompressedTexture2D::1893643266688341498::1786303984::1786303984::1::::<><><>0<>0<>e2e1088f8ba9c786c3b254e21d5e063d<>res://.godot/imported/TinySquareRedButton.png-6dbdb6b357d5aa5f263ee23eb7ee9ae1.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Cursors/::1786303518
+Cursor_01.png::CompressedTexture2D::5110015769725051546::1786303984::1786303984::1::::<><><>0<>0<>4df5204068821e9f27ff3f0bcf280af2<>res://.godot/imported/Cursor_01.png-78c38e3add0ef511e98eafe2958f9fd3.ctex::
+Cursor_02.png::CompressedTexture2D::8438188970119819008::1786303984::1786303984::1::::<><><>0<>0<>e54fecdd540ba386b13984c5d80638d1<>res://.godot/imported/Cursor_02.png-0504f348d731d83dfbfb821fcd099d22.ctex::
+Cursor_03.png::CompressedTexture2D::971634921705962386::1786303984::1786303984::1::::<><><>0<>0<>ef3439b2870cecc3851e17384dac7752<>res://.godot/imported/Cursor_03.png-fc4d0944c45f1cb2d29b53a2e672e877.ctex::
+Cursor_04.png::CompressedTexture2D::6483332335667134537::1786303984::1786303984::1::::<><><>0<>0<>f5bf393e4060e3c57f09ff3e97834f9e<>res://.godot/imported/Cursor_04.png-0b22ae7a7a417549cec2c4c0da8761f1.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Human Avatars/::1786303518
+Avatars_01.png::CompressedTexture2D::5813427604709936479::1786303984::1786303984::1::::<><><>0<>0<>14a59152bd8a04815f1c3d4ce3d05be4<>res://.godot/imported/Avatars_01.png-2823cc5419cfe0324d6338c4fdaefc78.ctex::
+Avatars_02.png::CompressedTexture2D::4886161254420669014::1786303984::1786303984::1::::<><><>0<>0<>b81050487c2ddbb7e0df7887de3c7165<>res://.godot/imported/Avatars_02.png-8d75c4c3c161b665a1fe07d0b54a1e3e.ctex::
+Avatars_03.png::CompressedTexture2D::719687709507876237::1786303984::1786303984::1::::<><><>0<>0<>7f0099f4d83d7c96438812114ff20095<>res://.godot/imported/Avatars_03.png-8c8414b6e6d2b389581beaa7d9e5ffe4.ctex::
+Avatars_04.png::CompressedTexture2D::6755981595237372800::1786303984::1786303984::1::::<><><>0<>0<>94a9cea97bdffaeb16b907a94d2c356d<>res://.godot/imported/Avatars_04.png-b35a562a6202e0673e3cec1e077cb477.ctex::
+Avatars_05.png::CompressedTexture2D::867491615084659551::1786303984::1786303984::1::::<><><>0<>0<>f8e2f4edeac2c26d88d390a0b975065f<>res://.godot/imported/Avatars_05.png-db2295e9fea691793edbf465f4fc6925.ctex::
+Avatars_06.png::CompressedTexture2D::521551147344834002::1786303984::1786303984::1::::<><><>0<>0<>e02b81f73cb77ddb2d3a5b3ea93e31ba<>res://.godot/imported/Avatars_06.png-76e3b49230f3ce66c70495a26cd2420e.ctex::
+Avatars_07.png::CompressedTexture2D::2667630965239342962::1786303984::1786303984::1::::<><><>0<>0<>7b6603163224777c69924b5734bead45<>res://.godot/imported/Avatars_07.png-b2e857e275909ed5061a0087cb330298.ctex::
+Avatars_08.png::CompressedTexture2D::8449456163014737326::1786303984::1786303984::1::::<><><>0<>0<>0773a6f15230b232351fca44c7061200<>res://.godot/imported/Avatars_08.png-e291ce2f037594fbe8889a6245338730.ctex::
+Avatars_09.png::CompressedTexture2D::2673151317975738724::1786303984::1786303984::1::::<><><>0<>0<>b11f72a9fb68ac4fd6ea955209c3151b<>res://.godot/imported/Avatars_09.png-a3f88d586d7a693c2569d56579b71230.ctex::
+Avatars_10.png::CompressedTexture2D::5021411061644639225::1786303984::1786303984::1::::<><><>0<>0<>89149cebcfb7646142ed32c6d95126f4<>res://.godot/imported/Avatars_10.png-28eb7f3b9a3a4f050af5848266b89652.ctex::
+Avatars_11.png::CompressedTexture2D::7529175670397744751::1786303984::1786303984::1::::<><><>0<>0<>ca9d1616b4f6963a687bca7400ea01fc<>res://.godot/imported/Avatars_11.png-c5383258c1e6c87098eef932811ddef5.ctex::
+Avatars_12.png::CompressedTexture2D::4636061867984551419::1786303984::1786303984::1::::<><><>0<>0<>2158c94d99d9a3d5ab8f814e2c090fd4<>res://.godot/imported/Avatars_12.png-18fc542fdf34575560304eb6b2a1b50f.ctex::
+Avatars_13.png::CompressedTexture2D::3138788505437993268::1786303984::1786303984::1::::<><><>0<>0<>8a4575acf0f91ca5e041782219f56ed5<>res://.godot/imported/Avatars_13.png-01c78ca68419841d9d2e88e1d3992068.ctex::
+Avatars_14.png::CompressedTexture2D::2982995969285103647::1786303984::1786303984::1::::<><><>0<>0<>ffc237277a604a71dfddbc2eefc18dd6<>res://.godot/imported/Avatars_14.png-437ed8774d9df3424988301694725cc0.ctex::
+Avatars_15.png::CompressedTexture2D::2780136648344030144::1786303984::1786303984::1::::<><><>0<>0<>9e516793a332f30fe5b347512b6520ca<>res://.godot/imported/Avatars_15.png-86385955a7e434fd877f5706c578d34e.ctex::
+Avatars_16.png::CompressedTexture2D::165554023638339653::1786303984::1786303984::1::::<><><>0<>0<>6757a3d727cf483c32d1dc0b863b84d2<>res://.godot/imported/Avatars_16.png-d81c13940de2e232252ee1a862419b40.ctex::
+Avatars_17.png::CompressedTexture2D::5234916722991322879::1786303984::1786303984::1::::<><><>0<>0<>f734b1f488558bfff1022dff2a1cca66<>res://.godot/imported/Avatars_17.png-227155793561303dbd6c3f3f1d11b3a4.ctex::
+Avatars_18.png::CompressedTexture2D::1856550547128552672::1786303984::1786303984::1::::<><><>0<>0<>9dc762af2784613218cbc0e9bc81038b<>res://.godot/imported/Avatars_18.png-66a3629ae286bebb622c4e51bd00ac44.ctex::
+Avatars_19.png::CompressedTexture2D::1558211979626621267::1786303984::1786303984::1::::<><><>0<>0<>e55abe5d8833198cfc65a6350acf7cf8<>res://.godot/imported/Avatars_19.png-816082ceab30b7bad48bb6361dd5b114.ctex::
+Avatars_20.png::CompressedTexture2D::7586561380845729011::1786303984::1786303984::1::::<><><>0<>0<>3b737725df6473e6ea90086775c769d0<>res://.godot/imported/Avatars_20.png-248a883273f4ebea45397699b56f2ffa.ctex::
+Avatars_21.png::CompressedTexture2D::5255425149464912399::1786303984::1786303984::1::::<><><>0<>0<>69ea984b71bd90567926f11553a776b6<>res://.godot/imported/Avatars_21.png-62c8dd0434e64508d7f9061737ad99f0.ctex::
+Avatars_22.png::CompressedTexture2D::263024967020193019::1786303984::1786303984::1::::<><><>0<>0<>23a5389fda7a0b05c13318c156007c00<>res://.godot/imported/Avatars_22.png-b4da170fd404539ddba723a10bcbe195.ctex::
+Avatars_23.png::CompressedTexture2D::8090020494365946906::1786303984::1786303984::1::::<><><>0<>0<>aac4ed2ac9f605410e1eda1d521fecd2<>res://.godot/imported/Avatars_23.png-07ad29505d9b805c2b3a1654f248c7cf.ctex::
+Avatars_24.png::CompressedTexture2D::1629634557857273055::1786303984::1786303984::1::::<><><>0<>0<>9d3c3548701d3cbc46be0e8f5b25b4e3<>res://.godot/imported/Avatars_24.png-5ad6823cf093a2f1f7d1fe775e069b3a.ctex::
+Avatars_25.png::CompressedTexture2D::6281611868500989844::1786303984::1786303984::1::::<><><>0<>0<>e427855a6c7e2cc14cd71ee53286c1d7<>res://.godot/imported/Avatars_25.png-4678ea9e17f971594761b498c6e9dc16.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/::1786303515
+Icon_01.png::CompressedTexture2D::4191201600251349738::1786303984::1786303984::1::::<><><>0<>0<>9a6d9243d753e31ca23337c502865e36<>res://.godot/imported/Icon_01.png-a19941aed023568ecf99bde512bef958.ctex::
+Icon_02.png::CompressedTexture2D::6308867185133857398::1786303984::1786303984::1::::<><><>0<>0<>fd86975fead7cec6a9e6db822c7b8fc1<>res://.godot/imported/Icon_02.png-918b4ac1a0c79bffe182f2d50aa536b6.ctex::
+Icon_03.png::CompressedTexture2D::4036128314643936435::1786303984::1786303984::1::::<><><>0<>0<>2074901ab84ed98102d2ff527a6a5867<>res://.godot/imported/Icon_03.png-12f17aa45af00390c9594e296243760a.ctex::
+Icon_04.png::CompressedTexture2D::8073009454327421767::1786303984::1786303984::1::::<><><>0<>0<>e16ac33ea7ce7dfb9a1eb42a80652e94<>res://.godot/imported/Icon_04.png-9a41321cb1dbeb190da05d01fb0f2f55.ctex::
+Icon_05.png::CompressedTexture2D::8830081508870660545::1786303984::1786303984::1::::<><><>0<>0<>30bd210979a59e04a604f2132cdae128<>res://.godot/imported/Icon_05.png-be7e7e3607039cdf1aece20dd4954f4a.ctex::
+Icon_06.png::CompressedTexture2D::155435194039535437::1786303984::1786303984::1::::<><><>0<>0<>e742dee9eea7b7d926bd917ef357c080<>res://.godot/imported/Icon_06.png-259ba1549d86a341aefe9f2d20db3ec7.ctex::
+Icon_07.png::CompressedTexture2D::781789567872966552::1786303984::1786303984::1::::<><><>0<>0<>e163628e554c078d1b0bad260d5ec91b<>res://.godot/imported/Icon_07.png-f568c8b572845cd64b93090ab9a20d35.ctex::
+Icon_08.png::CompressedTexture2D::7834244465461160385::1786303984::1786303984::1::::<><><>0<>0<>263a54d4abea5939da01d4e202c7fa2b<>res://.godot/imported/Icon_08.png-627245275c8ac388e2d230d991f0d53f.ctex::
+Icon_09.png::CompressedTexture2D::1925181941948055732::1786303984::1786303984::1::::<><><>0<>0<>00a412958c497180f883cd35c3e10537<>res://.godot/imported/Icon_09.png-1fda9e9c9ea0d7e3dcb41da32a648881.ctex::
+Icon_10.png::CompressedTexture2D::5424138933712716315::1786303984::1786303984::1::::<><><>0<>0<>e2ffce52b8dd5a81f292601816f35916<>res://.godot/imported/Icon_10.png-bc92a36c5a77e96a0893c5a6e6e8c6b0.ctex::
+Icon_11.png::CompressedTexture2D::4878294321321749896::1786303984::1786303984::1::::<><><>0<>0<>23cc8575561ec8c19d6fe556c21a3189<>res://.godot/imported/Icon_11.png-de629e292bf451c69f02023a6fb43ca1.ctex::
+Icon_12.png::CompressedTexture2D::5705355099359097052::1786303984::1786303984::1::::<><><>0<>0<>e9f24205900db1bfc5e77f1882d605f4<>res://.godot/imported/Icon_12.png-5f790962cadf9e3bef09122d00fd2e91.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Papers/::1786303515
+RegularPaper.png::CompressedTexture2D::1432248021467215922::1786303984::1786303984::1::::<><><>0<>0<>1b263ce9e38371017698fc1fe30d07f2<>res://.godot/imported/RegularPaper.png-19728f4a631d462450f1379b5f8db77f.ctex::
+SpecialPaper.png::CompressedTexture2D::1262540928700650386::1786303984::1786303984::1::::<><><>0<>0<>2013796fef7a488b2e672b94529e8be3<>res://.godot/imported/SpecialPaper.png-6fd3e1aa8720727f7875f794ec728f80.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Ribbons/::1786303516
+BigRibbons.png::CompressedTexture2D::1031906470797470869::1786303984::1786303984::1::::<><><>0<>0<>a9cfb0fb84e59d26d497276f48660ddf<>res://.godot/imported/BigRibbons.png-9d6879fd3b2208f22ec2e7557ebb09be.ctex::
+SmallRibbons.png::CompressedTexture2D::41505161306396684::1786303984::1786303984::1::::<><><>0<>0<>7a97d4df5bd45d868470db547aa06145<>res://.godot/imported/SmallRibbons.png-74caa88c27ab03ca07aaff4c848a10f2.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Swords/::1786303516
+Swords.png::CompressedTexture2D::3358421699406170755::1786303984::1786303984::1::::<><><>0<>0<>f5300abb18d28a75974b1142600a477d<>res://.godot/imported/Swords.png-e98bda8440cc30370d4b2f42ccda17f1.ctex::
+::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/::1786303516
+WoodTable.png::CompressedTexture2D::6067718629548382854::1786303984::1786303984::1::::<><><>0<>0<>5f2f65f167489059f73c34415d02c45a<>res://.godot/imported/WoodTable.png-42025fcd56fce2214e11d94d9c36a2d6.ctex::
+WoodTable_Slots.png::CompressedTexture2D::2936705033434607289::1786303984::1786303984::1::::<><><>0<>0<>f9f3d626f567a98154e8a87728c19105<>res://.godot/imported/WoodTable_Slots.png-237060dab39e7a847773b9d53ab276e5.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/::1786303227
+::res://Assets/Tiny Swords (Free Pack)/Units/Black Units/::1786303222
+::res://Assets/Tiny Swords (Free Pack)/Units/Black Units/Archer/::1786303516
+Archer_Idle.png::CompressedTexture2D::6257359522513575981::1786303984::1786303984::1::::<><><>0<>0<>563db1c628d838445b9835a7a66f3f2a<>res://.godot/imported/Archer_Idle.png-0975c7b1b8f0c7cab1589ca3c47f8793.ctex::
+Archer_Run.png::CompressedTexture2D::2920828778490699817::1786303984::1786303984::1::::<><><>0<>0<>97b132884379b588a2fa3c273be75772<>res://.godot/imported/Archer_Run.png-75112608aa8bae449f8f62252cbc14c4.ctex::
+Archer_Shoot.png::CompressedTexture2D::5678142313534523471::1786303984::1786303984::1::::<><><>0<>0<>04d6b1c88adb0076ed4c53619d735c4b<>res://.godot/imported/Archer_Shoot.png-312d175c60796bde3fb29b78e7e119fc.ctex::
+Arrow.png::CompressedTexture2D::3192877958021906373::1786303984::1786303984::1::::<><><>0<>0<>10d0d0e50306293b397bc34a0bf1bb6c<>res://.godot/imported/Arrow.png-29f334db13222265bcc98eb36f274da9.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Black Units/Lancer/::1786303516
+Lancer_DownRight_Attack.png::CompressedTexture2D::7349244670482165396::1786303984::1786303984::1::::<><><>0<>0<>1aeafab8f3c9d771fc551760720cf3f0<>res://.godot/imported/Lancer_DownRight_Attack.png-3da63c7c6231ed53d93219809a8ecf11.ctex::
+Lancer_DownRight_Defence.png::CompressedTexture2D::6702432163250198312::1786303984::1786303984::1::::<><><>0<>0<>3c8af38574eac1ff2768b6e3499a4da3<>res://.godot/imported/Lancer_DownRight_Defence.png-3115e1358a5a0ed3759363c365269390.ctex::
+Lancer_Down_Attack.png::CompressedTexture2D::284995020883016252::1786303984::1786303984::1::::<><><>0<>0<>2660595d495a5ec9a399724306f35bf7<>res://.godot/imported/Lancer_Down_Attack.png-8936b1720d82964bdf591874e915b09b.ctex::
+Lancer_Down_Defence.png::CompressedTexture2D::4100930948109501107::1786303984::1786303984::1::::<><><>0<>0<>4aa7143cb25f6d5a19fe070bcf5163bd<>res://.godot/imported/Lancer_Down_Defence.png-c7e0888b7071be4e22e9966d7e01239f.ctex::
+Lancer_Idle.png::CompressedTexture2D::8896022051131540112::1786303984::1786303984::1::::<><><>0<>0<>45b83de0a61fc609aaa4c36ab1fe112e<>res://.godot/imported/Lancer_Idle.png-97c4a14ee133dc9b4eb0b8ecf092104c.ctex::
+Lancer_Right_Attack.png::CompressedTexture2D::8453259792430873739::1786303984::1786303984::1::::<><><>0<>0<>174537f05f5c6fed72658d8d870a8550<>res://.godot/imported/Lancer_Right_Attack.png-59edcf96983781af95ff2a63a18562c7.ctex::
+Lancer_Right_Defence.png::CompressedTexture2D::9011517323071222346::1786303984::1786303984::1::::<><><>0<>0<>209f3512e49b8b29bdb70cad385bbd92<>res://.godot/imported/Lancer_Right_Defence.png-42215fc2c024a7d7ee621d02ba10ecf7.ctex::
+Lancer_Run.png::CompressedTexture2D::3896997982366219964::1786303984::1786303984::1::::<><><>0<>0<>129de1e1c1b5ee7e36660f81c289357d<>res://.godot/imported/Lancer_Run.png-b2002fb6f55cded830afd25bdc7fb1f9.ctex::
+Lancer_UpRight_Attack.png::CompressedTexture2D::6684351753240479443::1786303984::1786303984::1::::<><><>0<>0<>67f8ffa834475c4787dcae1e0a77be30<>res://.godot/imported/Lancer_UpRight_Attack.png-abcb639b59786a63f210b0cf099c5bef.ctex::
+Lancer_UpRight_Defence.png::CompressedTexture2D::4179242424536514288::1786303984::1786303984::1::::<><><>0<>0<>7d1df094a826887cb1ecd450becab9f2<>res://.godot/imported/Lancer_UpRight_Defence.png-2d6b1045ee554e2f4ae83fde451a0f01.ctex::
+Lancer_Up_Attack.png::CompressedTexture2D::1835829704867610807::1786303984::1786303984::1::::<><><>0<>0<>a4fc4c8a49d946cf1aaf83a24b6f7680<>res://.godot/imported/Lancer_Up_Attack.png-5e71b129f8facbc4512f0dd38c0f4646.ctex::
+Lancer_Up_Defence.png::CompressedTexture2D::5661048563083088596::1786303984::1786303984::1::::<><><>0<>0<>64aa9786c9d72bafb444cd9fef78e12b<>res://.godot/imported/Lancer_Up_Defence.png-1c233016fba6ecf1b71b4cd96017589e.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Black Units/Monk/::1786303516
+Heal.png::CompressedTexture2D::3501574340610229123::1786303984::1786303984::1::::<><><>0<>0<>074e72f6fd76cf7ed87ec68b1b97dd3d<>res://.godot/imported/Heal.png-c503c7f52de3e241ba921a9cde7e1727.ctex::
+Heal_Effect.png::CompressedTexture2D::7056867256069947607::1786303984::1786303984::1::::<><><>0<>0<>36717285b1ce19f8e78a2693fc59d8a8<>res://.godot/imported/Heal_Effect.png-abe5a070b8c97e1fa40c8f059c04d6c2.ctex::
+Idle.png::CompressedTexture2D::9030185922725577923::1786303984::1786303984::1::::<><><>0<>0<>90820aaabeb8323b186e64256af23420<>res://.godot/imported/Idle.png-0ca45dd9180c8710556f4aecb8578e58.ctex::
+Run.png::CompressedTexture2D::3070850751415844364::1786303984::1786303984::1::::<><><>0<>0<>c2e097af2d8589375e2351aa36adc1cb<>res://.godot/imported/Run.png-41a7ab6bdf521c1c22d5d5141a0e5ece.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Black Units/Pawn/::1786303516
+Pawn_Idle Axe.png::CompressedTexture2D::4471653465113770203::1786303984::1786303984::1::::<><><>0<>0<>ba93f5b6d4e235a5010fe18554fdb202<>res://.godot/imported/Pawn_Idle Axe.png-6fdfc8f540f8c8ef33d50bf473f4da9f.ctex::
+Pawn_Idle Gold.png::CompressedTexture2D::773065807406058466::1786303984::1786303984::1::::<><><>0<>0<>5570a6028400c820641ab2053f506973<>res://.godot/imported/Pawn_Idle Gold.png-0d70135a34fac3d431c955bc93fce604.ctex::
+Pawn_Idle Hammer.png::CompressedTexture2D::6175138549230705640::1786303984::1786303984::1::::<><><>0<>0<>b5946669484bd10d3ff9779b7a59032e<>res://.godot/imported/Pawn_Idle Hammer.png-e63eb4b691c83719d9be66ca5a31de90.ctex::
+Pawn_Idle Knife.png::CompressedTexture2D::5021761242661192740::1786303984::1786303984::1::::<><><>0<>0<>ee0a454a93c2b6a0833b59f8239e9699<>res://.godot/imported/Pawn_Idle Knife.png-7c4692dfd018296af81796a5609d5f73.ctex::
+Pawn_Idle Meat.png::CompressedTexture2D::4173988377149154803::1786303984::1786303984::1::::<><><>0<>0<>16e406e26908cb1db5e240c1438d65a9<>res://.godot/imported/Pawn_Idle Meat.png-2b8222bfef61e3811dde2fe9bed00f75.ctex::
+Pawn_Idle Pickaxe.png::CompressedTexture2D::2202561491318357596::1786303984::1786303984::1::::<><><>0<>0<>091ebbb1a8bb5459b5e8519f561631fe<>res://.godot/imported/Pawn_Idle Pickaxe.png-70d39f7f91ef409da78329e77edbfd42.ctex::
+Pawn_Idle Wood.png::CompressedTexture2D::4658403911995644040::1786303984::1786303984::1::::<><><>0<>0<>b528c8b782413585feaf2e7290270cc2<>res://.godot/imported/Pawn_Idle Wood.png-4833d424e2a2845e3ea51f070e66c7b8.ctex::
+Pawn_Idle.png::CompressedTexture2D::3379766171737323120::1786303984::1786303984::1::::<><><>0<>0<>7fac3db88dfdad0eea21d5b87f69d330<>res://.godot/imported/Pawn_Idle.png-3032032b3f83156ba5ac87208e9a2ade.ctex::
+Pawn_Interact Axe.png::CompressedTexture2D::3570291982333942816::1786303984::1786303984::1::::<><><>0<>0<>d897101745b1295a7e98ae2076a71172<>res://.godot/imported/Pawn_Interact Axe.png-7549ca47afbfc34443adfd4322b38647.ctex::
+Pawn_Interact Hammer.png::CompressedTexture2D::6357372806216732678::1786303984::1786303984::1::::<><><>0<>0<>149a37eeedaeae4b590e82c2efb631a2<>res://.godot/imported/Pawn_Interact Hammer.png-84321efe5d19e5019272283e123521de.ctex::
+Pawn_Interact Knife.png::CompressedTexture2D::2323289146017878820::1786303984::1786303984::1::::<><><>0<>0<>6388121e18b76ff644632c398ec36480<>res://.godot/imported/Pawn_Interact Knife.png-0fe6e774255230fde920e646fcb34ccf.ctex::
+Pawn_Interact Pickaxe.png::CompressedTexture2D::189839256143051124::1786303984::1786303984::1::::<><><>0<>0<>20ff28d5e27de9b03753ae136da5eca7<>res://.godot/imported/Pawn_Interact Pickaxe.png-e88fe2280b8edb47fb282bf434ab8937.ctex::
+Pawn_Run Axe.png::CompressedTexture2D::6512698682240702140::1786303984::1786303984::1::::<><><>0<>0<>ab859222386828906f1aa7227c1d8e9b<>res://.godot/imported/Pawn_Run Axe.png-cf684431984b6f4eba73b7c0a4290da7.ctex::
+Pawn_Run Gold.png::CompressedTexture2D::635855625000699838::1786303984::1786303984::1::::<><><>0<>0<>2508ef66cccd5668449bb488b5357992<>res://.godot/imported/Pawn_Run Gold.png-20dff8e8513a7c8a153762cced489962.ctex::
+Pawn_Run Hammer.png::CompressedTexture2D::5936421475241101698::1786303984::1786303984::1::::<><><>0<>0<>14f9385b8350d7604c347357d2cc4846<>res://.godot/imported/Pawn_Run Hammer.png-a88a0abf540c2e8202ea7832c0e98073.ctex::
+Pawn_Run Knife.png::CompressedTexture2D::1534721089236578497::1786303984::1786303984::1::::<><><>0<>0<>bc4fe274fff56f32282c7f9e5a68567b<>res://.godot/imported/Pawn_Run Knife.png-ee8ef72adf08e97bf27bff9fedffc68e.ctex::
+Pawn_Run Meat.png::CompressedTexture2D::96821859497932569::1786303984::1786303984::1::::<><><>0<>0<>e609af37871e2c797041ca4834484fd1<>res://.godot/imported/Pawn_Run Meat.png-49d82377b6c6f5ac8b504e0a658a1af3.ctex::
+Pawn_Run Pickaxe.png::CompressedTexture2D::424739107654989714::1786303984::1786303984::1::::<><><>0<>0<>17702836c207aa10e92955b60686a672<>res://.godot/imported/Pawn_Run Pickaxe.png-aca6a84b08de3b4d60a71cd4989860ff.ctex::
+Pawn_Run Wood.png::CompressedTexture2D::706593381640929517::1786303984::1786303984::1::::<><><>0<>0<>7526b831f3984cbf90cbde0899374566<>res://.godot/imported/Pawn_Run Wood.png-f7f1de6d18ab74bcd646df6e9640ff3e.ctex::
+Pawn_Run.png::CompressedTexture2D::2036631823702619991::1786303984::1786303984::1::::<><><>0<>0<>eeddde2a66c3154f49930ea012b33701<>res://.godot/imported/Pawn_Run.png-99413fdb766c262c5db34c882eee8537.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Black Units/Warrior/::1786303507
+Warrior_Attack1.png::CompressedTexture2D::7641517096562834209::1786303984::1786303984::1::::<><><>0<>0<>fc98f1b5021d279016048611e861c170<>res://.godot/imported/Warrior_Attack1.png-38f4c80509dbb05ec47ce56921a7f36b.ctex::
+Warrior_Attack2.png::CompressedTexture2D::4880756109953261829::1786303984::1786303984::1::::<><><>0<>0<>a8252c4d0b7e8d75472bc5a0a983e104<>res://.godot/imported/Warrior_Attack2.png-2dacc056afb875ce1aefc821315b6e81.ctex::
+Warrior_Guard.png::CompressedTexture2D::6001254371992639363::1786303984::1786303984::1::::<><><>0<>0<>64f991ee3918241a4bb567eb90ea03bb<>res://.godot/imported/Warrior_Guard.png-5b837f347a9f2febacba610b488e29c2.ctex::
+Warrior_Idle.png::CompressedTexture2D::1851937833155405058::1786303984::1786303984::1::::<><><>0<>0<>ab01bd9dbc13165141e51827301b6e40<>res://.godot/imported/Warrior_Idle.png-b2743832a0aecefc1dda04d4ea8658b8.ctex::
+Warrior_Run.png::CompressedTexture2D::3715580654280267456::1786303984::1786303984::1::::<><><>0<>0<>07a60c98b4b8a8c26190cf5ccf0abb5c<>res://.godot/imported/Warrior_Run.png-469347e84418fb860eafda2997852d6a.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/::1786303223
+::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Archer/::1786303508
+Archer_Idle.png::CompressedTexture2D::8314716100599561097::1786303984::1786303984::1::::<><><>0<>0<>68f461ac2dd0849fc6383d9c784bbea0<>res://.godot/imported/Archer_Idle.png-3b67cbb457cace35ac3fac73494fa127.ctex::
+Archer_Run.png::CompressedTexture2D::1389418054179897212::1786303984::1786303984::1::::<><><>0<>0<>7d3df9121fb18c28c8c1ab5f17f92e8d<>res://.godot/imported/Archer_Run.png-f83e5255a01a1d3b89a14c81d8bd66e3.ctex::
+Archer_Shoot.png::CompressedTexture2D::5717984449644663724::1786303984::1786303984::1::::<><><>0<>0<>04106c109ba5526b395614cc2bccfcf5<>res://.godot/imported/Archer_Shoot.png-c91c1d25e4729f64a8e24a47e1d3a1fa.ctex::
+Arrow.png::CompressedTexture2D::927318108598059764::1786303984::1786303984::1::::<><><>0<>0<>35f296b76f3f3357d9256da2cf0c31fe<>res://.godot/imported/Arrow.png-ba2935a9c1abd59bbc0806a142a9602f.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Lancer/::1786303508
+Lancer_DownRight_Attack.png::CompressedTexture2D::6445469269352336808::1786303984::1786303984::1::::<><><>0<>0<>30f69eaf8ade1fbfca4f2ea88fcd9f8b<>res://.godot/imported/Lancer_DownRight_Attack.png-4908e89caf222329f0c04bd0d964368a.ctex::
+Lancer_DownRight_Defence.png::CompressedTexture2D::3135191716681493351::1786303984::1786303984::1::::<><><>0<>0<>fd773578bc700c46dd5280b22cba37a2<>res://.godot/imported/Lancer_DownRight_Defence.png-35191c9373055fb8e075a54c09baa56e.ctex::
+Lancer_Down_Attack.png::CompressedTexture2D::7496442666382251499::1786303984::1786303984::1::::<><><>0<>0<>9069c33c178a0b519e1f393ed092cab2<>res://.godot/imported/Lancer_Down_Attack.png-b8d4b48f3bf4fc32cd5e9d6c1ade8c22.ctex::
+Lancer_Down_Defence.png::CompressedTexture2D::3430197813048873925::1786303984::1786303984::1::::<><><>0<>0<>396fe37021e80a390466c74a2922ed29<>res://.godot/imported/Lancer_Down_Defence.png-25ffda04d36b2a1b1e96782dbfc914b9.ctex::
+Lancer_Idle.png::CompressedTexture2D::2503672260969758123::1786303984::1786303984::1::::<><><>0<>0<>2908bfef79ce889d17d08e8b9c626623<>res://.godot/imported/Lancer_Idle.png-de502ae276976e0aa21140de6e850ebf.ctex::
+Lancer_Right_Attack.png::CompressedTexture2D::2376995920669636883::1786303984::1786303984::1::::<><><>0<>0<>d055c17dfa769db5324c0be0fddab6e6<>res://.godot/imported/Lancer_Right_Attack.png-8965eeb19d32d235c931ad387f2fe8f2.ctex::
+Lancer_Right_Defence.png::CompressedTexture2D::6774529910215143321::1786303984::1786303984::1::::<><><>0<>0<>802642956ca3c888bff078500348fcb2<>res://.godot/imported/Lancer_Right_Defence.png-63236b68740d27f7f22021b9ce880506.ctex::
+Lancer_Run.png::CompressedTexture2D::3002051279465485477::1786303984::1786303984::1::::<><><>0<>0<>95e5759c0d85ba7eca17ee590ba90cc1<>res://.godot/imported/Lancer_Run.png-c2111c3b9036f68d7acb67facb50459e.ctex::
+Lancer_UpRight_Attack.png::CompressedTexture2D::8877204253461498829::1786303984::1786303984::1::::<><><>0<>0<>9a2a1385efb0114261af74205a6c145b<>res://.godot/imported/Lancer_UpRight_Attack.png-1b1d5bb5ec0536d30b0f4d06217696f9.ctex::
+Lancer_UpRight_Defence.png::CompressedTexture2D::8479169028220322547::1786303984::1786303984::1::::<><><>0<>0<>96081b9591bcbca90dcd3b984b34817a<>res://.godot/imported/Lancer_UpRight_Defence.png-7ff07cdd037c9f6f0e4d05c727185bb9.ctex::
+Lancer_Up_Attack.png::CompressedTexture2D::8095404080508094733::1786303984::1786303984::1::::<><><>0<>0<>8798bbd54efb0ae4f53344d5eecb83f6<>res://.godot/imported/Lancer_Up_Attack.png-c2c0fd482af07e9f60e0eb806df78023.ctex::
+Lancer_Up_Defence.png::CompressedTexture2D::2700326925763275777::1786303984::1786303984::1::::<><><>0<>0<>deac17e671c2157e1fbf2347b3537479<>res://.godot/imported/Lancer_Up_Defence.png-ce85d72aaef453ae73712f232037cb39.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Monk/::1786303507
+Heal.png::CompressedTexture2D::219450683576389575::1786303984::1786303984::1::::<><><>0<>0<>e2da3592900950bfa7f3249580255bdc<>res://.godot/imported/Heal.png-7b76aa7f83dd01356de8724582f965c5.ctex::
+Heal_Effect.png::CompressedTexture2D::1815128286421161072::1786303984::1786303984::1::::<><><>0<>0<>08ab2d4dcd4abca9dee8d9cdb5d21166<>res://.godot/imported/Heal_Effect.png-5ec375d9fae59ca50fe938e2d5d4c8d4.ctex::
+Idle.png::CompressedTexture2D::5957137583099908221::1786303984::1786303984::1::::<><><>0<>0<>83ab93c310da6e19f9b343124c8b074b<>res://.godot/imported/Idle.png-47a43d4b0f3da8f2f4a3031471393d3b.ctex::
+Run.png::CompressedTexture2D::3259721969814695052::1786303984::1786303984::1::::<><><>0<>0<>23e51073f34a55bfb3361e53b054b8d7<>res://.godot/imported/Run.png-17a5d6980aa7c65c644a4a24f8c5ea3f.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Pawn/::1786303507
+Pawn_Idle Axe.png::CompressedTexture2D::2146359322913658005::1786303984::1786303984::1::::<><><>0<>0<>cdedb8d493c4b9486f8a39109f0c2973<>res://.godot/imported/Pawn_Idle Axe.png-28e419ec1b471bd73d8da6275d1f5566.ctex::
+Pawn_Idle Gold.png::CompressedTexture2D::7082967478293797814::1786303984::1786303984::1::::<><><>0<>0<>e000ebd7d58cd559d5b1ecd04dcab0ef<>res://.godot/imported/Pawn_Idle Gold.png-2da7af1483c140f919dd6b39e9927b73.ctex::
+Pawn_Idle Hammer.png::CompressedTexture2D::5707746099432508080::1786303984::1786303984::1::::<><><>0<>0<>24393c9adeb382a118f88786256193cb<>res://.godot/imported/Pawn_Idle Hammer.png-8a8f429a1eb843d88668dc7ca3378f0b.ctex::
+Pawn_Idle Knife.png::CompressedTexture2D::5780948536073143648::1786303984::1786303984::1::::<><><>0<>0<>b6962dcf3b47c945529f44c8c3453e48<>res://.godot/imported/Pawn_Idle Knife.png-3d14d1f24b941cfbb5147b0fbace20fd.ctex::
+Pawn_Idle Meat.png::CompressedTexture2D::8027446580699383864::1786303984::1786303984::1::::<><><>0<>0<>b2b028baf3c3467501fa9902c8937405<>res://.godot/imported/Pawn_Idle Meat.png-1ca9d051532c00886c37b5568f38b863.ctex::
+Pawn_Idle Pickaxe.png::CompressedTexture2D::4785851511541194186::1786303984::1786303984::1::::<><><>0<>0<>c75a8f896b754edd4e5a6a3cddab731c<>res://.godot/imported/Pawn_Idle Pickaxe.png-fb2fe8b13370fb743bb2633b1b731ab7.ctex::
+Pawn_Idle Wood.png::CompressedTexture2D::4610188548551644634::1786303984::1786303984::1::::<><><>0<>0<>a952edac82888ef1043a5bf7a8132437<>res://.godot/imported/Pawn_Idle Wood.png-ae2b37a80899143151f8e8a8a3b7a17e.ctex::
+Pawn_Idle.png::CompressedTexture2D::9005695511508392999::1786303984::1786303984::1::::<><><>0<>0<>cc6cc0a4f16749ddb4fedc4d8a693184<>res://.godot/imported/Pawn_Idle.png-1a1de62cd2266077b81c1d4bbac9d188.ctex::
+Pawn_Interact Axe.png::CompressedTexture2D::8867559226691946121::1786303984::1786303984::1::::<><><>0<>0<>02374913871aa961a6c8ece94accb944<>res://.godot/imported/Pawn_Interact Axe.png-688b7229bd63a9066b90d56bbdc5d5ec.ctex::
+Pawn_Interact Hammer.png::CompressedTexture2D::651731253840096276::1786303984::1786303984::1::::<><><>0<>0<>6a2e446c2cb89cb337a4a2598f494594<>res://.godot/imported/Pawn_Interact Hammer.png-ed4a3493c35a8eb9f3b1672c9b922f9a.ctex::
+Pawn_Interact Knife.png::CompressedTexture2D::2248262518128016896::1786303984::1786303984::1::::<><><>0<>0<>e004b73a24bc191eafff00c35e069a82<>res://.godot/imported/Pawn_Interact Knife.png-80dabe60a81200767cfef4b1859198e3.ctex::
+Pawn_Interact Pickaxe.png::CompressedTexture2D::9141535763405334108::1786303984::1786303984::1::::<><><>0<>0<>f392e1b4477e4030424fb71912c540b0<>res://.godot/imported/Pawn_Interact Pickaxe.png-5a4b9dbc4553cb81cc5d003fbcd448c4.ctex::
+Pawn_Run Axe.png::CompressedTexture2D::7012275986140515884::1786303984::1786303984::1::::<><><>0<>0<>72ad126f9fd29caf7ea725fd1f8aa31b<>res://.godot/imported/Pawn_Run Axe.png-3e41dd751100f0eb374da59f430cf9ca.ctex::
+Pawn_Run Gold.png::CompressedTexture2D::5485141968875449282::1786303984::1786303985::1::::<><><>0<>0<>b523719a106ee712a57a82190f09159e<>res://.godot/imported/Pawn_Run Gold.png-5437aae82661c2971ecf6cf597403f42.ctex::
+Pawn_Run Hammer.png::CompressedTexture2D::701356459137174053::1786303985::1786303985::1::::<><><>0<>0<>e1959b6de1d5e8922263dd9f3de0619d<>res://.godot/imported/Pawn_Run Hammer.png-bd73bd1cd4587b677e1cbad027f2aa3c.ctex::
+Pawn_Run Knife.png::CompressedTexture2D::3202148803845635277::1786303985::1786303985::1::::<><><>0<>0<>80ebdc9452ac8d0ef1bd7a7c1bb3eea9<>res://.godot/imported/Pawn_Run Knife.png-5ff77720d6917d095ed2595c12a7ab21.ctex::
+Pawn_Run Meat.png::CompressedTexture2D::7844292475408130519::1786303985::1786303985::1::::<><><>0<>0<>8ae3b051dace28046362ebe307282fad<>res://.godot/imported/Pawn_Run Meat.png-98e42fbeacfc6d5ecfd4861e0754d7a9.ctex::
+Pawn_Run Pickaxe.png::CompressedTexture2D::767066952656088682::1786303985::1786303985::1::::<><><>0<>0<>e6165b121cab949ced8228e4015f65ed<>res://.godot/imported/Pawn_Run Pickaxe.png-d94fcc0784948b5d1902b025b5f82585.ctex::
+Pawn_Run Wood.png::CompressedTexture2D::7768730002874652278::1786303985::1786303985::1::::<><><>0<>0<>c5b841d1ddd202b973065337ad2792a8<>res://.godot/imported/Pawn_Run Wood.png-69cdedda894142aacc82b95f6fae293f.ctex::
+Pawn_Run.png::CompressedTexture2D::116472610758284749::1786303985::1786303985::1::::<><><>0<>0<>d6fb37eca7c4054e91026905180bcdb7<>res://.godot/imported/Pawn_Run.png-30288cc17c5d51609339be8c37033c78.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Warrior/::1786303505
+Warrior_Attack1.png::CompressedTexture2D::806474313817498348::1786303985::1786303985::1::::<><><>0<>0<>cc3e80def5e966b93028452b29e6e377<>res://.godot/imported/Warrior_Attack1.png-f7bf67e2027d7d4ac15b77568fe98c1f.ctex::
+Warrior_Attack2.png::CompressedTexture2D::4973477484593451059::1786303985::1786303985::1::::<><><>0<>0<>1d9649d8d593e0dfe8512addf3e08092<>res://.godot/imported/Warrior_Attack2.png-319b66d9afb9f0be38d03da01b4a5757.ctex::
+Warrior_Guard.png::CompressedTexture2D::8596199243419723384::1786303985::1786303985::1::::<><><>0<>0<>280a9f4365c6a3e68e9cb9307af24e71<>res://.godot/imported/Warrior_Guard.png-7449f214b67d006007d7543258ced3b6.ctex::
+Warrior_Idle.png::CompressedTexture2D::7239270726255120944::1786303985::1786303985::1::::<><><>0<>0<>4ae0bdec075727a3f30ae8f543c145dd<>res://.godot/imported/Warrior_Idle.png-f10cccf2325a314b44b0830f05873ff1.ctex::
+Warrior_Run.png::CompressedTexture2D::8976261262951008151::1786303985::1786303985::1::::<><><>0<>0<>7edf24417e889ee75813bb2e08901f42<>res://.godot/imported/Warrior_Run.png-acfa57066dc9e315243a45dc04e169c3.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Purple Units/::1786303225
+::res://Assets/Tiny Swords (Free Pack)/Units/Purple Units/Archer/::1786303505
+Archer_Idle.png::CompressedTexture2D::5232330541730062868::1786303985::1786303985::1::::<><><>0<>0<>6de3dfe1eb6af20c615b2c716a1166bf<>res://.godot/imported/Archer_Idle.png-0a572606e4bd5460165c1e80b0b1c2b9.ctex::
+Archer_Run.png::CompressedTexture2D::6765153485732697042::1786303985::1786303985::1::::<><><>0<>0<>d214efd4b166806830e148fdfb748aea<>res://.godot/imported/Archer_Run.png-d8ad79dc864148c663a866d013074acc.ctex::
+Archer_Shoot.png::CompressedTexture2D::4500175668669815912::1786303985::1786303985::1::::<><><>0<>0<>501952d5e4772e3c16fe69917f6b0a35<>res://.godot/imported/Archer_Shoot.png-17d39511b563697fe4133a9911327594.ctex::
+Arrow.png::CompressedTexture2D::4055407953368824221::1786303985::1786303985::1::::<><><>0<>0<>7069f586a4f69ca4c8d234ff80f63f5a<>res://.godot/imported/Arrow.png-d88560079f3d2a4a12883219ab40a553.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Purple Units/Lancer/::1786303506
+Lancer_DownRight_Attack.png::CompressedTexture2D::7602571707385412053::1786303985::1786303985::1::::<><><>0<>0<>330bf604e5a3ed2fec91d978517acf65<>res://.godot/imported/Lancer_DownRight_Attack.png-bfdb710e690df64ae510a4a6f272ead4.ctex::
+Lancer_DownRight_Defence.png::CompressedTexture2D::8123516682839653524::1786303985::1786303985::1::::<><><>0<>0<>1af4d107b3d97ac3575f1a9710c7d0f2<>res://.godot/imported/Lancer_DownRight_Defence.png-78575a978a78f8879a2978f7a2272eb7.ctex::
+Lancer_Down_Attack.png::CompressedTexture2D::3180707377185490379::1786303985::1786303985::1::::<><><>0<>0<>32ba4d0375491f5745661c0d60c74f6d<>res://.godot/imported/Lancer_Down_Attack.png-5fd704b41dd42835cc24a0d80af875fb.ctex::
+Lancer_Down_Defence.png::CompressedTexture2D::7738368990585337543::1786303985::1786303985::1::::<><><>0<>0<>2f1fc3a3cb7ef277223bf7e7a888fca3<>res://.godot/imported/Lancer_Down_Defence.png-cd82f72119d0959b3ee1c0787af18d02.ctex::
+Lancer_Idle.png::CompressedTexture2D::5223752553942006209::1786303985::1786303985::1::::<><><>0<>0<>e1caafbd7d3adbad98315a38d9df7746<>res://.godot/imported/Lancer_Idle.png-7207e8a6ad402e1faae08efcfdea0ad1.ctex::
+Lancer_Right_Attack.png::CompressedTexture2D::8443168382233473477::1786303985::1786303985::1::::<><><>0<>0<>70e4b4599f4f58933e604d7dc0f86a8d<>res://.godot/imported/Lancer_Right_Attack.png-7849a69de6b45a2190851a948f0c1bf0.ctex::
+Lancer_Right_Defence.png::CompressedTexture2D::7053129195025812367::1786303985::1786303985::1::::<><><>0<>0<>bc21d278f238c51906f0c254a1f482fb<>res://.godot/imported/Lancer_Right_Defence.png-a1b1143aef703d5e879876ea4147431c.ctex::
+Lancer_Run.png::CompressedTexture2D::8681947200803211949::1786303985::1786303985::1::::<><><>0<>0<>ae628d8423cb7363299d4b67dada68ed<>res://.godot/imported/Lancer_Run.png-bd5fcf1430b6c564671bc6f7b67b4f21.ctex::
+Lancer_UpRight_Attack.png::CompressedTexture2D::2430205587288930878::1786303985::1786303985::1::::<><><>0<>0<>abe1658905fae97983b8b951417b006a<>res://.godot/imported/Lancer_UpRight_Attack.png-135a0512a37a2033a6a7a48da4743a8c.ctex::
+Lancer_UpRight_Defence.png::CompressedTexture2D::7659075613906576181::1786303985::1786303985::1::::<><><>0<>0<>7651db27298442b54e305c147495e433<>res://.godot/imported/Lancer_UpRight_Defence.png-721d0ca4224d298805eda79e6df12673.ctex::
+Lancer_Up_Attack.png::CompressedTexture2D::8095026642855361991::1786303985::1786303985::1::::<><><>0<>0<>8ba2ba4cf3c678f9e4d1b753f2f5fd71<>res://.godot/imported/Lancer_Up_Attack.png-c09ba074e7c3e80a238904532c9d689a.ctex::
+Lancer_Up_Defence.png::CompressedTexture2D::4291675170992692722::1786303985::1786303985::1::::<><><>0<>0<>9c5fa8809ab513d2208cce8d42eda5dc<>res://.godot/imported/Lancer_Up_Defence.png-2c7f0eff2dec4ea5f1d3f11a5d705540.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Purple Units/Monk/::1786303506
+Heal.png::CompressedTexture2D::8806574255439880019::1786303985::1786303985::1::::<><><>0<>0<>a8ad98d8eceee9d2c590cd9123903500<>res://.godot/imported/Heal.png-9f7e88eb6097e8d788aab1dd948a0337.ctex::
+Heal_Effect.png::CompressedTexture2D::651449072698878439::1786303985::1786303985::1::::<><><>0<>0<>ce056088666229988bed2331ae4e58de<>res://.godot/imported/Heal_Effect.png-d1f33d04b835bafa633b7d573eaf9761.ctex::
+Idle.png::CompressedTexture2D::1270963844204144318::1786303985::1786303985::1::::<><><>0<>0<>1633a6a7bf41534382928ab27d2c2d34<>res://.godot/imported/Idle.png-dffee528585aba4863d5f690542e04b3.ctex::
+Run.png::CompressedTexture2D::6209564527012184840::1786303985::1786303985::1::::<><><>0<>0<>ffefbf9f4ca318b1e32affe730cf7d6d<>res://.godot/imported/Run.png-0558d1e7542372d92459590eef86c010.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Purple Units/Pawn/::1786303511
+Pawn_Idle Axe.png::CompressedTexture2D::1270258004628989472::1786303985::1786303985::1::::<><><>0<>0<>70fe3019cf2a39b18d03937a0894271b<>res://.godot/imported/Pawn_Idle Axe.png-cc7dafb6e15ea056ece418b00f9298f5.ctex::
+Pawn_Idle Gold.png::CompressedTexture2D::4125334667581183091::1786303985::1786303985::1::::<><><>0<>0<>4d467fb0a28510aee3823b2ac660050c<>res://.godot/imported/Pawn_Idle Gold.png-f1fdf41fd67960cbade7237a64b27ea4.ctex::
+Pawn_Idle Hammer.png::CompressedTexture2D::1757295848267501496::1786303985::1786303985::1::::<><><>0<>0<>ee9b69e182f14ffabfacaf8463929c96<>res://.godot/imported/Pawn_Idle Hammer.png-2198acb02c1af4b196a41709d284e564.ctex::
+Pawn_Idle Knife.png::CompressedTexture2D::2670530210420446347::1786303985::1786303985::1::::<><><>0<>0<>ba4e9c571304f06df3726cb3770755e9<>res://.godot/imported/Pawn_Idle Knife.png-f9d7f450351bee9c70928d5e3f90272c.ctex::
+Pawn_Idle Meat.png::CompressedTexture2D::4347870931622027702::1786303985::1786303985::1::::<><><>0<>0<>fe98be7e93398e4b95c73e79c76e97ff<>res://.godot/imported/Pawn_Idle Meat.png-37a0753cf409dd8e9acb60675d5385fa.ctex::
+Pawn_Idle Pickaxe.png::CompressedTexture2D::947943877699267334::1786303985::1786303985::1::::<><><>0<>0<>e4e9bf0ac1ca994e3048f550f49084f8<>res://.godot/imported/Pawn_Idle Pickaxe.png-dbcfcf666d45280831ab17811a59e0a3.ctex::
+Pawn_Idle Wood.png::CompressedTexture2D::1099764978099166248::1786303985::1786303985::1::::<><><>0<>0<>48a962e44b8c466da47076f45b3ff85b<>res://.godot/imported/Pawn_Idle Wood.png-1f8b84e2c1442d4a3417c4b3cf28aaca.ctex::
+Pawn_Idle.png::CompressedTexture2D::988376580453231030::1786303985::1786303985::1::::<><><>0<>0<>13c4bcf1227c71b7693f2bf7e1695b94<>res://.godot/imported/Pawn_Idle.png-86dc85ae7f489de5ef85216ecab0fcbf.ctex::
+Pawn_Interact Axe.png::CompressedTexture2D::6546963085475131211::1786303985::1786303985::1::::<><><>0<>0<>3b936ca0bd0a6a7c6b3f21d077a50b51<>res://.godot/imported/Pawn_Interact Axe.png-de9cc08fe52775ad007a6adff5f3d70b.ctex::
+Pawn_Interact Hammer.png::CompressedTexture2D::1604130808183252927::1786303985::1786303985::1::::<><><>0<>0<>e8986ad4cef4056deab024fdd12047c3<>res://.godot/imported/Pawn_Interact Hammer.png-edc7cd43652df3b20ddc1973b1359716.ctex::
+Pawn_Interact Knife.png::CompressedTexture2D::13786714998180252::1786303985::1786303985::1::::<><><>0<>0<>bdfd50b22adaf900c570b749018d49e4<>res://.godot/imported/Pawn_Interact Knife.png-bcdcef062c18c4c9baf50d4937c71ac5.ctex::
+Pawn_Interact Pickaxe.png::CompressedTexture2D::9124964307770599597::1786303985::1786303985::1::::<><><>0<>0<>dcdcf56ca2f179c654c8fa77aac3d018<>res://.godot/imported/Pawn_Interact Pickaxe.png-5cb2600ed9d4ae6fc69058ed2d1f58e7.ctex::
+Pawn_Run Axe.png::CompressedTexture2D::990008685937920520::1786303985::1786303985::1::::<><><>0<>0<>c3c1119876066e13d702e299202f998f<>res://.godot/imported/Pawn_Run Axe.png-05f3f27d8e78134468c027b7e4c4d75e.ctex::
+Pawn_Run Gold.png::CompressedTexture2D::6325514350489910659::1786303985::1786303985::1::::<><><>0<>0<>4aae725d461d21277adb8f9e2b3b06e2<>res://.godot/imported/Pawn_Run Gold.png-7a6a17de3f72fbc984aa023907825e8c.ctex::
+Pawn_Run Hammer.png::CompressedTexture2D::1446690744377149267::1786303985::1786303985::1::::<><><>0<>0<>c1f9ef2668a29a32c1de7b8ae30aaf56<>res://.godot/imported/Pawn_Run Hammer.png-ce38a21386684165c8082eb6160efb32.ctex::
+Pawn_Run Knife.png::CompressedTexture2D::7713983278908021581::1786303985::1786303985::1::::<><><>0<>0<>90cf6b36743ce7bd2df03ef30aad292f<>res://.godot/imported/Pawn_Run Knife.png-12436ac5de64eba70ab8f5aea21a744c.ctex::
+Pawn_Run Meat.png::CompressedTexture2D::2370307165589962596::1786303985::1786303985::1::::<><><>0<>0<>da8a2f541d0694670d7f23e4008f50af<>res://.godot/imported/Pawn_Run Meat.png-aec06de984bead5f37cb069922215a4f.ctex::
+Pawn_Run Pickaxe.png::CompressedTexture2D::429196151986213187::1786303985::1786303985::1::::<><><>0<>0<>4fbfce425011113add21377025be8ef9<>res://.godot/imported/Pawn_Run Pickaxe.png-334c3814b7776f7fd2d8894ef90f0635.ctex::
+Pawn_Run Wood.png::CompressedTexture2D::6967605282007256378::1786303985::1786303985::1::::<><><>0<>0<>2d0823bd89ebfd32b1ee6204bb067631<>res://.godot/imported/Pawn_Run Wood.png-2cb6cfe46a1f09414f81afadca1ec49b.ctex::
+Pawn_Run.png::CompressedTexture2D::1431437941922636477::1786303985::1786303985::1::::<><><>0<>0<>fea69cac0d5f27c59f22111793b291ca<>res://.godot/imported/Pawn_Run.png-3eb330e187897de36ddcaf54ef87d4f6.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Purple Units/Warrior/::1786303511
+Warrior_Attack1.png::CompressedTexture2D::7321285769807526547::1786303985::1786303985::1::::<><><>0<>0<>77f8a0fed751acf21ca873ce06a444fd<>res://.godot/imported/Warrior_Attack1.png-52e413b041443f53e3fef928464226d8.ctex::
+Warrior_Attack2.png::CompressedTexture2D::2499710240364204855::1786303985::1786303985::1::::<><><>0<>0<>bd5351d17eb8aefe660d1e94e29c2849<>res://.godot/imported/Warrior_Attack2.png-6064e25449395268a2b1949a8cb451da.ctex::
+Warrior_Guard.png::CompressedTexture2D::4614877204899419362::1786303985::1786303985::1::::<><><>0<>0<>f303f861572158310c721796c6483daf<>res://.godot/imported/Warrior_Guard.png-ee08c7c192a903eacea8aecc1eeeb30a.ctex::
+Warrior_Idle.png::CompressedTexture2D::7662428904762183438::1786303985::1786303985::1::::<><><>0<>0<>b25170a9b543bb88c72b14796cd2794f<>res://.godot/imported/Warrior_Idle.png-30217df9ac4be78c0e257091f7851d36.ctex::
+Warrior_Run.png::CompressedTexture2D::7492754047761393862::1786303985::1786303985::1::::<><><>0<>0<>14da4332db82816e6dcceec0177db0e2<>res://.godot/imported/Warrior_Run.png-7e0b4c78763bc38ed0507e0edd406d55.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Red Units/::1786303226
+::res://Assets/Tiny Swords (Free Pack)/Units/Red Units/Archer/::1786303510
+Archer_Idle.png::CompressedTexture2D::5518408096775197041::1786303985::1786303985::1::::<><><>0<>0<>7b7c964cc9e3303069ec59d9a0a38f66<>res://.godot/imported/Archer_Idle.png-f91cb91c2a3d5279f35740256dc5d51c.ctex::
+Archer_Run.png::CompressedTexture2D::4267773264061467665::1786303985::1786303985::1::::<><><>0<>0<>27115164bf8f384263152fb902e4311c<>res://.godot/imported/Archer_Run.png-514a80b66ef2e59d72aaba12226a9d46.ctex::
+Archer_Shoot.png::CompressedTexture2D::822711770432745771::1786303985::1786303985::1::::<><><>0<>0<>36abeb014a492a3024b97ce905c14c3a<>res://.godot/imported/Archer_Shoot.png-017010737a85a5851d1ab3c8e0be7c53.ctex::
+Arrow.png::CompressedTexture2D::6882609781045572350::1786303985::1786303985::1::::<><><>0<>0<>c4cecc9247124ed6ec9d8f0e43334e50<>res://.godot/imported/Arrow.png-004a0b730abc6b3727d6212b6354f550.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Red Units/Lancer/::1786303512
+Lancer_DownRight_Attack.png::CompressedTexture2D::6537451646920371835::1786303985::1786303985::1::::<><><>0<>0<>37bcbeec220bfadfe42e6fe4187e6284<>res://.godot/imported/Lancer_DownRight_Attack.png-c1d975ff9cacca2961c700f3acb6ac0f.ctex::
+Lancer_DownRight_Defence.png::CompressedTexture2D::8158265748618322496::1786303985::1786303985::1::::<><><>0<>0<>65453d3a8546272221390fd45e83a908<>res://.godot/imported/Lancer_DownRight_Defence.png-3be2c198efeb045f75ba3fca9d397447.ctex::
+Lancer_Down_Attack.png::CompressedTexture2D::16869659189799157::1786303985::1786303985::1::::<><><>0<>0<>c95e18265930b1fefc4423a593fe9591<>res://.godot/imported/Lancer_Down_Attack.png-befb7689cd909814e4b19908651beb6a.ctex::
+Lancer_Down_Defence.png::CompressedTexture2D::2673307030109819338::1786303985::1786303985::1::::<><><>0<>0<>2cf5164d18b49e13f5def741abe75f1d<>res://.godot/imported/Lancer_Down_Defence.png-c77f9be8e471b29b42cc335842fcf737.ctex::
+Lancer_Idle.png::CompressedTexture2D::1293581024105137226::1786303985::1786303985::1::::<><><>0<>0<>8fd02a3f2625f0442aa368d88afcb611<>res://.godot/imported/Lancer_Idle.png-f9f074b8116564adee45d653b1c386a7.ctex::
+Lancer_Right_Attack.png::CompressedTexture2D::6088972962248848552::1786303985::1786303985::1::::<><><>0<>0<>3258e5a141784e2ce5d20fdd67863cb5<>res://.godot/imported/Lancer_Right_Attack.png-d86bec09241ae3378574b06551c4ef47.ctex::
+Lancer_Right_Defence.png::CompressedTexture2D::8626447193754691158::1786303985::1786303985::1::::<><><>0<>0<>726ea3c306e4a15a475c39a1ff4013a1<>res://.godot/imported/Lancer_Right_Defence.png-a7d5db4e8567b8417aa2ec7764167037.ctex::
+Lancer_Run.png::CompressedTexture2D::869563711962632021::1786303985::1786303985::1::::<><><>0<>0<>190e9fcd2cfe4832af69828ca530d59e<>res://.godot/imported/Lancer_Run.png-40f292bd6abc2f1076d4855c310efec3.ctex::
+Lancer_UpRight_Attack.png::CompressedTexture2D::3711624752018913794::1786303985::1786303985::1::::<><><>0<>0<>6f6652425e5382afd9bee37fe0a2d77a<>res://.godot/imported/Lancer_UpRight_Attack.png-be3468bb9fa301400cb75dbd3c650098.ctex::
+Lancer_UpRight_Defence.png::CompressedTexture2D::3628865914585316146::1786303985::1786303985::1::::<><><>0<>0<>1e1daa3f76009ed6f78a30c907a5a835<>res://.godot/imported/Lancer_UpRight_Defence.png-a1d63179d3dcc3761aa26359179bf9e3.ctex::
+Lancer_Up_Attack.png::CompressedTexture2D::7431818843338323549::1786303985::1786303985::1::::<><><>0<>0<>9701e4487ea162ea817968c9690f88e5<>res://.godot/imported/Lancer_Up_Attack.png-e784fc827a2866686ec34405696f4080.ctex::
+Lancer_Up_Defence.png::CompressedTexture2D::1316176970566115985::1786303985::1786303985::1::::<><><>0<>0<>ff22f50b9782e0d73ec054ad9d3d8efc<>res://.godot/imported/Lancer_Up_Defence.png-22138fc2c33a44033ef83d67a7c61895.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Red Units/Monk/::1786303512
+Heal.png::CompressedTexture2D::1621202537346238896::1786303985::1786303985::1::::<><><>0<>0<>c85b371025aaddbf51b300fbbc93939f<>res://.godot/imported/Heal.png-08a5733c7b5b30688e09f501b0063479.ctex::
+Heal_Effect.png::CompressedTexture2D::561376738564801582::1786303985::1786303985::1::::<><><>0<>0<>308b2288eb550d5e22203883082d315e<>res://.godot/imported/Heal_Effect.png-e544864cee01e5548c60720740f1f3f8.ctex::
+Idle.png::CompressedTexture2D::4276261722026490276::1786303985::1786303985::1::::<><><>0<>0<>4eb9b006938507fb40f05330b0585d31<>res://.godot/imported/Idle.png-eac84f69631206e303733d9c744658ec.ctex::
+Run.png::CompressedTexture2D::6040912862407929355::1786303985::1786303985::1::::<><><>0<>0<>1f25b7001b128d1382edecd4c7121f82<>res://.godot/imported/Run.png-a2eed13aaf260141d5951d8fe6fdb5ed.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Red Units/Pawn/::1786303511
+Pawn_Idle Axe.png::CompressedTexture2D::1838155688017883556::1786303985::1786303985::1::::<><><>0<>0<>80935d84cbd4bfdf7d6b3fd863d524ba<>res://.godot/imported/Pawn_Idle Axe.png-23cf064e9508b8d3ef689933e526f736.ctex::
+Pawn_Idle Gold.png::CompressedTexture2D::3269705712172168811::1786303985::1786303985::1::::<><><>0<>0<>befaf3aa5d2c004d63f8bcd6b7956e39<>res://.godot/imported/Pawn_Idle Gold.png-95997fb844657b6d003ed9910147bc4b.ctex::
+Pawn_Idle Hammer.png::CompressedTexture2D::5019265665133426941::1786303985::1786303985::1::::<><><>0<>0<>ee7c90135607e77c2ed50f619b2dbfd2<>res://.godot/imported/Pawn_Idle Hammer.png-6f8ed60de4ba3cfc5e18b72b8164c2b0.ctex::
+Pawn_Idle Knife.png::CompressedTexture2D::1561560412957082305::1786303985::1786303985::1::::<><><>0<>0<>68c5c7926ce9be4df4f91ac6a3c52aa7<>res://.godot/imported/Pawn_Idle Knife.png-073ba9876dbda067c9af77710ab022e1.ctex::
+Pawn_Idle Meat.png::CompressedTexture2D::6737597263857333296::1786303985::1786303985::1::::<><><>0<>0<>35b2c5ea8cfe8a56b5b5f617ff027ce4<>res://.godot/imported/Pawn_Idle Meat.png-e5eb6e883f40e05763b90b712385c81f.ctex::
+Pawn_Idle Pickaxe.png::CompressedTexture2D::2578975295755787316::1786303985::1786303985::1::::<><><>0<>0<>380cdffa8a9f9003e038d044727add9e<>res://.godot/imported/Pawn_Idle Pickaxe.png-e11df020675ec87abf316f48bdc226cb.ctex::
+Pawn_Idle Wood.png::CompressedTexture2D::2465590555379681715::1786303985::1786303985::1::::<><><>0<>0<>c5e35afbbc9ee54d0e1ce813e73d5dbb<>res://.godot/imported/Pawn_Idle Wood.png-d8a285b96bfaf344d50b6784bf9a6187.ctex::
+Pawn_Idle.png::CompressedTexture2D::4182731314517718192::1786303985::1786303985::1::::<><><>0<>0<>a093d3f064cb96c361d4123b91845b33<>res://.godot/imported/Pawn_Idle.png-418fd4eac113c041f3f06f930a29fed8.ctex::
+Pawn_Interact Axe.png::CompressedTexture2D::7269761462673316399::1786303985::1786303985::1::::<><><>0<>0<>a5fbd0dc980508f1d006f347fb60f735<>res://.godot/imported/Pawn_Interact Axe.png-c399b07d17f1c6b19d011b3ad916494a.ctex::
+Pawn_Interact Hammer.png::CompressedTexture2D::7144620538651348183::1786303985::1786303985::1::::<><><>0<>0<>234d628a5e4ac4d24896cb58332679dd<>res://.godot/imported/Pawn_Interact Hammer.png-a42204545a47e30ce7157383d5e541c2.ctex::
+Pawn_Interact Knife.png::CompressedTexture2D::4060450382345703838::1786303985::1786303985::1::::<><><>0<>0<>abe07afbcec7b69edfc27f727ce2094f<>res://.godot/imported/Pawn_Interact Knife.png-59cc2ab0ac45a865917d715a64b40161.ctex::
+Pawn_Interact Pickaxe.png::CompressedTexture2D::4939071302537962414::1786303985::1786303985::1::::<><><>0<>0<>a55f4dfd815605be6d69b994b38c103b<>res://.godot/imported/Pawn_Interact Pickaxe.png-421691b460cc6ec7c79e4700dfff223a.ctex::
+Pawn_Run Axe.png::CompressedTexture2D::7901473215406451233::1786303985::1786303985::1::::<><><>0<>0<>6974492c3d144bc3702a07cef8412327<>res://.godot/imported/Pawn_Run Axe.png-c3b586d4d64d1fefef805472a35f9575.ctex::
+Pawn_Run Gold.png::CompressedTexture2D::8773126775092940896::1786303985::1786303985::1::::<><><>0<>0<>254c3b8b3841ddba87012aaa52b3d41f<>res://.godot/imported/Pawn_Run Gold.png-8fa1f199f165f22dae41d94789c6a749.ctex::
+Pawn_Run Hammer.png::CompressedTexture2D::3479239852668859241::1786303985::1786303985::1::::<><><>0<>0<>60f756a3abd5a4d165dc549c6506d602<>res://.godot/imported/Pawn_Run Hammer.png-9e20cac8208154729e69955f90880c5d.ctex::
+Pawn_Run Knife.png::CompressedTexture2D::6625084794907217295::1786303985::1786303985::1::::<><><>0<>0<>f66c4c4f9fe58c7c38ff30b8ec860e55<>res://.godot/imported/Pawn_Run Knife.png-09de76a773d9e479041a800086b4b858.ctex::
+Pawn_Run Meat.png::CompressedTexture2D::9054107139921673298::1786303985::1786303985::1::::<><><>0<>0<>a5150ec11c3ddc0f0c9d2cb621720f5d<>res://.godot/imported/Pawn_Run Meat.png-614f00d6ef98d30e9b0a5061cc7d0f76.ctex::
+Pawn_Run Pickaxe.png::CompressedTexture2D::7709809117598437951::1786303985::1786303985::1::::<><><>0<>0<>dfa41cdd5d0d3f1a941ebfa8c69331ad<>res://.godot/imported/Pawn_Run Pickaxe.png-89e8f16e4dc9b30a42dc1c51485538ec.ctex::
+Pawn_Run Wood.png::CompressedTexture2D::5100538482718147064::1786303985::1786303985::1::::<><><>0<>0<>beb501ac2a1719f9989ba846a253c36d<>res://.godot/imported/Pawn_Run Wood.png-ad2045fbc08b73e381b96fe30a92babf.ctex::
+Pawn_Run.png::CompressedTexture2D::5094240321687994821::1786303985::1786303985::1::::<><><>0<>0<>fb26b611d4232e2e9926343c94da7b3f<>res://.godot/imported/Pawn_Run.png-d302de7774eff19aaee982c30d7895a1.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Red Units/Warrior/::1786303509
+Warrior_Attack1.png::CompressedTexture2D::1867792229049140190::1786303985::1786303985::1::::<><><>0<>0<>e0e28d99c4fc91c9bf21d0b52c4f5d09<>res://.godot/imported/Warrior_Attack1.png-6ad5c06a25c44286c8c54cc9c2c86ae6.ctex::
+Warrior_Attack2.png::CompressedTexture2D::5848990628725406198::1786303985::1786303985::1::::<><><>0<>0<>2f7a1ddffda6cc80e6c57b0458cc628f<>res://.godot/imported/Warrior_Attack2.png-7284cc76b58c7703e0dde4d875efee36.ctex::
+Warrior_Guard.png::CompressedTexture2D::7913391516985287206::1786303985::1786303985::1::::<><><>0<>0<>1bf1df435faf4288cfd3543d629c414b<>res://.godot/imported/Warrior_Guard.png-ce5df4eb1cf3fd0bdbb244c71cce0e1e.ctex::
+Warrior_Idle.png::CompressedTexture2D::2074230442523832379::1786303985::1786303985::1::::<><><>0<>0<>6c3dd3ae8e75a4f472bedc2611e15a6c<>res://.godot/imported/Warrior_Idle.png-6707ae8428fa4d4f6d5068add6442df5.ctex::
+Warrior_Run.png::CompressedTexture2D::6444419824730845211::1786303985::1786303985::1::::<><><>0<>0<>1cf770092349460fbc1d982bc8b2b432<>res://.godot/imported/Warrior_Run.png-2fc668183056b36b468de0e9d5dc07d0.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Units (aseprite in Blue only)/::1786303227
+::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/::1786303227
+::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Archer/::1786303509
+Archer_Idle.png::CompressedTexture2D::4220321811636250942::1786303985::1786303985::1::::<><><>0<>0<>06be39106016801a1969dfa5363f15e5<>res://.godot/imported/Archer_Idle.png-f4fe872f9b8a0a281ba7819c2f3d7f83.ctex::
+Archer_Run.png::CompressedTexture2D::2776601433110619940::1786303985::1786303985::1::::<><><>0<>0<>41d36ec582ba72ba200fefd7b9807dd6<>res://.godot/imported/Archer_Run.png-1fb0a0f385b2ad0df540e7c49cc6a284.ctex::
+Archer_Shoot.png::CompressedTexture2D::7837672390235871268::1786303985::1786303985::1::::<><><>0<>0<>1920dcde576f06d4ab6cb8044d6a03eb<>res://.godot/imported/Archer_Shoot.png-386bb0cfe59f8d27e484ae95b5312455.ctex::
+Arrow.png::CompressedTexture2D::5492890469340143407::1786303985::1786303985::1::::<><><>0<>0<>7f365b8b17aec15c6ffc092c2db3cbe4<>res://.godot/imported/Arrow.png-f7c5ba563cac3e6a0181dae02e032b76.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Lancer/::1786303509
+Lancer_DownRight_Attack.png::CompressedTexture2D::7874500440431745564::1786303985::1786303985::1::::<><><>0<>0<>55c62046c89ff409d10c4058e5246e0d<>res://.godot/imported/Lancer_DownRight_Attack.png-bf01cbe90aa6a8918f9a91711f2f87a6.ctex::
+Lancer_DownRight_Defence.png::CompressedTexture2D::5940287044273477116::1786303985::1786303985::1::::<><><>0<>0<>bf9d71302355889f0565e16afeb66738<>res://.godot/imported/Lancer_DownRight_Defence.png-34a270f291102137c3f9c9b185dbfee6.ctex::
+Lancer_Down_Attack.png::CompressedTexture2D::2599000256552087315::1786303985::1786303985::1::::<><><>0<>0<>e04fad4cb9ae552c93a61f74b0ae44f6<>res://.godot/imported/Lancer_Down_Attack.png-f87dfdb3502a0eb7a476f510aefa5e01.ctex::
+Lancer_Down_Defence.png::CompressedTexture2D::454531752909622455::1786303985::1786303985::1::::<><><>0<>0<>3cd91dfd73c4c9d8d7770122ca3b09e8<>res://.godot/imported/Lancer_Down_Defence.png-c09f5ad3ab30b51af48164f6e6c363dd.ctex::
+Lancer_Idle.png::CompressedTexture2D::1898214205621633879::1786303985::1786303985::1::::<><><>0<>0<>0482d5232c9afdf89b26a548bde577cc<>res://.godot/imported/Lancer_Idle.png-8d51c7aaf40fd3da49000320d1c9dd25.ctex::
+Lancer_Right_Attack.png::CompressedTexture2D::5272290840450962776::1786303985::1786303985::1::::<><><>0<>0<>69b94871b46b475aa9997a1b576ef9f0<>res://.godot/imported/Lancer_Right_Attack.png-2d103a1407a79e4f88a9787318fa79a8.ctex::
+Lancer_Right_Defence.png::CompressedTexture2D::8810908073982653153::1786303985::1786303985::1::::<><><>0<>0<>648ce29255e82545ae935df972eacf8d<>res://.godot/imported/Lancer_Right_Defence.png-a6e7bee5acf0b23a29bbcbbade0fe00a.ctex::
+Lancer_Run.png::CompressedTexture2D::1928515209334195134::1786303985::1786303985::1::::<><><>0<>0<>489c1d10f5a0f04fdc41da794707a81b<>res://.godot/imported/Lancer_Run.png-1dd593b5e9a2cfa8e96e957d5c5b7f4a.ctex::
+Lancer_UpRight_Attack.png::CompressedTexture2D::6598470619515830354::1786303985::1786303985::1::::<><><>0<>0<>8798d2bd4ecd4552efc943c34fd76996<>res://.godot/imported/Lancer_UpRight_Attack.png-b718c5acf86e6cc2206b3f43d9baa42c.ctex::
+Lancer_UpRight_Defence.png::CompressedTexture2D::5693292437396491287::1786303985::1786303985::1::::<><><>0<>0<>5fcbd4f85edc6ac1350a2a283c5ab5ae<>res://.godot/imported/Lancer_UpRight_Defence.png-e9fded6074b6b7034898749c37c75e58.ctex::
+Lancer_Up_Attack.png::CompressedTexture2D::9040595363704670302::1786303985::1786303985::1::::<><><>0<>0<>7c232a9729e10148d88cf8b8d4eaedb5<>res://.godot/imported/Lancer_Up_Attack.png-c45d227f223e347b6c441fb6e4aef3e5.ctex::
+Lancer_Up_Defence.png::CompressedTexture2D::6536910270731301873::1786303985::1786303985::1::::<><><>0<>0<>97b0178a38c77612d21a8746dda09131<>res://.godot/imported/Lancer_Up_Defence.png-aa8dce238c500010764150cae992f5f7.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Monk/::1786303508
+Heal.png::CompressedTexture2D::6368884372672384542::1786303985::1786303985::1::::<><><>0<>0<>34df62167635020d60c5a8587e552eff<>res://.godot/imported/Heal.png-cf2dbcadb20ddb85f9a567ed1763777d.ctex::
+Heal_Effect.png::CompressedTexture2D::9097430794569619355::1786303985::1786303985::1::::<><><>0<>0<>a05cba6538cea6dc387b72a70eac9dd1<>res://.godot/imported/Heal_Effect.png-ab681c7bfe13509c0b5fc8e0e8d89842.ctex::
+Idle.png::CompressedTexture2D::857586130908538571::1786303985::1786303985::1::::<><><>0<>0<>e09d32ebcf92e7e2d7a7580b94c78324<>res://.godot/imported/Idle.png-d61750c8a756c2c1f243c3308ebfb301.ctex::
+Run.png::CompressedTexture2D::6474665643399393638::1786303985::1786303985::1::::<><><>0<>0<>283f4122a11abb29c706cded9f5348ed<>res://.godot/imported/Run.png-01b5f234b4e0731cf7e58d0b7199775f.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Pawn/::1786303510
+Pawn_Idle Axe.png::CompressedTexture2D::5399056945273943532::1786303985::1786303985::1::::<><><>0<>0<>f1e24251e72bf6745910c76ca046328c<>res://.godot/imported/Pawn_Idle Axe.png-66d9786ee19ae1da09823366ad98fdf2.ctex::
+Pawn_Idle Gold.png::CompressedTexture2D::7785509231938643139::1786303985::1786303985::1::::<><><>0<>0<>767dad4a40fd3751bbc6a3e70e04608b<>res://.godot/imported/Pawn_Idle Gold.png-16d6cb2716d402df5bd5f036dcc83a3b.ctex::
+Pawn_Idle Hammer.png::CompressedTexture2D::2756795577369470720::1786303985::1786303985::1::::<><><>0<>0<>c0d56b0fe3b8c145a3a6dbbaf1c8d66b<>res://.godot/imported/Pawn_Idle Hammer.png-58c592b2ebfd95ad0365c9c0ef1da672.ctex::
+Pawn_Idle Knife.png::CompressedTexture2D::8102429350108633624::1786303985::1786303985::1::::<><><>0<>0<>28133fcadfb748cf1a1bb83626fed352<>res://.godot/imported/Pawn_Idle Knife.png-0c8b6216fc6c1afbbf17701f7a4a60fc.ctex::
+Pawn_Idle Meat.png::CompressedTexture2D::1931332334497308088::1786303985::1786303985::1::::<><><>0<>0<>d54408388cbadb582a768e66c691bd06<>res://.godot/imported/Pawn_Idle Meat.png-027115c2846e23f2f97792a6d5f58b80.ctex::
+Pawn_Idle Pickaxe.png::CompressedTexture2D::7230075895954811370::1786303985::1786303985::1::::<><><>0<>0<>656b3cda5086d618fef9ec213599d632<>res://.godot/imported/Pawn_Idle Pickaxe.png-fe079d818d39ec3cd8db7906ac040e26.ctex::
+Pawn_Idle Wood.png::CompressedTexture2D::5405887661233718331::1786303985::1786303985::1::::<><><>0<>0<>9303b1ae78849b99cee3f6f597a36aa1<>res://.godot/imported/Pawn_Idle Wood.png-2a4864a93de52cbb3ddd9523a1ec9231.ctex::
+Pawn_Idle.png::CompressedTexture2D::5660180845706065423::1786303985::1786303985::1::::<><><>0<>0<>87c982f516091f8ec00649b41fd83651<>res://.godot/imported/Pawn_Idle.png-3ef1782abf00969d7a17ea09edb59344.ctex::
+Pawn_Interact Axe.png::CompressedTexture2D::8323536420497645066::1786303985::1786303985::1::::<><><>0<>0<>d928f98ae459693d2b52cb59397d7faa<>res://.godot/imported/Pawn_Interact Axe.png-226b1bd62bbd1714504329cf3c46632f.ctex::
+Pawn_Interact Hammer.png::CompressedTexture2D::6547418326345355263::1786303985::1786303985::1::::<><><>0<>0<>121acfb2090bd43abece1d9822f51d41<>res://.godot/imported/Pawn_Interact Hammer.png-4c1b16f040ce3c1b1330558bcbede033.ctex::
+Pawn_Interact Knife.png::CompressedTexture2D::6941642974118865243::1786303985::1786303985::1::::<><><>0<>0<>bec8fbc8998a886e6fc00340b16c0257<>res://.godot/imported/Pawn_Interact Knife.png-ed242d696fbcaf66abb18831113273d4.ctex::
+Pawn_Interact Pickaxe.png::CompressedTexture2D::8736794723399534785::1786303985::1786303985::1::::<><><>0<>0<>79c7a3701571b568fa378eabe9590262<>res://.godot/imported/Pawn_Interact Pickaxe.png-dc833919244a0106511aae1b84d08c86.ctex::
+Pawn_Run Axe.png::CompressedTexture2D::6258796968420558744::1786303985::1786303985::1::::<><><>0<>0<>3a2a38669ad68267316be8f3541bcb00<>res://.godot/imported/Pawn_Run Axe.png-ee7600e2c3952a289ebbfa3ef0695e44.ctex::
+Pawn_Run Gold.png::CompressedTexture2D::4477872237709764506::1786303985::1786303985::1::::<><><>0<>0<>139835cce9fe205b7155dcbdefb1bc58<>res://.godot/imported/Pawn_Run Gold.png-cc07384524d0a694fd09f1f83b43c299.ctex::
+Pawn_Run Hammer.png::CompressedTexture2D::4128823991449980775::1786303985::1786303985::1::::<><><>0<>0<>052d4551b31ae72bb10ec78a59605b9f<>res://.godot/imported/Pawn_Run Hammer.png-45b10d464dc0ce012979058749633e80.ctex::
+Pawn_Run Knife.png::CompressedTexture2D::4530873582152824986::1786303985::1786303985::1::::<><><>0<>0<>19c5a33e83c1d5fc7daca35aaba980b9<>res://.godot/imported/Pawn_Run Knife.png-a92fd061bca35e1257db7034228243d1.ctex::
+Pawn_Run Meat.png::CompressedTexture2D::5227583386992884979::1786303985::1786303985::1::::<><><>0<>0<>1a44b3ec3ca6b55f0f28122ff62594ca<>res://.godot/imported/Pawn_Run Meat.png-b6752c9fee9b5d728aafe4d189bca1af.ctex::
+Pawn_Run Pickaxe.png::CompressedTexture2D::6511633529128608048::1786303985::1786303985::1::::<><><>0<>0<>63a13362de38804de23b1d91f7649720<>res://.godot/imported/Pawn_Run Pickaxe.png-b13c3b490dc45e216ebcdef34008d6c8.ctex::
+Pawn_Run Wood.png::CompressedTexture2D::5044243035131867463::1786303985::1786303985::1::::<><><>0<>0<>60399e93b1967346b7a7d5a6e4803c40<>res://.godot/imported/Pawn_Run Wood.png-245effc68daac3481df3896368d44967.ctex::
+Pawn_Run.png::CompressedTexture2D::1459100592792819519::1786303985::1786303985::1::::<><><>0<>0<>31611cbadd2dbb5282955378a020d683<>res://.godot/imported/Pawn_Run.png-af519c9556b8c056b64638504ec9abc4.ctex::
+::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/::1786303509
+Warrior_Attack1.png::CompressedTexture2D::2308634396671403788::1786303985::1786303985::1::::<><><>0<>0<>94bd3468a1a040d1f26c71a8c044d6f6<>res://.godot/imported/Warrior_Attack1.png-e7fb762f79da3c0428c8f4abd64b38c5.ctex::
+Warrior_Attack2.png::CompressedTexture2D::8199143044922887703::1786303985::1786303985::1::::<><><>0<>0<>fd0d05723a1a16526dd530d87d4830d3<>res://.godot/imported/Warrior_Attack2.png-f8ed8d8b401fa515aaf406b25ab80fb0.ctex::
+Warrior_Guard.png::CompressedTexture2D::141687244251880966::1786303985::1786303985::1::::<><><>0<>0<>a6dfc6d2402591266c1e446f8185e8f3<>res://.godot/imported/Warrior_Guard.png-2d2f088f13f2fc0933900fb4aeadb6d7.ctex::
+Warrior_Idle.png::CompressedTexture2D::3426570313685014109::1786303985::1786303985::1::::<><><>0<>0<>05d2c47c00c86403bc315952a1ed4ab7<>res://.godot/imported/Warrior_Idle.png-4776cd307bd2c0e95aed6de2438f696f.ctex::
+Warrior_Run.png::CompressedTexture2D::4375908446865552550::1786303985::1786303985::1::::<><><>0<>0<>a079655b4a15f89f4bdff461fbfb2cd3<>res://.godot/imported/Warrior_Run.png-6f3282f29213c261a87714e824b8806e.ctex::
+::res://intro_scen/::1786857504
+1.png::CompressedTexture2D::3771586804066863248::1786856894::1786857488::1::::<><><>0<>0<>2952a562bab5be7557b8f707b2b778a1<>res://.godot/imported/1.png-aa496c2394d7e89cb634b3a7e4e69ab5.ctex::
+2.png::CompressedTexture2D::554140259045457048::1786856899::1786857488::1::::<><><>0<>0<>4bfb59af69c5428e464b90e08cd5adf2<>res://.godot/imported/2.png-4705cdf18e0dae4fc72c0e07cddea9fb.ctex::
+3.png::CompressedTexture2D::8664845284253979231::1786856885::1786857488::1::::<><><>0<>0<>4956b98a845e6b0c7f9887d4e94301ab<>res://.godot/imported/3.png-bcba912efb1ce4a1af9e0c4a8fd7977d.ctex::
+moonlight_over_the_canyon_floor.mp3::AudioStreamMP3::4371085427830171111::1786857489::1786865548::1::::<><><>0<>0<>1da2aafd8b97e5eadc7fe241879a39dc<>res://.godot/imported/moonlight_over_the_canyon_floor.mp3-b9c8d23f9605b86c7838f3dd966aeb51.mp3str::
+صوت الشايب المتحدث.mp3::AudioStreamMP3::7719610676286982428::1786856789::1786857488::1::::<><><>0<>0<>b26f84bc5e7a587f37129b7d76e2c418<>res://.godot/imported/صوت الشايب المتحدث.mp3-fec77e489e5395b68dae298ef3ae7f2a.mp3str::
+::res://Resources/::1789286527
+::res://Resources/Upgrades/::1789301895
+CharacterData.tres::Resource/CharacterData::3577314278550910894::1789286815::0::1::::<><><>0<>0<><>::uid://dvlxwi5l4atse::::res://icon.svg<>uid://dtuajl0imwdyq::::res://Scripts/Shop/character_data.gd<>uid://cktbbchu1pg5::::res://Scripts/Shop/upgrade_data.gd<>uid://dkxygq5vkke1g::::res://Resources/Upgrades/player.tres<>uid://btx7vipjcwruj::::res://Resources/Upgrades/speed_upgrade.tres
+player.tres::SpriteFrames::7910099986078466970::1789301895::0::1::::<><><>0<>0<><>::uid://lqwrqlaw2y5y::::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Warrior/Warrior_Attack1.png<>uid://dbe0y4iyq6x73::::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Warrior/Warrior_Idle.png<>uid://d05fygs4m8kah::::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Warrior/Warrior_Run.png
+speed_upgrade.tres::Resource/UpgradeData::3769470290370964773::1789286750::0::1::::<><><>0<>0<><>::uid://dvlxwi5l4atse::::res://icon.svg<>uid://cktbbchu1pg5::::res://Scripts/Shop/upgrade_data.gd
+::res://Scenes/::1790019914
+archer_enemy.tscn::PackedScene::460083597272557719::1786834705::0::1::::<><><>0<>0<><>::uid://cnp3mr7v76ewy::::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Archer/Archer_Shoot.png<>uid://oyxb3q3xvyti::::res://Scripts/archer_enemy.gd<>uid://cp2yuvkhjxukk::::res://Scenes/arrow.tscn<>uid://t2brojvsespw::::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Archer/Archer_Run.png<>uid://dcddu667sqq8n::::res://Assets/Tiny Swords (Free Pack)/Particle FX/Dust_02.png
+arrow.tscn::PackedScene::5882906263790194518::1786834705::0::1::::<><><>0<>0<><>::uid://nhg18ufy5t2c::::res://Assets/Tiny Swords (Free Pack)/Units/Blue Units/Archer/Arrow.png<>uid://ipnf72nj2y2s::::res://Scripts/arrow.gd
+asb.tscn::PackedScene::5980881912381845357::1786487528::0::1::::<><><>0<>0<><>::uid://ds7m5d8r5siqg::::res://Assets/Tiny Swords (Free Pack)/Terrain/Decorations/Bushes/Bushe1.png<>uid://ds8kx3bigasd4::::res://Scripts/asb.gd
+back_ground.tscn::PackedScene::5025735182096606704::1786487528::0::1::::<><><>0<>0<><>::uid://blnbqthmx26wk::::res://المابات/new_tile_set.tres<>uid://btnfluxivh41x::::res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png<>uid://5jfm64ia1oja::::res://Scenes/efx_water.tscn<>uid://crhgisqjmsawr::::res://Scenes/asb.tscn<>uid://cuqd8lgpigid5::::res://Scenes/tree.tscn
+controls_popup.tscn::PackedScene::1151132213576110966::1786878625::0::1::::<><><>0<>0<><>::uid://cspio64gks5kk::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png<>uid://biulwwfxp5ymc::::res://Scripts/controls_popup.gd<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png<>uid://2otp25uhohuq::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_09.png<>uid://cbrc2ayvvasj5::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_11.png
+cridts.tscn::PackedScene::4640266247884747817::1786865546::0::1::::<><><>0<>0<><>::uid://biulwwfxp5ymc::::res://Scripts/controls_popup.gd<>uid://cspio64gks5kk::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png<>uid://2otp25uhohuq::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_09.png<>uid://dju74kgf203jh::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_08.png
+efx_water.tscn::PackedScene::2124571396805904890::1786487528::0::1::::<><><>0<>0<><>::uid://cwcckc6w26tkw::::res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Foam.png<>uid://cp15rpirt6y76::::res://Scripts/efx_water.gd
+enemy.tscn::PackedScene::8694575732806283235::1786834705::0::1::::<><><>0<>0<><>::uid://dj4aa4bj7jley::::res://Scripts/enemy.gd<>uid://mhok26ytslp8::::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Monk/Idle.png<>uid://dcddu667sqq8n::::res://Assets/Tiny Swords (Free Pack)/Particle FX/Dust_02.png<>uid://cyim2dsu0q1sk::::res://Assets/Tiny Swords (Free Pack)/Units/Yellow Units/Monk/Run.png
+game.tscn::PackedScene::3584234999084861689::1786883084::0::1::::<><><>0<>0<><>::uid://cfepn7ehex1qq::::res://Scenes/player.tscn<>uid://btnfluxivh41x::::res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png<>uid://bnmflpvuotthv::::res://Scripts/wave_spawner.gd<>uid://dxn0e4hs5fyig::::res://Scripts/wave_data.gd<>uid://blnbqthmx26wk::::res://المابات/new_tile_set.tres<>uid://dv4ynlgglkvcl::::res://Scenes/enemy.tscn<>uid://5jfm64ia1oja::::res://Scenes/efx_water.tscn<>uid://gs4rleojmlfr::::res://Scenes/archer_enemy.tscn<>uid://crhgisqjmsawr::::res://Scenes/asb.tscn<>uid://cuqd8lgpigid5::::res://Scenes/tree.tscn<>uid://bkrj61r6x6du0::::res://Scenes/tower.tscn<>uid://kapgl3a7bar2::::res://Scenes/scene_manager.tscn<>uid://7cc20dxhfnnr::::res://Scenes/pause_menu.tscn<>uid://b3jnex7usmlfr::::res://intro_scen/moonlight_over_the_canyon_floor.mp3
+intro_scene.tscn::PackedScene::5066387393552178065::1786865546::0::1::::<><><>0<>0<><>::uid://dh8o4ifasqbfo::::res://intro_scen/صوت الشايب المتحدث.mp3<>uid://bty8qpcqrkb2w::::res://intro_scen/1.png<>uid://dtx335xt0idpw::::res://Scripts/intro_scene.gd<>uid://b3jnex7usmlfr::::res://intro_scen/moonlight_over_the_canyon_floor.mp3<>uid://h5ouyejx86d5::::res://intro_scen/2.png<>uid://dvpk0axdrhkcl::::res://intro_scen/3.png<>uid://kapgl3a7bar2::::res://Scenes/scene_manager.tscn
+LoginScreen.tscn::PackedScene::6200539505235609833::1786877683::0::1::::<><><>0<>0<><>::uid://bylqgyp65f5gs::::res://Scripts/login_screen.gd<>uid://cdurehs1inibg::::res://Scenes/back_ground.tscn<>uid://siafnp8xko4q::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner_Slots.png<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png<>uid://m6v8dfwx13gx::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BigBlueButton_Regular.png
+main_menu.tscn::PackedScene::1261016432836596580::1790019914::0::1::::<><><>0<>0<><>::uid://cdurehs1inibg::::res://Scenes/back_ground.tscn<>uid://cipqlgw7xvdfn::::res://Scripts/main_menu.gd<>uid://bn33ykhi7kvt0::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Swords/Swords.png<>uid://siafnp8xko4q::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner_Slots.png<>uid://3w5mwfyr15mh::::res://Scripts/control.gd<>uid://dbd4vy5esx1vk::::res://Scenes/player_hud.tscn<>uid://qnu8kfmf5nni::::res://Scenes/controls_popup.tscn<>uid://b7d1rijcrmqhl::::res://Scenes/cridts.tscn<>uid://b3jnex7usmlfr::::res://intro_scen/moonlight_over_the_canyon_floor.mp3
+matchmaking_screen.tscn::PackedScene::7892891513579027088::1786884074::0::1::::<><><>0<>0<><>::uid://bun4nn18aod7k::::res://Scripts/matchmaking_screen.gd<>uid://cdurehs1inibg::::res://Scenes/back_ground.tscn<>uid://cspio64gks5kk::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png<>uid://m6v8dfwx13gx::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BigBlueButton_Regular.png<>uid://7cc20dxhfnnr::::res://Scenes/pause_menu.tscn<>uid://b3jnex7usmlfr::::res://intro_scen/moonlight_over_the_canyon_floor.mp3
+multiplayer_game.tscn::PackedScene::7723878460959161088::1790019914::0::1::::<><><>0<>0<><>::uid://btnfluxivh41x::::res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png<>uid://5jfm64ia1oja::::res://Scenes/efx_water.tscn<>uid://blnbqthmx26wk::::res://المابات/new_tile_set.tres<>uid://bnmflpvuotthv::::res://Scripts/wave_spawner.gd<>uid://dxn0e4hs5fyig::::res://Scripts/wave_data.gd<>uid://dv4ynlgglkvcl::::res://Scenes/enemy.tscn<>uid://gs4rleojmlfr::::res://Scenes/archer_enemy.tscn<>uid://crhgisqjmsawr::::res://Scenes/asb.tscn<>uid://cfepn7ehex1qq::::res://Scenes/player.tscn<>uid://cuqd8lgpigid5::::res://Scenes/tree.tscn<>uid://bkrj61r6x6du0::::res://Scenes/tower.tscn<>uid://kapgl3a7bar2::::res://Scenes/scene_manager.tscn<>uid://gb6fb2fwdpt::::res://Scripts/multiplayer_ui.gd<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png<>uid://b3jnex7usmlfr::::res://intro_scen/moonlight_over_the_canyon_floor.mp3
+NamePrompt.tscn::PackedScene::2110589982506414888::1786661888::0::1::::<><><>0<>0<><>::uid://cmt5uob00iui8::::res://Scripts/name_prompt.gd
+pause_menu.tscn::PackedScene::2250342721118868919::1786834705::0::1::::<><><>0<>0<><>::uid://dpwsehion24dc::::res://Scripts/pause_menu.gd<>uid://cspio64gks5kk::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Wood Table/WoodTable.png<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png<>uid://m6v8dfwx13gx::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Buttons/BigBlueButton_Regular.png<>uid://lex7vyl0xvp5::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Icons/Icon_07.png
+player.tscn::PackedScene::5132978754055613936::1789286815::0::1::::<><><>0<>0<><>::uid://ciskxqemtfqvg::::res://Scripts/player.gd<>uid://dkxygq5vkke1g::::res://Resources/Upgrades/player.tres
+player_hud.tscn::PackedScene::7237443629553011604::1786865546::0::1::::<><><>0<>0<><>::uid://ctcgdprddfsgw::::res://Scripts/player_hud.gd
+scene_manager.tscn::PackedScene::702810527089428069::1786487528::0::1::::<><><>0<>0<><>::uid://bulyyl3svrka2::::res://Scripts/scene_manager.gd
+tower.tscn::PackedScene::3124006747747626325::1786834705::0::1::::<><><>0<>0<><>::uid://cmfi871c6r4j7::::res://Scripts/tower.gd<>uid://q5pkdfs044u5::::res://Assets/Tiny Swords (Free Pack)/Buildings/Blue Buildings/Tower.png
+tree.tscn::PackedScene::6209889954107112500::1786487528::0::1::::<><><>0<>0<><>::uid://dq6sjvf4q68im::::res://Assets/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree2.png<>uid://dx6d33a0imu5w::::res://Scripts/tree.gd
+برج.tscn::PackedScene::3689119357306220977::1786865546::0::1::::<><><>0<>0<><>::uid://cdurehs1inibg::::res://Scenes/back_ground.tscn<>uid://bqjymaj3gfjvp::::res://Assets/Tiny Swords (Free Pack)/UI Elements/UI Elements/Banners/Banner.png
+::res://Scripts/::1790019914
+archer_enemy.gd::GDScript::1033588650331877638::1786834705::0::1::::<>CharacterBody2D<><>0<>0<><>::
+arrow.gd::GDScript::593276388351345488::1786834705::0::1::::<>Area2D<><>0<>0<><>::
+asb.gd::GDScript::8491435418205466731::1786487528::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+back_grond.gd::GDScript::5174499862090848538::1786865546::0::1::::<>Control<><>0<>0<><>::
+cloud_manager.gd::GDScript::5141168473388032833::1789286110::0::1::::<>Node<><>0<>0<><>::
+control.gd::GDScript::2012548036116024631::1786487528::0::1::::<>Control<><>0<>0<><>::
+controls_popup.gd::GDScript::2989927326568886778::1786865546::0::1::::<>Control<><>0<>0<><>::
+efx_water.gd::GDScript::5881200512849346567::1786487528::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
+enemy.gd::GDScript::7850830123863334900::1786834705::0::1::::<>CharacterBody2D<><>0<>0<><>::
+intro_scene.gd::GDScript::8542082458700097168::1786865546::0::1::::<>Control<><>0<>0<><>::
+login_screen.gd::GDScript::4094644558129517950::1786661889::0::1::::<>Control<><>0<>0<><>::
+main_menu.gd::GDScript::5366309249029871451::1790019914::0::1::::<>Control<><>0<>0<><>::
+matchmaking_screen.gd::GDScript::3818819199835907430::1787410541::0::1::::<>Control<><>0<>0<><>::
+multiplayer_ui.gd::GDScript::12502608524038845::1790019914::0::1::::<>CanvasLayer<><>0<>0<><>::
+name_prompt.gd::GDScript::5656188632072156593::1786661889::0::1::::<>Control<><>0<>0<><>::
+network_manager.gd::GDScript::7705135429701864221::1787506343::0::1::::<>Node<><>0<>0<><>::
+pause_menu.gd::GDScript::8258611445960969412::1786834705::0::1::::<>Control<><>0<>0<><>::
+player.gd::GDScript::5372160006374665576::1787506343::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_hud.gd::GDScript::6110928625607710498::1786834705::0::1::::<>Control<><>0<>0<><>::
+SaveManager.gd::GDScript::7431765513977598147::1786661888::0::1::::<>Node<><>0<>0<><>::
+scene_manager.gd::GDScript::3814406400486474587::1786487528::0::1::::<>CanvasLayer<><>0<>0<><>::
+supabase_manager.gd::GDScript::6064423459227628727::1786661888::0::1::::<>Node<><>0<>0<><>::
+tower.gd::GDScript::5625975767999001598::1786834705::0::1::::<>StaticBody2D<><>0<>0<><>::
+tree.gd::GDScript::8837834790138413666::1786487528::0::1::::<>StaticBody2D<><>0<>0<><>::
+wave_data.gd::GDScript::8801968968400543614::1786327044::0::1::::WaveData<>Resource<><>0<>0<><>::
+wave_spawner.gd::GDScript::3323972233952356615::1786865546::0::1::::<>Node2D<><>0<>0<><>::
+::res://المابات/::1789301895
+new_tile_set.tres::TileSet::3185425173543821434::1789301895::0::1::::<><><>0<>0<><>::uid://yesaour7kbxa::::res://Assets/Tiny Swords (Free Pack)/Terrain/Tileset/Tilemap_color3.png
