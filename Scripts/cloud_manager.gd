@@ -311,7 +311,7 @@ func logout():
 		DirAccess.remove_absolute(OFFLINE_SAVE_PATH)
 
 func fetch_leaderboard() -> Array:
-	var req_url = table_url + "?select=player_name,wave,kills&order=wave.desc,kills.desc&limit=10"
+	var req_url = table_url + "?select=player_name,score&order=score.desc&limit=10"
 	var temp_http = HTTPRequest.new()
 	add_child(temp_http)
 	temp_http.accept_gzip = false
@@ -325,6 +325,46 @@ func fetch_leaderboard() -> Array:
 		if json.parse(response[3].get_string_from_utf8()) == OK:
 			return json.get_data()
 	return []
+
+func get_leaderboard() -> Result:
+	var req_url = table_url + "?select=player_name,score&order=score.desc&limit=10"
+	var temp_http = HTTPRequest.new()
+	add_child(temp_http)
+	temp_http.accept_gzip = false
+	temp_http.request(req_url, headers)
+	var response = await temp_http.request_completed
+	temp_http.queue_free()
+
+	var code = response[1]
+	if code == 200:
+		var json = JSON.new()
+		if json.parse(response[3].get_string_from_utf8()) == OK:
+			return Result.ok(json.get_data())
+		else:
+			return Result.err("فشل في تحليل JSON")
+	else:
+		return Result.err("خطأ HTTP: " + str(code))
+
+func submit_score(player_name: String, score: int) -> Result:
+	var req_url = table_url
+	var temp_http = HTTPRequest.new()
+	add_child(temp_http)
+	temp_http.accept_gzip = false
+	
+	var body = JSON.stringify({
+		"player_name": player_name,
+		"score": score
+	})
+	
+	temp_http.request(req_url, headers, HTTPClient.METHOD_POST, body)
+	var response = await temp_http.request_completed
+	temp_http.queue_free()
+
+	var code = response[1]
+	if code == 200 or code == 201:
+		return Result.ok(null)
+	else:
+		return Result.err("فشل إرسال النتيجة: " + str(code))
 
 func search_players_by_query(query_str: String) -> Array:
 	var req_url = table_url + "?player_name=ilike.*" + query_str.uri_encode() + "*&select=player_name,wave,kills&order=wave.desc,kills.desc"

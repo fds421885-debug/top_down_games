@@ -1,79 +1,78 @@
 extends Control
 
-@export_category("UI References")
-@export var list_container: VBoxContainer     # اسحب هنا الـ VBoxContainer اللي جوة الـ ScrollContainer
-@export var search_input: LineEdit           # اسحب خانة البحث هنا
-@export var search_button: Button            # اسحب زر البحث هنا
-@export var search_result_label: Label       # اسحب لبل عرض النتائج هنا
-@export var back_button: Button              # اسحب زر الرجوع هنا
+@onready var leaderboard_list: VBoxContainer = $MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer
+@onready var back_button: Button = $MarginContainer/VBoxContainer/BackButton
+@onready var title_label: Label = $MarginContainer/VBoxContainer/TitleLabel
+@onready var loading_label: Label = $MarginContainer/VBoxContainer/LoadingLabel
 
-@export_category("Scene Navigation")
-@export_file("*.tscn") var main_menu_scene: String = "res://Scenes/main_menu.tscn"
+var cloud_manager: Node
+var is_loaded := false
 
 func _ready() -> void:
-	if back_button: 
-		back_button.pressed.connect(_on_back_pressed)
-	if search_button: 
-		search_button.pressed.connect(_on_search_pressed)
+	cloud_manager = get_node_or_null("/root/CloudManager")
 	
-	# أول ما تفتح القائمة، نحمل التوب تن كاملين
-	load_players_list()
+	if not cloud_manager:
+		loading_label.text = "خطأ: مدير السحابة غير موجود"
+		back_button.disabled = true
+		return
+	
+	# تحميل البيانات
+	await load_leaderboard()
+	is_loaded = true
 
-func load_players_list(players_data: Array = []) -> void:
-	if not list_container: return
+func load_leaderboard() -> void:
+	loading_label.visible = true
+	leaderboard_list.visible = false
 	
-	# تنظيف العناصر القديمة
-	for child in list_container.get_children():
+	# تنظيف القائمة الحالية
+	for child in leaderboard_list.get_children():
 		child.queue_free()
-		
-	# لو ما انمررت بيانات، نجيب التوب تن الأساسيين من السحابة
-	var data_to_show = players_data
-	if data_to_show.is_empty():
-		data_to_show = await CloudManager.fetch_leaderboard()
-		
-	if data_to_show.is_empty():
-		var lbl = Label.new()
-		lbl.text = "لا توجد بيانات متاحة حالياً..."
-		list_container.add_child(lbl)
-		return
-		
-	var rank = 1
-	for player in data_to_show:
-		var row_lbl = Label.new()
-		var p_name = player.get("player_name", "مجهول")
-		var p_wave = player.get("wave", 1)
-		var p_kills = player.get("kills", 0)
-		
-		row_lbl.text = "#" + str(rank) + " | اللاعب: " + p_name + " -- الويف: " + str(p_wave) + " | القتلات: " + str(p_kills)
-		
-		if p_name == CloudManager.current_player_name:
-			row_lbl.modulate = Color.GOLD
-			row_lbl.text += " (أنت!)"
-			
-		list_container.add_child(row_lbl)
-		rank += 1
-
-func _on_search_pressed() -> void:
-	if not search_input or not search_result_label: return
 	
-	var query = search_input.text.strip_edges()
-	if query == "":
-		search_result_label.text = "تمت إزالة البحث، جاري عرض القائمة العامة."
-		load_players_list()
-		return
-		
-	search_result_label.text = "جاري البحث عن: " + query + " ..."
+	# جلب البيانات من Supabase
+	var result = await cloud_manager.get_leaderboard()
 	
-	var results = await CloudManager.search_players_by_query(query)
+	loading_label.visible = false
+	leaderboard_list.visible = true
 	
-	if results.is_empty():
-		search_result_label.text = "ما فيه أي لاعب مطابق لهذا البحث."
-		for child in list_container.get_children():
-			child.queue_free()
+	if result.is_ok():
+		var data = result.ok()
+		if data.size() == 0:
+			var no_data_label = Label.new()
+			no_data_label.text = "لا توجد نتائج بعد"
+			no_data_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			leaderboard_list.add_child(no_data_label)
+		else:
+			var rank = 1
+			for entry in data:
+				var row = HBoxContainer.new()
+				row.add_theme_constant_override("separation", 20)
+				
+				# الترتيب
+				var rank_label = Label.new()
+				rank_label.text = str(rank) + "."
+				rank_label.custom_minimum_size = Vector2(40, 0)
+				rank_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+				row.add_child(rank_label)
+				
+				# اسم اللاعب
+				var name_label = Label.new()
+				name_label.text = entry.get("player_name", "لاعب")
+				name_label.custom_minimum_size = Vector2(150, 0)
+				row.add_child(name_label)
+				
+				# النقاط/القتلى
+				var score_label = Label.new()
+				var score = entry.get("score", 0)
+				score_label.text = "النقاط: " + str(score)
+				row.add_child(score_label)
+				
+				leaderboard_list.add_child(row)
+				rank += 1
 	else:
-		search_result_label.text = "تم العثور على (" + str(results.size()) + ") نتيجة."
-		load_players_list(results)
+		var error_label = Label.new()
+		error_label.text = "فشل تحميل اللوحة: " + str(result.err())
+		error_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		leaderboard_list.add_child(error_label)
 
-func _on_back_pressed() -> void:
-	if main_menu_scene != "":
-		get_tree().change_scene_to_file(main_menu_scene)
+func _on_back_button_pressed() -> void:
+	queue_free()
