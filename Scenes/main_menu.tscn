@@ -36,9 +36,11 @@ script = ExtResource("1_48xlc")
 play_button = NodePath("button/start")
 online_button = NodePath("button/top2")
 logout_button = NodePath("button/quitr")
+leaderboard_button = NodePath("button/leaderboard")
 game_scene_path = "uid://brch3d0oybrmv"
 matchmaking_scene_path = "uid://dkpm1ggsuhkfg"
 login_scene_path = "uid://cult8kt0i8q3j"
+leaderboard_scene_path = "uid://leaderboard123"
 
 [node name="back ground" parent="." unique_id=26277604 instance=ExtResource("1_28flt")]
 
@@ -308,6 +310,19 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.104493, 0.10449313, 0.10449346, 1)
 theme_override_font_sizes/font_size = 32
 text = "العب اولاين"
+flat = true
+
+[node name="leaderboard" type="Button" parent="button" unique_id=1844399113]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 290.0
+offset_right = 396.0
+offset_bottom = 386.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.104493, 0.10449313, 0.10449346, 1)
+theme_override_font_sizes/font_size = 32
+text = "لوحة الصدارة"
 flat = true
 
 [node name="quitr" type="Button" parent="button" unique_id=1756784856]
